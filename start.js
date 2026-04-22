@@ -36,7 +36,6 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "powershell -Command \"if (Test-Path dynamic_conf.yml) { Remove-Item -Recurse -Force dynamic_conf.yml -ErrorAction SilentlyContinue }\"",
           "powershell -Command \"New-Item -ItemType Directory -Force -Path data/paperclip/instances/default\"",
           "docker run --rm -v \"{{path.join(cwd, 'data', 'paperclip')}}:/fix\" busybox chmod -R 777 /fix",
           "docker compose --env-file .env up -d",

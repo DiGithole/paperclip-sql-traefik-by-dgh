@@ -2,8 +2,144 @@
 Microsoft Windows [Versione 10.0.26200.8246]
 (c) Microsoft Corporation. Tutti i diritti riservati.
 
-F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && type .env
-DOMAIN=paperclip.localhost
-EMAIL=admin@paperclip.local
-SECRET=paperclip-very-secure-random-secret-32-chars-long
-(base) F:\pinokio\api\paperclip-sql-traefik-by-dgh>
+F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker compose exec --user node paperclip_app pnpm paperclipai onboard --yes
+
+
+> paperclip@ paperclipai /app
+> node cli/node_modules/tsx/dist/cli.mjs cli/src/index.ts "onboard" "--yes"
+
+
+██████╗  █████╗ ██████╗ ███████╗██████╗  ██████╗██╗     ██╗██████╗ 
+██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗██╔════╝██║     ██║██╔══██╗
+██████╔╝███████║██████╔╝█████╗  ██████╔╝██║     ██║     ██║██████╔╝
+██╔═══╝ ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗██║     ██║     ██║██╔═══╝ 
+██║     ██║  ██║██║     ███████╗██║  ██║╚██████╗███████╗██║██║     
+╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝╚══════╝╚═╝╚═╝     
+  ───────────────────────────────────────────────────────
+  Open-source orchestration for zero-human companies
+
+┌   paperclipai onboard 
+│
+│  Local home: /paperclip | instance: default | config: /paperclip/instances/default/config.json
+│
+│  /paperclip/instances/default/config.json exists
+│
+│  Existing Paperclip install detected; keeping the current configuration unchanged.
+│
+│  Use paperclipai configure if you want to change settings.
+│
+●  Using existing PAPERCLIP_AGENT_JWT_SECRET from environment
+│
+│  Using existing local secrets key file at /paperclip/instances/default/secrets/master.key
+│
+◇  Configuration ready ───────────────────────────────────────╮
+│                                                             │
+│  Existing config preserved│
+│  Database: postgres│
+│  LLM: not configured│
+│  Logging: file -> /paperclip/instances/default/logs│
+│  Server: local_trusted/private @ loopback (127.0.0.1):3100  │
+│  Allowed hosts: (loopback only)│
+│  Auth URL mode: auto│
+│  Storage: local_disk│
+│  Secrets: local_encrypted (strict mode off)│
+│  Agent auth: PAPERCLIP_AGENT_JWT_SECRET configured│
+│                                                             │
+├─────────────────────────────────────────────────────────────╯
+│
+◇  Next commands ────────────────────────────╮
+│                                            │
+│  Run: paperclipai run│
+│  Reconfigure later: paperclipai configure  │
+│  Diagnose setup: paperclipai doctor        │
+│                                            │
+├────────────────────────────────────────────╯
+┌   paperclipai run 
+│
+│  Home: /paperclip
+│
+│  Instance: default
+│
+│  Config: /paperclip/instances/default/config.json
+│
+◇  Running doctor checks...
+
+██████╗  █████╗ ██████╗ ███████╗██████╗  ██████╗██╗     ██╗██████╗
+██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗██╔════╝██║     ██║██╔══██╗
+██████╔╝███████║██████╔╝█████╗  ██████╔╝██║     ██║     ██║██████╔╝
+██╔═══╝ ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗██║     ██║     ██║██╔═══╝
+██║     ██║  ██║██║     ███████╗██║  ██║╚██████╗███████╗██║██║
+╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝╚══════╝╚═╝╚═╝
+  ───────────────────────────────────────────────────────
+  Open-source orchestration for zero-human companies
+
+┌   paperclip doctor 
+│
+│  ✓ Config file: Valid config at /paperclip/instances/default/config.json
+│
+│  ✓ Deployment/auth mode: local_trusted mode is configured for loopback-only access        
+│
+│  ✓ Agent JWT secret: PAPERCLIP_AGENT_JWT_SECRET is set in environment
+│
+│  ! Secrets adapter: Local encrypted provider configured with key file /paperclip/instances/default/secrets/master.key; strict secret mode is disabled for postgres deployment
+│
+│    Consider enabling secrets.strictMode
+│
+│  ✓ Storage: Local disk storage is writable: /paperclip/instances/default/data/storage     
+│
+│  ✓ Database: PostgreSQL connection successful
+│
+│  ✓ LLM provider: No LLM provider configured (optional)
+│
+│  ✓ Log directory: Log directory is writable: /paperclip/instances/default/logs
+│
+│  ! Server port: Port 3100 is already in use
+│
+│    Check what's using port 3100 with: lsof -i :3100
+│
+◇  Summary ──────────────╮
+│                        │
+│  7 passed, 2 warnings  │
+│                        │
+├────────────────────────╯
+│
+└  All critical checks passed with some warnings.
+
+│
+◇  Starting Paperclip server...
+[20:38:54] INFO: Using external PostgreSQL via DATABASE_URL/config
+[20:38:55] INFO: Authenticated mode auth origin configuration {"authBaseUrlMode":"auto","authPublicBaseUrl":"http://paperclip.localhost:8000","trustedOrigins":["https://paperclip.localhost","http://paperclip.localhost"],"trustedOriginsSource":{"derived":2,"env":0}}
+
+██████╗  █████╗ ██████╗ ███████╗██████╗  ██████╗██╗     ██╗██████╗
+██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗██╔════╝██║     ██║██╔══██╗
+██████╔╝███████║██████╔╝█████╗  ██████╔╝██║     ██║     ██║██████╔╝
+██╔═══╝ ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗██║     ██║     ██║██╔═══╝
+██║     ██║  ██║██║     ███████╗██║  ██║╚██████╗███████╗██║██║
+╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝╚══════╝╚═╝╚═╝
+  ───────────────────────────────────────────────────────
+Mode external-postgres  |  vite-dev-middleware
+Deploy authenticated (private)
+Bind loopback (127.0.0.1)
+Auth ready
+Server 3101
+API http://127.0.0.1:3101/api (health: http://127.0.0.1:3101/api/health)       
+UI http://127.0.0.1:3101
+Database         postgres://paperclip:***@paperclip_db:5432/paperclip
+Migrations       already applied
+Agent JWT        set
+Heartbeat        enabled (30000ms)
+DB Backup        enabled (every 60m, keep 30d)
+Backup Dir       /paperclip/instances/default/data/backups
+Config /paperclip/instances/default/config.json
+  ───────────────────────────────────────────────────────
+
+[20:38:56] INFO: plugin job coordinator started — listening to lifecycle events {"service":"plugin-job-coordinator"}
+[20:38:56] INFO: plugin job scheduler started {"service":"plugin-job-scheduler","tickIntervalMs":30000,"maxConcurrentJobs":10}
+[20:38:56] INFO: initializing plugin tool dispatcher {"service":"plugin-tool-dispatcher"}   
+[20:38:56] INFO: plugin-loader: loading all ready plugins {"service":"plugin-loader"}       
+[20:38:56] INFO: Automatic database backups enabled {"intervalMinutes":60,"retentionSource":"instance-settings-db","backupDir":"/paperclip/instances/default/data/backups"}
+[20:38:56] INFO: Server listening on 127.0.0.1:3101
+[20:38:56] INFO: Opened browser at http://127.0.0.1:3101
+[20:38:56] INFO: loaded tools from ready plugins {"service":"plugin-tool-dispatcher","readyPlugins":0,"registeredTools":0}
+[20:38:56] INFO: plugin tool dispatcher initialized {"service":"plugin-tool-dispatcher","totalTools":0}
+[20:38:56] INFO: plugin-loader: no ready plugins to load {"service":"plugin-loader"}        
