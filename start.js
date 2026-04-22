@@ -19,16 +19,6 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        message: "docker compose --env-file .env up --force-recreate",
-        on: [{
-          "event": "/Server listening on/",
-          "done": true
-        }]
-      }
-    },
-    {
-      method: "shell.run",
-      params: {
         message: "type .env",
         on: [{
           "event": "/DOMAIN=(.+)/",
@@ -39,23 +29,51 @@ module.exports = {
     {
       method: "local.set",
       params: {
-        url: "http://{{input.event[1].trim()}}"
+        domain: "{{input.event[1].trim()}}"
       }
     },
     {
       method: "shell.run",
       params: {
-        message: "echo {{local.url}}",
+        message: "powershell -Command \"if (Test-Path dynamic_conf.yml) { if ((Get-Item dynamic_conf.yml).PSIsContainer) { Remove-Item -Recurse -Force dynamic_conf.yml } }\""
+      }
+    },
+    {
+      method: "fs.write",
+      params: {
+        path: "dynamic_conf.yml",
+        text: "http:\n  routers:\n    paperclip:\n      rule: \"Host(`{{local.domain}}`) || Host(`127.0.0.1`) || Host(`localhost`)\"\n      service: paperclip\n      entryPoints:\n        - web\n    paperclip-secure:\n      rule: \"Host(\"{{local.domain}}\") || Host(\"127.0.0.1\") || Host(\"localhost\")\"\n      service: paperclip\n      entryPoints:\n        - websecure\n      tls:\n        certResolver: myresolver\n\n  services:\n    paperclip:\n      loadBalancer:\n        servers:\n          - url: \"http://paperclip:3100\""
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        message: [
+          "docker compose --env-file .env up -d --force-recreate",
+          "docker compose logs -f"
+        ],
         on: [{
-          "event": "/(http:\\/\\/[0-9.:a-z-]+)/",
+          "event": "/Server listening on/",
           "done": true
         }]
       }
     },
     {
+      method: "shell.run",
+      params: {
+        message: "docker compose exec paperclip pnpm paperclipai auth bootstrap-ceo"
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        message: "docker compose logs -f"
+      }
+    },
+    {
       method: "local.set",
       params: {
-        url: "{{input.event[1]}}"
+        url: "http://{{local.domain}}"
       }
     }
   ]

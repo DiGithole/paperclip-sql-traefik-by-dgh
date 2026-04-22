@@ -29,7 +29,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "powershell -Command \"(gc app/scripts/docker-entrypoint.sh) -join \"\"`n\"\" | Out-File -FilePath app/scripts/docker-entrypoint.sh -Encoding ascii -NoNewline\"",
+          "node fix.js",
           "mkdir -p data/traefik data/postgres data/paperclip",
           "touch data/traefik/acme.json"
         ]

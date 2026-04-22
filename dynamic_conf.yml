@@ -1,12 +1,12 @@
 http:
   routers:
     paperclip:
-      rule: "Host(\"paperclip.localhost\") || Host(\"127.0.0.1\") || Host(\"localhost\")"
+      rule: "Host(`paperclip.localhost`) || Host(`127.0.0.1`) || Host(`localhost`)"
       service: paperclip
       entryPoints:
         - web
     paperclip-secure:
-      rule: "Host(\"paperclip.localhost\") || Host(\"127.0.0.1\") || Host(\"localhost\")"
+      rule: "Host(`paperclip.localhost`) || Host(`127.0.0.1`) || Host(`localhost`)"
       service: paperclip
       entryPoints:
         - websecure

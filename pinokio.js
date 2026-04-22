@@ -3,7 +3,9 @@ module.exports = {
   title: "PAPERCLIP SQL TRAEFIK BY DGH",
   icon: "icon.png",
   menu: async (kernel) => {
-    let installed = await kernel.exists(path.resolve(__dirname, "app"))
+    let app_exists = await kernel.exists(path.resolve(__dirname, "app"))
+    let env_exists = await kernel.exists(path.resolve(__dirname, ".env"))
+    let installed = app_exists && env_exists
     let running = kernel.running("start.js")
     if (installed) {
       if (running) {

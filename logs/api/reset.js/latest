@@ -2,6 +2,6 @@
 Microsoft Windows [Versione 10.0.26200.8246]
 (c) Microsoft Corporation. Tutti i diritti riservati.
 
-F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && rm .env
+F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && powershell -Command "Remove-Item -Force dynamic_conf.yml -ErrorAction SilentlyContinue"
 
 (base) F:\pinokio\api\paperclip-sql-traefik-by-dgh>
