@@ -1,61 +1,19 @@
-[api shell.run]
-Microsoft Windows [Versione 10.0.26200.8246]
-(c) Microsoft Corporation. Tutti i diritti riservati.
+[memory]
+{"ts":1776888643941,"step":7,"input":{"id":"788e7f0e-e328-45a1-a768-87525eabe0b5"},"args":{},"global":{},"local":{},"port":42004}
 
-F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker compose logs -f
-traefik-1      | 2026-04-22T20:07:36Z ERR The ACME resolve is skipped from the resolvers list error="unable to get ACME account: permissions 777 for /etc/traefik/acme.json are too open, please use 600" resolver=myresolver
-paperclip_app  | 
-paperclip_db   | 
-paperclip_db   | PostgreSQL Database directory appears to contain a database; Skipping initialization
-paperclip_db   | 
-paperclip_db   | 2026-04-22 20:07:37.479 UTC [1] LOG:  starting PostgreSQL 15.17 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
-paperclip_db   | 2026-04-22 20:07:37.479 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-paperclip_db   | 2026-04-22 20:07:37.479 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-paperclip_app  | ██████╗  █████╗ ██████╗ ███████╗██████╗  ██████╗██╗     ██╗██████╗ 
-paperclip_app  | ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗██╔════╝██║     ██║██╔══██╗
-paperclip_app  | ██████╔╝███████║██████╔╝█████╗  ██████╔╝██║     ██║     ██║██████╔╝
-paperclip_app  | ██╔═══╝ ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗██║     ██║     ██║██╔═══╝ 
-paperclip_app  | ██║     ██║  ██║██║     ███████╗██║  ██║╚██████╗███████╗██║██║     
-paperclip_app  | ╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝╚══════╝╚═╝╚═╝     
-paperclip_app  |   ───────────────────────────────────────────────────────
-paperclip_app  | Mode             external-postgres  |  static-ui
-paperclip_app  | Deploy           authenticated (private)
-paperclip_app  | Bind             lan (0.0.0.0)
-paperclip_app  | Auth             ready
-paperclip_app  | Server           3100
-paperclip_app  | API              http://localhost:3100/api (health: http://localhost:3100/api/health)
-paperclip_app  | UI               http://localhost:3100
-paperclip_app  | Database         postgres://paperclip:***@paperclip_db:5432/paperclip
-paperclip_app  | Migrations       already applied
-paperclip_app  | Agent JWT        missing (run `pnpm paperclipai onboard`)
-paperclip_app  | Heartbeat        enabled (30000ms)
-paperclip_app  | DB Backup        enabled (every 60m, keep 7d)
-paperclip_app  | Backup Dir       /paperclip/instances/default/data/backups
-paperclip_app  | Config           /paperclip/instances/default/config.json
-paperclip_app  |   ───────────────────────────────────────────────────────
-paperclip_app  |   ───────────────────────────────────────────────────────
-paperclip_app  | 
-paperclip_app  | [20:07:49] INFO: Using external PostgreSQL via DATABASE_URL/config
-paperclip_app  | [20:07:50] INFO: Authenticated mode auth origin configuration {"authBaseUrlMode":"explicit","authPublicBaseUrl":"http://paperclip.localhost:8000","trustedOrigins":["http://paperclip.localhost:8000","https://paperclip.localhost","http://paperclip.localhost"],"trustedOriginsSource":{"derived":3,"env":0}}
-paperclip_app  | [20:07:50] INFO: plugin job coordinator started — listening to lifecycle events {"service":"plugin-job-coordinator"}
-paperclip_app  | [20:07:50] INFO: plugin job scheduler started {"service":"plugin-job-scheduler","tickIntervalMs":30000,"maxConcurrentJobs":10}
-paperclip_app  | [20:07:50] INFO: initializing plugin tool dispatcher {"service":"plugin-tool-dispatcher"}
-paperclip_app  | [20:07:50] INFO: plugin-loader: loading all ready plugins {"service":"plugin-loader"}
-paperclip_app  | [20:07:50] INFO: Automatic database backups enabled {"intervalMinutes":60,"retentionSource":"instance-settings-db","backupDir":"/paperclip/instances/default/data/backups"}
-paperclip_app  | [20:07:50] INFO: Server listening on 0.0.0.0:3100
-paperclip_app  | [20:07:50] INFO: loaded tools from ready plugins {"service":"plugin-tool-dispatcher","readyPlugins":0,"registeredTools":0}
-paperclip_app  | [20:07:50] INFO: plugin tool dispatcher initialized {"service":"plugin-tool-dispatcher","totalTools":0}
-paperclip_app  | [20:07:50] INFO: plugin-loader: no ready plugins to load {"service":"plugin-loader"}
-traefik-1      | 2026-04-22T20:07:36Z ERR error="HTTP challenge is not enabled" entryPointName=web routerName=acme-http@internal
-traefik-1      | 2026-04-22T20:07:36Z ERR error="HTTP challenge is not enabled" entryPointName=web routerName=acme-http@internal
-traefik-1      | 2026-04-22T20:07:36Z ERR Router uses a non-existent certificate resolver certificateResolver=myresolver routerName=paperclip-secure@file
-paperclip_db   | 2026-04-22 20:07:37.485 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-paperclip_db   | 2026-04-22 20:07:37.508 UTC [29] LOG:  database system shutdown was interrupted; last known up at 2026-04-22 20:07:33 UTC
-paperclip_db   | 2026-04-22 20:07:41.343 UTC [36] FATAL:  the database system is starting up
-paperclip_db   | 2026-04-22 20:07:42.109 UTC [29] LOG:  database system was not properly shut down; automatic recovery in progress
-paperclip_db   | 2026-04-22 20:07:42.133 UTC [29] LOG:  redo starts at 0/192D528
-paperclip_db   | 2026-04-22 20:07:42.995 UTC [29] LOG:  invalid record length at 0/1D040D8: wanted 24, got 0
-paperclip_db   | 2026-04-22 20:07:42.995 UTC [29] LOG:  redo done at 0/1D040A0 system usage: CPU: user: 0.00 s, system: 0.10 s, elapsed: 0.86 s
-paperclip_db   | 2026-04-22 20:07:43.135 UTC [27] LOG:  checkpoint starting: end-of-recovery immediate wait
-paperclip_db   | 2026-04-22 20:07:44.045 UTC [27] LOG:  checkpoint complete: wrote 763 buffers (4.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.267 s, sync=0.620 s, total=0.914 s; sync files=597, longest=0.007 s, average=0.002 s; distance=3931 kB, estimate=3931 kB
-paperclip_db   | 2026-04-22 20:07:44.242 UTC [1] LOG:  database system is ready to accept connections
+[api local.set]
+
+
+===================================================
+
+[api local.set]
+# local variables
+
+[api local.set]
+{
+  "url": "http://localhost:8000"
+}
+[api local.set]
+
+===================================================
+

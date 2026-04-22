@@ -4,16 +4,10 @@ services:
     command:
       - "--providers.file.filename=/etc/traefik/dynamic_conf.yml"
       - "--entrypoints.web.address=:80"
-      - "--entrypoints.websecure.address=:443"
-      - "--certificatesresolvers.myresolver.acme.email=${EMAIL}"
-      - "--certificatesresolvers.myresolver.acme.storage=/etc/traefik/acme.json"
-      - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"
     ports:
       - "8000:80"
-      - "4433:443"
     volumes:
       - "./dynamic_conf.yml:/etc/traefik/dynamic_conf.yml"
-      - "./data/traefik/acme.json:/etc/traefik/acme.json"
     networks:
       - paperclip-network
 

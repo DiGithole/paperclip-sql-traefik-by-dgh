@@ -21,7 +21,8 @@ module.exports = {
       params: {
         message: [
           "powershell -Command \"docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)\"",
-          "powershell -Command \"if (Test-Path dynamic_conf.yml) { Remove-Item -Recurse -Force dynamic_conf.yml -ErrorAction SilentlyContinue }\""
+          "powershell -Command \"if (Test-Path dynamic_conf.yml) { Remove-Item -Recurse -Force dynamic_conf.yml -ErrorAction SilentlyContinue }\"",
+          "powershell -Command \"if (Test-Path data/traefik) { Remove-Item -Recurse -Force data/traefik -ErrorAction SilentlyContinue }\""
         ]
       }
     },
