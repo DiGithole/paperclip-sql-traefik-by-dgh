@@ -17,14 +17,14 @@ module.exports = {
             key: "email",
             label: "Email for SSL (Optional)",
             type: "text",
-            default: "admin@example.com",
+            default: "admin@paperclip.local",
             placeholder: "Used for Let's Encrypt"
           },
           {
             key: "secret",
             label: "Better Auth Secret",
             type: "text",
-            default: "paperclip-dev-secret",
+            default: "paperclip-very-secure-random-secret-32-chars-long",
             placeholder: "Enter a random string for security"
           }
         ]
