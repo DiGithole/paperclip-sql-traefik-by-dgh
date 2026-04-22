@@ -2,4 +2,81 @@
 Microsoft Windows [Versione 10.0.26200.8246]
 (c) Microsoft Corporation. Tutti i diritti riservati.
 
-F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && powershell -Command "Start-Sleep -Seconds 10"
+F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker compose logs -f
+paperclip_app  | [20:32:09] INFO: Using external PostgreSQL via DATABASE_URL/config
+paperclip_app  | [20:32:10] INFO: Authenticated mode auth origin configuration {"authBaseUrlMode":"auto","authPublicBaseUrl":"http://paperclip.localhost:8000","trustedOrigins":["https://paperclip.localhost","http://paperclip.localhost"],"trustedOriginsSource":{"derived":2,"env":0}}
+paperclip_app  | [20:32:10] INFO: plugin job coordinator started — listening to lifecycle events {"service":"plugin-job-coordinator"}
+paperclip_db   | 
+traefik-1      | 2026-04-22T20:22:39Z ERR Error while Peeking first byte error="read tcp 172.18.0.3:80->172.18.0.1:38256: i/o timeout"
+paperclip_db   | PostgreSQL Database directory appears to contain a database; Skipping initialization
+paperclip_db   | 
+paperclip_db   | 2026-04-22 20:21:40.336 UTC [1] LOG:  starting PostgreSQL 15.17 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+paperclip_db   | 2026-04-22 20:21:40.336 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+paperclip_db   | 2026-04-22 20:21:40.336 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+paperclip_db   | 2026-04-22 20:21:40.342 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+paperclip_db   | 2026-04-22 20:21:40.363 UTC [30] LOG:  database system shutdown was interrupted; last known up at 2026-04-22 20:21:36 UTC
+paperclip_db   | 2026-04-22 20:21:44.269 UTC [37] FATAL:  the database system is starting up
+paperclip_db   | 2026-04-22 20:21:44.885 UTC [30] LOG:  database system was not properly shut down; automatic recovery in progress
+paperclip_db   | 2026-04-22 20:21:44.915 UTC [30] LOG:  redo starts at 0/192D528
+paperclip_db   | 2026-04-22 20:21:45.778 UTC [30] LOG:  invalid record length at 0/1D43200: wanted 24, got 0
+paperclip_db   | 2026-04-22 20:21:45.778 UTC [30] LOG:  redo done at 0/1D431C8 system usage: CPU: user: 0.02 s, system: 0.09 s, elapsed: 0.86 s
+paperclip_db   | 2026-04-22 20:21:45.902 UTC [28] LOG:  checkpoint starting: end-of-recovery immediate wait
+paperclip_db   | 2026-04-22 20:21:46.834 UTC [28] LOG:  checkpoint complete: wrote 796 buffers (4.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.277 s, sync=0.631 s, total=0.935 s; sync files=606, longest=0.006 s, average=0.002 s; distance=4183 kB, estimate=4183 kB
+paperclip_db   | 2026-04-22 20:21:47.059 UTC [1] LOG:  database system is ready to accept connections
+paperclip_db   | 2026-04-22 20:32:11.074 UTC [943] LOG:  could not receive data from client: Connection reset by peer
+paperclip_db   | 2026-04-22 20:32:11.074 UTC [943] LOG:  unexpected EOF on client connection with an open transaction
+paperclip_db   | 2026-04-22 20:33:52.676 UTC [1086] LOG:  could not receive data from client: Connection reset by peer
+paperclip_db   | 2026-04-22 20:33:52.676 UTC [1086] LOG:  unexpected EOF on client connection with an open transaction
+paperclip_app  | [20:32:10] INFO: plugin job scheduler started {"service":"plugin-job-scheduler","tickIntervalMs":30000,"maxConcurrentJobs":10}
+paperclip_app  | [20:32:10] INFO: initializing plugin tool dispatcher {"service":"plugin-tool-dispatcher"}
+paperclip_app  | [20:32:10] INFO: plugin-loader: loading all ready plugins {"service":"plugin-loader"}
+paperclip_app  | [20:32:10] INFO: Automatic database backups enabled {"intervalMinutes":60,"retentionSource":"instance-settings-db","backupDir":"/paperclip/instances/default/data/backups"}
+paperclip_app  | [20:32:10] INFO: Server listening on 127.0.0.1:3100
+paperclip_app  | node:fs:441
+paperclip_app  |     return binding.readFileUtf8(path, stringToFlags(options.flag));        
+paperclip_app  |^
+paperclip_app  |
+paperclip_app  | Error: EACCES: permission denied, open '/paperclip/instances/default/.env' 
+paperclip_app  |     at readFileSync (node:fs:441:20)
+paperclip_app  |     at resolveAgentJwtSecretStatus (/app/server/src/startup-banner.ts:84:41)
+paperclip_app  |     at printStartupBanner (/app/server/src/startup-banner.ts:107:26)       
+paperclip_app  |     at Server.<anonymous> (/app/server/dist/index.js:627:13)
+paperclip_app  |     at Object.onceWrapper (node:events:630:28)
+paperclip_app  |     at Server.emit (node:events:521:24)
+paperclip_app  |     at emitListeningNT (node:net:2051:10)
+paperclip_app  |     at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+paperclip_app  |   errno: -13,
+paperclip_app  |   code: 'EACCES',
+paperclip_app  |   syscall: 'open',
+paperclip_app  |   path: '/paperclip/instances/default/.env'
+paperclip_app  | }
+paperclip_app  |
+paperclip_app  | Node.js v24.15.0
+paperclip_app  | [20:33:51] INFO: Using external PostgreSQL via DATABASE_URL/config
+paperclip_app  | [20:33:52] INFO: Authenticated mode auth origin configuration {"authBaseUrlMode":"auto","authPublicBaseUrl":"http://paperclip.localhost:8000","trustedOrigins":["https://paperclip.localhost","http://paperclip.localhost"],"trustedOriginsSource":{"derived":2,"env":0}}
+paperclip_app  | [20:33:52] INFO: plugin job coordinator started — listening to lifecycle events {"service":"plugin-job-coordinator"}
+paperclip_app  | [20:33:52] INFO: plugin job scheduler started {"service":"plugin-job-scheduler","tickIntervalMs":30000,"maxConcurrentJobs":10}
+paperclip_app  | [20:33:52] INFO: initializing plugin tool dispatcher {"service":"plugin-tool-dispatcher"}
+paperclip_app  | [20:33:52] INFO: plugin-loader: loading all ready plugins {"service":"plugin-loader"}
+paperclip_app  | [20:33:52] INFO: Automatic database backups enabled {"intervalMinutes":60,"retentionSource":"instance-settings-db","backupDir":"/paperclip/instances/default/data/backups"}
+paperclip_app  | [20:33:52] INFO: Server listening on 127.0.0.1:3100
+paperclip_app  | node:fs:441
+paperclip_app  |     return binding.readFileUtf8(path, stringToFlags(options.flag));        
+paperclip_app  |^
+paperclip_app  |
+paperclip_app  | Error: EACCES: permission denied, open '/paperclip/instances/default/.env' 
+paperclip_app  |     at readFileSync (node:fs:441:20)
+paperclip_app  |     at resolveAgentJwtSecretStatus (/app/server/src/startup-banner.ts:84:41)
+paperclip_app  |     at printStartupBanner (/app/server/src/startup-banner.ts:107:26)       
+paperclip_app  |     at Server.<anonymous> (/app/server/dist/index.js:627:13)
+paperclip_app  |     at Object.onceWrapper (node:events:630:28)
+paperclip_app  |     at Server.emit (node:events:521:24)
+paperclip_app  |     at emitListeningNT (node:net:2051:10)
+paperclip_app  |     at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+paperclip_app  |   errno: -13,
+paperclip_app  |   code: 'EACCES',
+paperclip_app  |   syscall: 'open',
+paperclip_app  |   path: '/paperclip/instances/default/.env'
+paperclip_app  | }
+paperclip_app  |
+paperclip_app  | Node.js v24.15.0

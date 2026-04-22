@@ -54,6 +54,7 @@ module.exports = {
         message: [
           "docker compose --env-file .env up -d",
           "powershell -Command \"Start-Sleep -Seconds 10\"",
+          "docker compose exec --user root paperclip_app chmod -R 777 /paperclip",
           "docker compose exec --user node paperclip_app pnpm paperclipai onboard --yes",
           "docker compose exec --user node paperclip_app pnpm paperclipai auth bootstrap-ceo",
           "docker compose logs -f"
