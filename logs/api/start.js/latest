@@ -1,20 +1,5 @@
-[memory]
-{"ts":1776891733168,"step":8,"input":{"id":"aab0a025-27c2-4235-a59c-2f29faf8b612"},"args":{},"global":{},"local":{"domain":"paperclip.localhost"},"port":42003}
+[api shell.run]
+Microsoft Windows [Versione 10.0.26200.8246]
+(c) Microsoft Corporation. Tutti i diritti riservati.
 
-[api local.set]
-
-
-===================================================
-
-[api local.set]
-# local variables
-
-[api local.set]
-{
-  "domain": "paperclip.localhost",
-  "url": "http://localhost:8000"
-}
-[api local.set]
-
-===================================================
-
+F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker compose --env-file .env up -d

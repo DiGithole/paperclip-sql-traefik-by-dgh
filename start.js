@@ -35,6 +35,22 @@ module.exports = {
     {
       method: "shell.run",
       params: {
+        message: "type .env",
+        on: [{
+          "event": "/SECRET=(.+)/",
+          "done": true
+        }]
+      }
+    },
+    {
+      method: "local.set",
+      params: {
+        secret: "{{input.event[1].trim()}}"
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
         message: [
           "powershell -Command \"New-Item -ItemType Directory -Force -Path data/paperclip/instances/default\"",
           "docker run --rm -v \"{{path.join(cwd, 'data', 'paperclip')}}:/fix\" busybox chmod -R 777 /fix"
@@ -61,7 +77,7 @@ module.exports = {
         message: [
           "docker compose --env-file .env up -d",
           "powershell -Command \"Start-Sleep -Seconds 15\"",
-          "docker compose --env-file .env run --rm paperclip_app pnpm paperclipai auth bootstrap-ceo",
+          "docker compose --env-file .env run --rm -e PAPERCLIP_AGENT_JWT_SECRET={{local.secret}} -e BETTER_AUTH_SECRET={{local.secret}} paperclip_app pnpm paperclipai auth bootstrap-ceo",
           "docker compose logs -f"
         ]
       }
