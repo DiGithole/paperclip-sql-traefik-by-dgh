@@ -1,33 +1,28 @@
 services:
   traefik:
     image: traefik:v3.0
-    container_name: traefik
     command:
-      - "--api.insecure=true"
+      - "--providers.file.filename=/etc/traefik/dynamic_conf.yml"
       - "--entrypoints.web.address=:80"
       - "--entrypoints.websecure.address=:443"
-      - "--providers.file.filename=/etc/traefik/dynamic_conf.yml"
-      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
       - "--certificatesresolvers.myresolver.acme.email=${EMAIL}"
-      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
-    environment:
-      - DOCKER_HOST=unix:///var/run/docker.sock
+      - "--certificatesresolvers.myresolver.acme.storage=/etc/traefik/acme.json"
+      - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"
     ports:
-      - "80:80"
-      - "443:443"
-      - "8080:8080"
+      - "8000:80"
+      - "4433:443"
     volumes:
-      - "./data/traefik:/letsencrypt"
-      - "./dynamic_conf.yml:/etc/traefik/dynamic_conf.yml:ro"
-    restart: always
+      - "./dynamic_conf.yml:/etc/traefik/dynamic_conf.yml"
+      - "./data/traefik/acme.json:/etc/traefik/acme.json"
+    networks:
+      - paperclip-network
 
-  db:
+  paperclip_db:
     image: postgres:15-alpine
     container_name: paperclip_db
-    restart: always
     environment:
       POSTGRES_USER: paperclip
-      POSTGRES_PASSWORD: paperclip_password
+      POSTGRES_PASSWORD: db
       POSTGRES_DB: paperclip
     volumes:
       - ./data/postgres:/var/lib/postgresql/data
@@ -36,24 +31,24 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    networks:
+      - paperclip-network
 
-  paperclip:
-    build: 
+  paperclip_app:
+    build:
       context: ./app
       dockerfile: Dockerfile
     container_name: paperclip_app
-    restart: always
     environment:
-      - DATABASE_URL=postgres://paperclip:paperclip_password@db:5432/paperclip
-      - BETTER_AUTH_SECRET=${SECRET:-paperclip-dev-secret}
-      - BETTER_AUTH_URL=http://${DOMAIN}
-      - BETTER_AUTH_BASE_URL=http://${DOMAIN}
-      - PAPERCLIP_AGENT_JWT_SECRET=${SECRET:-paperclip-dev-secret}
-      - SERVE_UI=true
-      - PORT=3100
-    volumes:
-      - ./data/paperclip:/paperclip
+      DATABASE_URL: postgres://paperclip:db@paperclip_db:5432/paperclip
+      BETTER_AUTH_SECRET: ${SECRET}
+      BETTER_AUTH_URL: http://${DOMAIN}:8000
     depends_on:
-      db:
+      paperclip_db:
         condition: service_healthy
+    networks:
+      - paperclip-network
 
+networks:
+  paperclip-network:
+    driver: bridge

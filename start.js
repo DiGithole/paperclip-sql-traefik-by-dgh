@@ -42,7 +42,7 @@ module.exports = {
       method: "fs.write",
       params: {
         path: "dynamic_conf.yml",
-        text: "http:\n  routers:\n    paperclip:\n      rule: \"Host(`{{local.domain}}`) || Host(`127.0.0.1`) || Host(`localhost`)\"\n      service: paperclip\n      entryPoints:\n        - web\n    paperclip-secure:\n      rule: \"Host(\"{{local.domain}}\") || Host(\"127.0.0.1\") || Host(\"localhost\")\"\n      service: paperclip\n      entryPoints:\n        - websecure\n      tls:\n        certResolver: myresolver\n\n  services:\n    paperclip:\n      loadBalancer:\n        servers:\n          - url: \"http://paperclip:3100\""
+        text: "http:\n  routers:\n    paperclip:\n      rule: \"HostRegexp(`{host:.+}`)\"\n      service: paperclip_app\n      entryPoints:\n        - web\n    paperclip-secure:\n      rule: \"HostRegexp(`{host:.+}`)\"\n      service: paperclip_app\n      entryPoints:\n        - websecure\n      tls:\n        certResolver: myresolver\n\n  services:\n    paperclip_app:\n      loadBalancer:\n        servers:\n          - url: \"http://paperclip_app:3100\""
       }
     },
     {
@@ -61,7 +61,7 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        message: "docker compose exec paperclip pnpm paperclipai auth bootstrap-ceo"
+        message: "docker compose exec paperclip_app pnpm paperclipai auth bootstrap-ceo"
       }
     },
     {
@@ -73,7 +73,7 @@ module.exports = {
     {
       method: "local.set",
       params: {
-        url: "http://{{local.domain}}"
+        url: "http://{{local.domain}}:8000"
       }
     }
   ]

@@ -1,85 +1,20 @@
-[api shell.run]
-Microsoft Windows [Versione 10.0.26200.8246]
-(c) Microsoft Corporation. Tutti i diritti riservati.
+[memory]
+{"ts":1776887951894,"step":9,"input":{"id":"a557968c-330d-4df9-8967-0bc986711ddb"},"args":{},"global":{},"local":{"domain":"paperclip.localhost"},"port":42004}
 
-F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker compose logs -f
-traefik        | 2026-04-22T19:54:56Z ERR Unable to obtain ACME certificate for domains error="cannot get ACME client acme: error: 400 :: POST :: https://acme-v02.api.letsencrypt.org/acme/new-acct :: urn:ietf:params:acme:error:invalidContact :: Error validating contact(s) :: contact email has invalid domain: Domain name does not end with a valid public suffix (TLD)" ACME CA=https://acme-v02.api.letsencrypt.org/directory acmeCA=https://acme-v02.api.letsencrypt.org/directory domains=["paperclip.localhost","127.0.0.1","localhost"] providerName=myresolver.acme routerName=paperclip-secure@file rule="Host(`paperclip.localhost`) || Host(`127.0.0.1`) || Host(`localhost`)"
-paperclip_db   | 
-paperclip_app  | 
-paperclip_app  | ██████╗  █████╗ ██████╗ ███████╗██████╗  ██████╗██╗     ██╗██████╗ 
-paperclip_app  | ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗██╔════╝██║     ██║██╔══██╗
-paperclip_app  | ██████╔╝███████║██████╔╝█████╗  ██████╔╝██║     ██║     ██║██████╔╝
-paperclip_app  | ██╔═══╝ ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗██║     ██║     ██║██╔═══╝ 
-paperclip_app  | ██║     ██║  ██║██║     ███████╗██║  ██║╚██████╗███████╗██║██║     
-paperclip_app  | ╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝╚══════╝╚═╝╚═╝     
-paperclip_app  |   ───────────────────────────────────────────────────────
-paperclip_db   | PostgreSQL Database directory appears to contain a database; Skipping initialization
-paperclip_db   | 
-paperclip_db   | 2026-04-22 19:54:54.150 UTC [1] LOG:  starting PostgreSQL 15.17 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
-paperclip_db   | 2026-04-22 19:54:54.151 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-paperclip_db   | 2026-04-22 19:54:54.151 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-paperclip_db   | 2026-04-22 19:54:54.155 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-paperclip_db   | 2026-04-22 19:54:54.182 UTC [29] LOG:  database system was shut down at 2026-04-22 19:54:51 UTC
-paperclip_db   | 2026-04-22 19:54:54.219 UTC [1] LOG:  database system is ready to accept connections
-paperclip_app  | Mode             external-postgres  |  static-ui
-paperclip_app  | Deploy           authenticated (private)
-paperclip_app  | Bind             lan (0.0.0.0)
-paperclip_app  | Auth             ready
-paperclip_app  | Server           3100
-paperclip_app  | API              http://localhost:3100/api (health: http://localhost:3100/api/health)
-paperclip_app  | UI               http://localhost:3100
-paperclip_app  | Database         postgres://paperclip:***@db:5432/paperclip
-paperclip_app  | Migrations       already applied
-paperclip_app  | Agent JWT        set
-paperclip_app  | Heartbeat        enabled (30000ms)
-paperclip_app  | DB Backup        enabled (every 60m, keep 7d)
-paperclip_app  | Backup Dir       /paperclip/instances/default/data/backups
-paperclip_app  | Config           /paperclip/instances/default/config.json
-paperclip_app  |   ───────────────────────────────────────────────────────
-paperclip_app  | 
-paperclip_app  | [19:55:01] INFO: Using external PostgreSQL via DATABASE_URL/config
-paperclip_app  | [19:55:01] INFO: Authenticated mode auth origin configuration {"authBaseUrlMode":"explicit","authPublicBaseUrl":"http://paperclip.localhost","trustedOrigins":["http://paperclip.localhost","https://paperclip.localhost"],"trustedOriginsSource":{"derived":2,"env":0}}
-paperclip_app  | [19:55:01] INFO: plugin job coordinator started — listening to lifecycle events {"service":"plugin-job-coordinator"}
-paperclip_app  | [19:55:01] INFO: plugin job scheduler started {"service":"plugin-job-scheduler","tickIntervalMs":30000,"maxConcurrentJobs":10}
-paperclip_app  | [19:55:01] INFO: initializing plugin tool dispatcher {"service":"plugin-tool-dispatcher"}
-paperclip_app  | [19:55:01] INFO: plugin-loader: loading all ready plugins {"service":"plugin-loader"}
-paperclip_app  | [19:55:01] INFO: Automatic database backups enabled {"intervalMinutes":60,"retentionSource":"instance-settings-db","backupDir":"/paperclip/instances/default/data/backups"}
-paperclip_app  | [19:55:01] INFO: Server listening on 0.0.0.0:3100
-paperclip_app  | [19:55:01] INFO: loaded tools from ready plugins {"service":"plugin-tool-dispatcher","readyPlugins":0,"registeredTools":0}
-paperclip_app  | [19:55:01] INFO: plugin tool dispatcher initialized {"service":"plugin-tool-dispatcher","totalTools":0}
-paperclip_app  | [19:55:01] INFO: plugin-loader: no ready plugins to load {"service":"plugin-loader"}
-paperclip_app  | [19:55:27] WARN: GET /api/companies 403 {"routePath":"/"}
-paperclip_app  | [19:55:27] WARN: GET /api/auth/get-session 401 {"routePath":"/get-session"}
-paperclip_app  | [19:55:27] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:28] WARN: GET /api/auth/get-session 401 {"routePath":"/get-session"}
-paperclip_app  | [19:55:28] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:28] WARN: GET /api/companies 403 {"routePath":"/"}
-paperclip_app  | [19:55:29] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:29] WARN: GET /api/auth/get-session 401 {"routePath":"/get-session"}
-paperclip_app  | [19:55:29] WARN: GET /api/companies 403 {"routePath":"/"}
-paperclip_app  | [19:55:30] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:30] WARN: GET /api/auth/get-session 401 {"routePath":"/get-session"}
-paperclip_app  | [19:55:30] WARN: GET /api/companies 403 {"routePath":"/"}
-paperclip_app  | [19:55:30] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:30] WARN: GET /api/auth/get-session 401 {"routePath":"/get-session"}
-paperclip_app  | [19:55:30] WARN: GET /api/companies 403 {"routePath":"/"}
-paperclip_app  | [19:55:30] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:30] WARN: GET /api/auth/get-session 401 {"routePath":"/get-session"}
-paperclip_app  | [19:55:30] WARN: GET /api/companies 403 {"routePath":"/"}
-paperclip_app  | [19:55:31] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:33] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:34] WARN: GET /api/auth/get-session 401 {"routePath":"/get-session"}
-paperclip_app  | [19:55:34] WARN: GET /api/companies 403 {"routePath":"/"}
-paperclip_app  | [19:55:34] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:35] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:35] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:35] WARN: GET /api/auth/get-session 401 {"routePath":"/get-session"}
-paperclip_app  | [19:55:35] WARN: GET /api/companies 403 {"routePath":"/"}
-paperclip_app  | [19:55:47] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:47] WARN: GET /api/companies 403 {"routePath":"/"}
-paperclip_app  | [19:55:49] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:49] WARN: GET /api/auth/get-session 401 {"routePath":"/get-session"}
-paperclip_app  | [19:55:49] WARN: GET /api/companies 403 {"routePath":"/"}
-paperclip_app  | [19:55:50] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:52] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
-paperclip_app  | [19:55:56] WARN: GET /api/adapters 403 {"routePath":"/adapters"}
+[api local.set]
+
+
+===================================================
+
+[api local.set]
+# local variables
+
+[api local.set]
+{
+  "domain": "paperclip.localhost",
+  "url": "http://paperclip.localhost"
+}
+[api local.set]
+
+===================================================
+
