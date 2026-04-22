@@ -5,7 +5,7 @@ module.exports = {
       "when": "{{args && args.stop}}",
       "method": "shell.run",
       "params": {
-        "message": "docker compose down",
+        "message": "docker compose stop",
         "path": "."
       }
     },
@@ -35,7 +35,33 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        message: "powershell -Command \"if (Test-Path dynamic_conf.yml) { Remove-Item -Recurse -Force dynamic_conf.yml -ErrorAction SilentlyContinue }\""
+        message: "type .env",
+        on: [{
+          "event": "/SECRET=(.+)/",
+          "done": true
+        }]
+      }
+    },
+    {
+      method: "local.set",
+      params: {
+        secret: "{{input.event[1].trim()}}"
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        message: [
+          "powershell -Command \"if (Test-Path dynamic_conf.yml) { Remove-Item -Recurse -Force dynamic_conf.yml -ErrorAction SilentlyContinue }\"",
+          "powershell -Command \"New-Item -ItemType Directory -Force -Path data/paperclip/instances/default\""
+        ]
+      }
+    },
+    {
+      method: "fs.write",
+      params: {
+        path: "data/paperclip/instances/default/config.json",
+        text: "{\n  \"auth\": {\n    \"baseUrl\": \"http://{{local.domain}}:8000\",\n    \"secret\": \"{{local.secret}}\"\n  }\n}"
       }
     },
     {
@@ -49,7 +75,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "docker compose --env-file .env up -d --force-recreate",
+          "docker compose --env-file .env up -d",
           "docker compose logs -f"
         ],
         on: [{
@@ -62,7 +88,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "powershell -Command \"Start-Sleep -Seconds 15\"",
+          "powershell -Command \"Start-Sleep -Seconds 5\"",
           "docker compose exec paperclip_app pnpm paperclipai auth bootstrap-ceo"
         ]
       }
