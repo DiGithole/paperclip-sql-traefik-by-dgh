@@ -10,4 +10,4 @@ http:
     paperclip_app:
       loadBalancer:
         servers:
-          - url: "http://paperclip_app:3105"
+          - url: "http://paperclip_app:3100"
