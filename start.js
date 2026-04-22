@@ -37,24 +37,10 @@ module.exports = {
       params: {
         message: [
           "powershell -Command \"if (Test-Path dynamic_conf.yml) { Remove-Item -Recurse -Force dynamic_conf.yml -ErrorAction SilentlyContinue }\"",
-          "powershell -Command \"New-Item -ItemType Directory -Force -Path data/paperclip/instances/default\""
-        ]
-      }
-    },
-    {
-      method: "fs.write",
-      params: {
-        path: "dynamic_conf.yml",
-        text: "http:\n  routers:\n    paperclip:\n      rule: \"PathPrefix(`/`)\"\n      service: paperclip_app\n      entryPoints:\n        - web\n\n  services:\n    paperclip_app:\n      loadBalancer:\n        servers:\n          - url: \"http://paperclip_app:3100\""
-      }
-    },
-    {
-      method: "shell.run",
-      params: {
-        message: [
+          "powershell -Command \"New-Item -ItemType Directory -Force -Path data/paperclip/instances/default\"",
+          "docker run --rm -v \"{{path.join(cwd, 'data', 'paperclip')}}:/fix\" busybox chmod -R 777 /fix",
           "docker compose --env-file .env up -d",
-          "powershell -Command \"Start-Sleep -Seconds 10\"",
-          "docker compose exec --user root paperclip_app chmod -R 777 /paperclip",
+          "powershell -Command \"Start-Sleep -Seconds 15\"",
           "docker compose exec --user node paperclip_app pnpm paperclipai onboard --yes",
           "docker compose exec --user node paperclip_app pnpm paperclipai auth bootstrap-ceo",
           "docker compose logs -f"
