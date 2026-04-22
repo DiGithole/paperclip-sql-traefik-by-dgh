@@ -69,12 +69,17 @@ The system automatically generates a `.env` file during installation:
 ---
 
 ## 🛠️ Credits & Deep Appreciation
-This signature edition is a tribute to the open-source pioneers whose work makes this possible:
+This signature edition is a tribute to the open-source pioneers whose work makes this possible, and to the key individuals who drove this implementation:
 
-- **[Paperclip AI](https://github.com/paperclipai/paperclip)**: Developed by the visionary team at Paperclipai. The core of this orchestration magic.
-- **[PostgreSQL](https://www.postgresql.org/)**: The PostgreSQL Global Development Group. For the most reliable database on earth.
-- **[Traefik Labs](https://traefik.io/traefik/)**: For creating the "unbearable lightness" of modern proxying.
-- **[Pinokio](https://pinokio.computer/)**: By @cocktailpeanut. The game-changing browser for the AI era.
+- **[Paperclip AI](https://github.com/paperclipai/paperclip)**: Developed by the visionary team at Paperclipai.
+- **[PostgreSQL](https://www.postgresql.org/)**: The PostgreSQL Global Development Group.
+- **[Traefik Labs](https://traefik.io/traefik/)**: For the modern edge routing.
+- **[Pinokio](https://pinokio.computer/)**: By @cocktailpeanut.
+
+### 🌟 Key Contributors
+A special thanks to the fundamental contributors who made this specific repository possible:
+- **Manuel Cavallaro**
+- **Giovanni Savino**
 
 ---
 
