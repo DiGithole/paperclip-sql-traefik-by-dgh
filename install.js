@@ -3,8 +3,8 @@ module.exports = {
     {
       method: "input",
       params: {
-        title: "Paperclip Configuration (Digithole Edition)",
-        description: "Configure your Paperclip + PostgreSQL + Traefik stack",
+        title: "Digithole Interactive Setup",
+        description: "Configure your Paperclip + Postgres + Traefik stack carefully. These settings will be saved to your .env file.",
         form: [
           {
             key: "domain",
@@ -76,8 +76,14 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "docker-compose build --no-cache"
+          "docker compose build --no-cache"
         ]
+      }
+    },
+    {
+      method: "notify",
+      params: {
+        html: "Installation successful! Click <b>Start</b> to launch the stack."
       }
     }
   ]

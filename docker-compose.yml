@@ -1,24 +1,24 @@
 services:
   traefik:
-    image: traefik:v2.10
+    image: traefik:v3.0
     container_name: traefik
     command:
       - "--api.insecure=true"
-      - "--providers.docker=true"
-      - "--providers.docker.exposedbydefault=false"
-      - "--providers.docker.endpoint=npipe:////./pipe/docker_engine"
       - "--entrypoints.web.address=:80"
       - "--entrypoints.websecure.address=:443"
+      - "--providers.file.filename=/etc/traefik/dynamic_conf.yml"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
       - "--certificatesresolvers.myresolver.acme.email=${EMAIL}"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
     ports:
       - "80:80"
       - "443:443"
       - "8080:8080"
     volumes:
-      - "\\\\.\\pipe\\docker_engine:\\\\.\\pipe\\docker_engine"
       - "./data/traefik:/letsencrypt"
+      - "./dynamic_conf.yml:/etc/traefik/dynamic_conf.yml:ro"
     restart: always
 
   db:
@@ -46,6 +46,8 @@ services:
     environment:
       - DATABASE_URL=postgres://paperclip:paperclip_password@db:5432/paperclip
       - BETTER_AUTH_SECRET=${SECRET:-paperclip-dev-secret}
+      - BETTER_AUTH_URL=http://${DOMAIN}
+      - BETTER_AUTH_BASE_URL=http://${DOMAIN}
       - PAPERCLIP_AGENT_JWT_SECRET=${SECRET:-paperclip-dev-secret}
       - SERVE_UI=true
       - PORT=3100
@@ -54,13 +56,4 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.paperclip.rule=Host(`${DOMAIN}`)"
-      - "traefik.http.routers.paperclip.entrypoints=websecure"
-      - "traefik.http.routers.paperclip.tls.certresolver=myresolver"
-      - "traefik.http.services.paperclip.loadbalancer.server.port=3100"
-      - "traefik.http.routers.paperclip-http.rule=Host(`${DOMAIN}`)"
-      - "traefik.http.routers.paperclip-http.entrypoints=web"
-      - "traefik.http.routers.paperclip-http.middlewares=redirect-to-https"
-      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+

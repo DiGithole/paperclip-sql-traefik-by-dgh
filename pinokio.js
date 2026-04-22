@@ -11,6 +11,7 @@ module.exports = {
         if (local && local.url) {
           return [
             { icon: "fa-solid fa-rocket", text: "Open WebUI", href: local.url, target: "_blank" },
+            { icon: "fa-solid fa-user-shield", text: "Bootstrap CEO", href: "bootstrap.js" },
             { icon: "fa-solid fa-terminal", text: "Terminal", href: "start.js" },
             { icon: "fa-solid fa-circle-stop", text: "Stop", href: "start.js", params: { stop: true } }
           ]

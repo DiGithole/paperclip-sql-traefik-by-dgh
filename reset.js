@@ -4,7 +4,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "docker-compose down --rmi all --volumes",
+          "docker compose down --rmi all --volumes",
           "rm -rf app",
           "rm -rf data",
           "rm .env"
