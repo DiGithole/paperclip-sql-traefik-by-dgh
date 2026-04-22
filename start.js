@@ -20,9 +20,15 @@ module.exports = {
           "docker-compose up"
         ],
         on: [{
-          "event": "/(http:\\/\\/[0-9.:]+)/",
+          "event": "/Server listening on 0.0.0.0:3100/",
           "done": true
         }]
+      }
+    },
+    {
+      method: "web.open",
+      params: {
+        url: "{{local.url}}"
       }
     }
   ]
