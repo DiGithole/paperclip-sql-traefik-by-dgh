@@ -1,0 +1,20 @@
+http:
+  routers:
+    paperclip:
+      rule: "HostRegexp(`{host:.+}`)"
+      service: paperclip_app
+      entryPoints:
+        - web
+    paperclip-secure:
+      rule: "HostRegexp(`{host:.+}`)"
+      service: paperclip_app
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: myresolver
+
+  services:
+    paperclip_app:
+      loadBalancer:
+        servers:
+          - url: "http://paperclip_app:3100"

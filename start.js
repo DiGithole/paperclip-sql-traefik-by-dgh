@@ -19,30 +19,17 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        message: "type .env",
-        on: [{
-          "event": "/DOMAIN=(.+)/",
-          "done": true
-        }]
-      }
-    },
-    {
-      method: "local.set",
-      params: {
-        domain: "{{input.event[1].trim()}}"
-      }
-    },
-    {
-      method: "shell.run",
-      params: {
-        message: "powershell -Command \"if (Test-Path dynamic_conf.yml) { if ((Get-Item dynamic_conf.yml).PSIsContainer) { Remove-Item -Recurse -Force dynamic_conf.yml } }\""
+        message: [
+          "powershell -Command \"docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)\"",
+          "powershell -Command \"if (Test-Path dynamic_conf.yml) { Remove-Item -Recurse -Force dynamic_conf.yml -ErrorAction SilentlyContinue }\""
+        ]
       }
     },
     {
       method: "fs.write",
       params: {
         path: "dynamic_conf.yml",
-        text: "http:\n  routers:\n    paperclip:\n      rule: \"HostRegexp(`{host:.+}`)\"\n      service: paperclip_app\n      entryPoints:\n        - web\n    paperclip-secure:\n      rule: \"HostRegexp(`{host:.+}`)\"\n      service: paperclip_app\n      entryPoints:\n        - websecure\n      tls:\n        certResolver: myresolver\n\n  services:\n    paperclip_app:\n      loadBalancer:\n        servers:\n          - url: \"http://paperclip_app:3100\""
+        text: "http:\n  routers:\n    paperclip:\n      rule: \"PathPrefix(`/`)\"\n      service: paperclip_app\n      entryPoints:\n        - web\n\n  services:\n    paperclip_app:\n      loadBalancer:\n        servers:\n          - url: \"http://paperclip_app:3100\""
       }
     },
     {
@@ -73,7 +60,7 @@ module.exports = {
     {
       method: "local.set",
       params: {
-        url: "http://{{local.domain}}:8000"
+        url: "http://localhost:8000"
       }
     }
   ]
