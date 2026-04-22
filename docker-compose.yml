@@ -34,10 +34,14 @@ services:
       dockerfile: Dockerfile
     container_name: paperclip_app
     environment:
+      PAPERCLIP_DATABASE_URL: postgres://paperclip:db@paperclip_db:5432/paperclip
+      PAPERCLIP_AUTH_SECRET: ${SECRET}
+      PAPERCLIP_AUTH_BASE_URL: http://${DOMAIN}:8000
+      PAPERCLIP_HOME: /paperclip
       DATABASE_URL: postgres://paperclip:db@paperclip_db:5432/paperclip
       BETTER_AUTH_SECRET: ${SECRET}
       BETTER_AUTH_URL: http://${DOMAIN}:8000
-      PAPERCLIP_HOME: /paperclip
+      PORT: 3100
     volumes:
       - ./data/paperclip:/paperclip
     depends_on:

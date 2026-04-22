@@ -35,33 +35,10 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        message: "type .env",
-        on: [{
-          "event": "/SECRET=(.+)/",
-          "done": true
-        }]
-      }
-    },
-    {
-      method: "local.set",
-      params: {
-        secret: "{{input.event[1].trim()}}"
-      }
-    },
-    {
-      method: "shell.run",
-      params: {
         message: [
           "powershell -Command \"if (Test-Path dynamic_conf.yml) { Remove-Item -Recurse -Force dynamic_conf.yml -ErrorAction SilentlyContinue }\"",
           "powershell -Command \"New-Item -ItemType Directory -Force -Path data/paperclip/instances/default\""
         ]
-      }
-    },
-    {
-      method: "fs.write",
-      params: {
-        path: "data/paperclip/instances/default/config.json",
-        text: "{\n  \"auth\": {\n    \"baseUrl\": \"http://{{local.domain}}:8000\",\n    \"secret\": \"{{local.secret}}\"\n  }\n}"
       }
     },
     {
@@ -76,27 +53,11 @@ module.exports = {
       params: {
         message: [
           "docker compose --env-file .env up -d",
+          "powershell -Command \"Start-Sleep -Seconds 10\"",
+          "docker compose exec --user node paperclip_app pnpm paperclipai onboard --yes",
+          "docker compose exec --user node paperclip_app pnpm paperclipai auth bootstrap-ceo",
           "docker compose logs -f"
-        ],
-        on: [{
-          "event": "/Server listening on/",
-          "done": true
-        }]
-      }
-    },
-    {
-      method: "shell.run",
-      params: {
-        message: [
-          "powershell -Command \"Start-Sleep -Seconds 5\"",
-          "docker compose exec paperclip_app pnpm paperclipai auth bootstrap-ceo"
         ]
-      }
-    },
-    {
-      method: "shell.run",
-      params: {
-        message: "docker compose logs -f"
       }
     },
     {

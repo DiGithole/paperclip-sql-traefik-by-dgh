@@ -1091,3 +1091,151 @@
 2026-04-22T20:21:33.140Z [memory] 
 2026-04-22T20:21:54.343Z [memory] {"ts":1776889314342,"step":7,"input":{"id":"eb7b44c2-a172-408c-826a-ead4a62845ce","event":["Server listening on"]},"args":{},"global":{},"local":{"domain":"paperclip.localhost"},"port":42004}
 2026-04-22T20:21:54.343Z [memory] 
+2026-04-22T20:24:29.659Z [memory] {"ts":1776889469659,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:24:29.659Z [memory] 
+2026-04-22T20:24:29.659Z [memory] {"ts":1776889469659,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:24:29.659Z [memory] 
+2026-04-22T20:24:29.690Z [memory] {"ts":1776889469684,"step":1,"input":null,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:24:29.690Z [memory] 
+2026-04-22T20:24:29.712Z [memory] {"ts":1776889469712,"step":2,"input":null,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:24:29.712Z [memory] 
+2026-04-22T20:24:33.158Z [memory] {"ts":1776889473157,"step":3,"input":{"id":"2f8736db-fc8b-4aac-b112-d9486489a044","event":["DOMAIN=paperclip.localhost","paperclip.localhost"]},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:24:33.158Z [memory] 
+2026-04-22T20:24:33.220Z [api local.set] 
+2026-04-22T20:24:33.220Z [api local.set] 
+2026-04-22T20:24:33.220Z [api local.set] ===================================================
+2026-04-22T20:24:33.220Z [api local.set] 
+2026-04-22T20:24:33.220Z [api local.set] # local variables
+2026-04-22T20:24:33.220Z [api local.set] 
+2026-04-22T20:24:33.220Z [api local.set] {
+2026-04-22T20:24:33.220Z [api local.set]   "domain": "paperclip.localhost"
+2026-04-22T20:24:33.220Z [api local.set] }
+2026-04-22T20:24:33.221Z [api local.set] 
+2026-04-22T20:24:33.221Z [api local.set] ===================================================
+2026-04-22T20:24:33.221Z [api local.set] 
+2026-04-22T20:24:33.221Z [api local.set] 
+2026-04-22T20:24:33.254Z [memory] {"ts":1776889473254,"step":4,"args":{},"global":{},"local":{"domain":"paperclip.localhost"},"port":42004}
+2026-04-22T20:24:33.254Z [memory] 
+2026-04-22T20:24:36.753Z [memory] {"ts":1776889476752,"step":5,"input":{"id":"db4ed29f-c159-494d-9209-b763b186f7c4","event":["SECRET=paperclip-very-secure-random-secret-32-chars-long","paperclip-very-secure-random-secret-32-chars-long"]},"args":{},"global":{},"local":{"domain":"paperclip.localhost"},"port":42004}
+2026-04-22T20:24:36.753Z [memory] 
+2026-04-22T20:24:36.825Z [api local.set] 
+2026-04-22T20:24:36.825Z [api local.set] 
+2026-04-22T20:24:36.825Z [api local.set] ===================================================
+2026-04-22T20:24:36.825Z [api local.set] 
+2026-04-22T20:24:36.825Z [api local.set] # local variables
+2026-04-22T20:24:36.825Z [api local.set] 
+2026-04-22T20:24:36.825Z [api local.set] {
+2026-04-22T20:24:36.825Z [api local.set]   "domain": "paperclip.localhost",
+2026-04-22T20:24:36.825Z [api local.set]   "secret": "paperclip-very-secure-random-secret-32-chars-long"
+2026-04-22T20:24:36.825Z [api local.set] }
+2026-04-22T20:24:36.825Z [api local.set] 
+2026-04-22T20:24:36.825Z [api local.set] ===================================================
+2026-04-22T20:24:36.825Z [api local.set] 
+2026-04-22T20:24:36.825Z [api local.set] 
+2026-04-22T20:24:36.878Z [memory] {"ts":1776889476878,"step":6,"args":{},"global":{},"local":{"domain":"paperclip.localhost","secret":"paperclip-very-secure-random-secret-32-chars-long"},"port":42004}
+2026-04-22T20:24:36.878Z [memory] 
+2026-04-22T20:24:45.666Z [memory] {"ts":1776889485665,"step":7,"input":{"id":"4e9296cb-8486-494d-b504-920a65fe76ed"},"args":{},"global":{},"local":{"domain":"paperclip.localhost","secret":"paperclip-very-secure-random-secret-32-chars-long"},"port":42004}
+2026-04-22T20:24:45.666Z [memory] 
+2026-04-22T20:24:45.850Z [memory] {"ts":1776889485849,"step":8,"args":{},"global":{},"local":{"domain":"paperclip.localhost","secret":"paperclip-very-secure-random-secret-32-chars-long"},"port":42004}
+2026-04-22T20:24:45.850Z [memory] 
+2026-04-22T20:24:45.999Z [memory] {"ts":1776889485998,"step":9,"args":{},"global":{},"local":{"domain":"paperclip.localhost","secret":"paperclip-very-secure-random-secret-32-chars-long"},"port":42004}
+2026-04-22T20:24:45.999Z [memory] 
+2026-04-22T20:24:55.640Z [memory] {"ts":1776889495636,"step":10,"input":{"id":"2e0089f5-6180-4bff-bf96-c681c2719a1f","event":["Server listening on"]},"args":{},"global":{},"local":{"domain":"paperclip.localhost","secret":"paperclip-very-secure-random-secret-32-chars-long"},"port":42004}
+2026-04-22T20:24:55.640Z [memory] 
+2026-04-22T20:25:23.377Z [memory] {"ts":1776889523376,"step":11,"input":{"id":"be78bc85-777f-438c-903a-b20c7bcdcfee"},"args":{},"global":{},"local":{"domain":"paperclip.localhost","secret":"paperclip-very-secure-random-secret-32-chars-long"},"port":42004}
+2026-04-22T20:25:23.377Z [memory] 
+2026-04-22T20:27:35.347Z [memory] {"ts":1776889655347,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:27:35.347Z [memory] 
+2026-04-22T20:27:35.347Z [memory] {"ts":1776889655347,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:27:35.347Z [memory] 
+2026-04-22T20:27:35.372Z [memory] {"ts":1776889655372,"step":1,"input":null,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:27:35.372Z [memory] 
+2026-04-22T20:27:35.401Z [memory] {"ts":1776889655401,"step":2,"input":null,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:27:35.401Z [memory] 
+2026-04-22T20:27:38.833Z [memory] {"ts":1776889658832,"step":3,"input":{"id":"d916cb14-e36f-4922-b303-be1a249d68c8","event":["DOMAIN=paperclip.localhost","paperclip.localhost"]},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:27:38.833Z [memory] 
+2026-04-22T20:27:38.914Z [api local.set] 
+2026-04-22T20:27:38.914Z [api local.set] 
+2026-04-22T20:27:38.914Z [api local.set] ===================================================
+2026-04-22T20:27:38.914Z [api local.set] 
+2026-04-22T20:27:38.914Z [api local.set] # local variables
+2026-04-22T20:27:38.914Z [api local.set] 
+2026-04-22T20:27:38.914Z [api local.set] {
+2026-04-22T20:27:38.914Z [api local.set]   "domain": "paperclip.localhost"
+2026-04-22T20:27:38.914Z [api local.set] }
+2026-04-22T20:27:38.914Z [api local.set] 
+2026-04-22T20:27:38.914Z [api local.set] ===================================================
+2026-04-22T20:27:38.914Z [api local.set] 
+2026-04-22T20:27:38.914Z [api local.set] 
+2026-04-22T20:27:38.949Z [memory] {"ts":1776889658948,"step":4,"args":{},"global":{},"local":{"domain":"paperclip.localhost"},"port":42004}
+2026-04-22T20:27:38.949Z [memory] 
+2026-04-22T20:27:47.460Z [memory] {"ts":1776889667459,"step":5,"input":{"id":"1e5b75cd-7558-4d76-bb88-318f20b78803"},"args":{},"global":{},"local":{"domain":"paperclip.localhost"},"port":42004}
+2026-04-22T20:27:47.460Z [memory] 
+2026-04-22T20:27:47.672Z [memory] {"ts":1776889667672,"step":6,"args":{},"global":{},"local":{"domain":"paperclip.localhost"},"port":42004}
+2026-04-22T20:27:47.672Z [memory] 
+2026-04-22T20:29:20.086Z [memory] {"ts":1776889760085,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:29:20.086Z [memory] 
+2026-04-22T20:29:20.086Z [memory] {"ts":1776889760085,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:29:20.086Z [memory] 
+2026-04-22T20:29:20.114Z [memory] {"ts":1776889760113,"step":1,"input":null,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:29:20.114Z [memory] 
+2026-04-22T20:29:20.140Z [memory] {"ts":1776889760140,"step":2,"input":null,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:29:20.140Z [memory] 
+2026-04-22T20:31:47.686Z [memory] {"ts":1776889907686,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:31:47.686Z [memory] 
+2026-04-22T20:31:47.687Z [memory] {"ts":1776889907686,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:31:47.687Z [memory] 
+2026-04-22T20:31:47.725Z [memory] {"ts":1776889907719,"step":1,"input":null,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:31:47.725Z [memory] 
+2026-04-22T20:31:47.750Z [memory] {"ts":1776889907750,"step":2,"input":null,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:31:47.750Z [memory] 
+2026-04-22T20:31:51.200Z [memory] {"ts":1776889911199,"step":3,"input":{"id":"dd257344-93ea-470b-bf12-05e93dd5e0ef","event":["DOMAIN=paperclip.localhost","paperclip.localhost"]},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:31:51.200Z [memory] 
+2026-04-22T20:31:51.266Z [api local.set] 
+2026-04-22T20:31:51.266Z [api local.set] 
+2026-04-22T20:31:51.266Z [api local.set] ===================================================
+2026-04-22T20:31:51.266Z [api local.set] 
+2026-04-22T20:31:51.266Z [api local.set] # local variables
+2026-04-22T20:31:51.266Z [api local.set] 
+2026-04-22T20:31:51.266Z [api local.set] {
+2026-04-22T20:31:51.266Z [api local.set]   "domain": "paperclip.localhost"
+2026-04-22T20:31:51.266Z [api local.set] }
+2026-04-22T20:31:51.266Z [api local.set] 
+2026-04-22T20:31:51.266Z [api local.set] ===================================================
+2026-04-22T20:31:51.266Z [api local.set] 
+2026-04-22T20:31:51.266Z [api local.set] 
+2026-04-22T20:31:51.308Z [memory] {"ts":1776889911305,"step":4,"args":{},"global":{},"local":{"domain":"paperclip.localhost"},"port":42004}
+2026-04-22T20:31:51.308Z [memory] 
+2026-04-22T20:31:59.984Z [memory] {"ts":1776889919984,"step":5,"input":{"id":"aecb14d4-0ffa-4835-9cf4-66bf512a3e11"},"args":{},"global":{},"local":{"domain":"paperclip.localhost"},"port":42004}
+2026-04-22T20:31:59.984Z [memory] 
+2026-04-22T20:32:00.164Z [memory] {"ts":1776889920163,"step":6,"args":{},"global":{},"local":{"domain":"paperclip.localhost"},"port":42004}
+2026-04-22T20:32:00.164Z [memory] 
+2026-04-22T20:33:32.001Z [memory] {"ts":1776890011995,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:33:32.001Z [memory] 
+2026-04-22T20:33:32.001Z [memory] {"ts":1776890011995,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:33:32.001Z [memory] 
+2026-04-22T20:33:32.028Z [memory] {"ts":1776890012027,"step":1,"input":null,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:33:32.028Z [memory] 
+2026-04-22T20:33:32.057Z [memory] {"ts":1776890012056,"step":2,"input":null,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:33:32.057Z [memory] 
+2026-04-22T20:33:35.447Z [memory] {"ts":1776890015447,"step":3,"input":{"id":"769573a5-6ed5-4bed-a31f-9616b9433cae","event":["DOMAIN=paperclip.localhost","paperclip.localhost"]},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T20:33:35.447Z [memory] 
+2026-04-22T20:33:35.510Z [api local.set] # local variables
+2026-04-22T20:33:35.510Z [api local.set] 
+2026-04-22T20:33:35.510Z [api local.set] 
+2026-04-22T20:33:35.510Z [api local.set] 
+2026-04-22T20:33:35.510Z [api local.set] ===================================================
+2026-04-22T20:33:35.510Z [api local.set] 
+2026-04-22T20:33:35.510Z [api local.set] {
+2026-04-22T20:33:35.510Z [api local.set]   "domain": "paperclip.localhost"
+2026-04-22T20:33:35.510Z [api local.set] }
+2026-04-22T20:33:35.510Z [api local.set] 
+2026-04-22T20:33:35.510Z [api local.set] ===================================================
+2026-04-22T20:33:35.510Z [api local.set] 
+2026-04-22T20:33:35.510Z [api local.set] 
+2026-04-22T20:33:35.548Z [memory] {"ts":1776890015548,"step":4,"args":{},"global":{},"local":{"domain":"paperclip.localhost"},"port":42004}
+2026-04-22T20:33:35.548Z [memory] 
+2026-04-22T20:33:44.008Z [memory] {"ts":1776890024008,"step":5,"input":{"id":"5f90839a-c221-4aed-a8f9-2168c28ab39b"},"args":{},"global":{},"local":{"domain":"paperclip.localhost"},"port":42004}
+2026-04-22T20:33:44.008Z [memory] 
+2026-04-22T20:33:44.164Z [memory] {"ts":1776890024163,"step":6,"args":{},"global":{},"local":{"domain":"paperclip.localhost"},"port":42004}
+2026-04-22T20:33:44.164Z [memory] 
