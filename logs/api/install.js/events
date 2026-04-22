@@ -122,3 +122,47 @@
 2026-04-22T17:46:34.835Z [memory] 
 2026-04-22T17:46:42.803Z [memory] {"ts":1776880002803,"step":6,"input":{"id":"f7af4518-f2af-471f-b763-dfc40a942210"},"args":{},"global":{},"local":{},"port":42004}
 2026-04-22T17:46:42.803Z [memory] 
+2026-04-22T18:37:39.440Z [memory] {"ts":1776883059439,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:37:39.440Z [memory] 
+2026-04-22T18:37:39.440Z [memory] {"ts":1776883059439,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:37:39.440Z [memory] 
+2026-04-22T18:37:41.197Z [memory] {"ts":1776883061196,"step":1,"input":{"domain":"paperclip.localhost","email":"admin@paperclip.local","secret":"paperclip-very-secure-random-secret-32-chars-long"},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:37:41.197Z [memory] 
+2026-04-22T18:37:41.364Z [memory] {"ts":1776883061363,"step":2,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:37:41.364Z [memory] 
+2026-04-22T18:37:41.396Z [memory] {"ts":1776883061396,"step":3,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:37:41.396Z [memory] 
+2026-04-22T18:37:51.272Z [memory] {"ts":1776883071271,"step":4,"input":{"id":"567814b0-782b-425c-ba7f-07bd4ae06037"},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:37:51.272Z [memory] 
+2026-04-22T18:37:55.569Z [memory] {"ts":1776883075569,"step":5,"input":{"id":"400f502e-39ac-4136-b569-426b3d8b765e"},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:37:55.569Z [memory] 
+2026-04-22T18:38:03.744Z [memory] {"ts":1776883083744,"step":6,"input":{"id":"126dd939-e850-4e54-8ddf-80a78cf80601"},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:38:03.744Z [memory] 
+2026-04-22T18:54:19.549Z [memory] {"ts":1776884059549,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:54:19.549Z [memory] 
+2026-04-22T18:54:19.549Z [memory] {"ts":1776884059549,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:54:19.549Z [memory] 
+2026-04-22T18:54:27.589Z [memory] {"ts":1776884067588,"step":1,"input":{"domain":"paperclip.localhost","email":"admin@paperclip.local","secret":"paperclip-very-secure-random-secret-32-chars-long"},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:54:27.589Z [memory] 
+2026-04-22T18:54:27.782Z [memory] {"ts":1776884067781,"step":2,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:54:27.782Z [memory] 
+2026-04-22T18:54:27.815Z [memory] {"ts":1776884067815,"step":3,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:54:27.815Z [memory] 
+2026-04-22T18:54:36.633Z [memory] {"ts":1776884076632,"step":4,"input":{"id":"0764be83-b446-4e72-a5da-7652f1494d22"},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:54:36.633Z [memory] 
+2026-04-22T18:54:40.766Z [memory] {"ts":1776884080765,"step":5,"input":{"id":"377f537f-6ce9-45c8-b552-359c78ca40d7"},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:54:40.766Z [memory] 
+2026-04-22T18:54:48.713Z [memory] {"ts":1776884088713,"step":6,"input":{"id":"50ddfd5e-58d7-4396-9414-7ff4f366e0cb"},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T18:54:48.713Z [memory] 
+2026-04-22T19:28:53.268Z [memory] {"ts":1776886133267,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T19:28:53.268Z [memory] 
+2026-04-22T19:28:53.268Z [memory] {"ts":1776886133267,"step":0,"input":{},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T19:28:53.268Z [memory] 
+2026-04-22T19:28:54.830Z [memory] {"ts":1776886134829,"step":1,"input":{"domain":"paperclip.localhost","email":"admin@paperclip.local","secret":"paperclip-very-secure-random-secret-32-chars-long"},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T19:28:54.830Z [memory] 
+2026-04-22T19:28:55.030Z [memory] {"ts":1776886135029,"step":2,"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T19:28:55.030Z [memory] 
+2026-04-22T19:29:05.531Z [memory] {"ts":1776886145531,"step":3,"input":{"id":"05a89957-c0d9-4cf2-9e10-807d3ccb06fa"},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T19:29:05.531Z [memory] 
+2026-04-22T19:29:09.778Z [memory] {"ts":1776886149778,"step":4,"input":{"id":"47a0f1f1-10a1-46e0-b10d-d9482d3ed565"},"args":{},"global":{},"local":{},"port":42004}
+2026-04-22T19:29:09.778Z [memory] 

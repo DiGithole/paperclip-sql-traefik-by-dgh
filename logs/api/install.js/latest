@@ -8,11 +8,11 @@ F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & cond
 #1 DONE 0.0s
 
 #2 [internal] load build definition from Dockerfile
-#2 transferring dockerfile: 3.04kB 0.0s done
+#2 transferring dockerfile: 3.04kB done
 #2 DONE 0.0s
 
 #3 [internal] load metadata for docker.io/library/node:lts-trixie-slim
-#3 DONE 1.4s
+#3 DONE 0.7s
 
 #4 [internal] load .dockerignore
 #4 transferring context: 139B done
@@ -27,363 +27,363 @@ F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & cond
 #6 DONE 2.3s
 
 #7 [base 2/3] RUN apt-get update   && apt-get install -y --no-install-recommends ca-certificates gosu curl gh git wget ripgrep python3   && rm -rf /var/lib/apt/lists/*   && corepack enable
-#7 0.912 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
-#7 1.100 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
-#7 1.197 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
-#7 1.278 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9671 kB]
-#7 2.287 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
-#7 2.363 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [127 kB]
-#7 2.811 Fetched 10.0 MB in 2s (4719 kB/s)
-#7 2.811 Reading package lists...
-#7 3.185 Reading package lists...
-#7 3.547 Building dependency tree...
-#7 3.642 Reading state information...
-#7 3.760 The following additional packages will be installed:
-#7 3.760   git-man libbrotli1 libcom-err2 libcurl3t64-gnutls libcurl4t64 liberror-perl
-#7 3.760   libexpat1 libffi8 libgdbm-compat4t64 libgdbm6t64 libgnutls30t64
-#7 3.760   libgssapi-krb5-2 libidn2-0 libk5crypto3 libkeyutils1 libkrb5-3
-#7 3.760   libkrb5support0 libldap2 libncursesw6 libnghttp2-14 libnghttp3-9
-#7 3.760   libngtcp2-16 libngtcp2-crypto-gnutls8 libp11-kit0 libperl5.40 libpsl5t64
-#7 3.760   libpython3-stdlib libpython3.13-minimal libpython3.13-stdlib libreadline8t64
-#7 3.760   librtmp1 libsasl2-2 libsasl2-modules-db libssh2-1t64 libtasn1-6
-#7 3.760   libunistring5 media-types netbase openssl perl perl-modules-5.40
-#7 3.761   python3-minimal python3.13 python3.13-minimal readline-common
-#7 3.762 Suggested packages:
-#7 3.762   gettext-base git-doc git-email git-gui gitk gitweb git-cvs git-mediawiki
-#7 3.762   git-svn gdbm-l10n gnutls-bin krb5-doc krb5-user sensible-utils perl-doc
-#7 3.762   libterm-readline-gnu-perl | libterm-readline-perl-perl make
-#7 3.762   libtap-harness-archive-perl python3-doc python3-tk python3-venv
-#7 3.762   python3.13-venv python3.13-doc binutils binfmt-support readline-doc
-#7 3.762 Recommended packages:
-#7 3.762   bash-completion patch less ssh-client krb5-locales libldap-common libgpm2
-#7 3.762   publicsuffix libsasl2-modules
-#7 3.955 The following NEW packages will be installed:
-#7 3.955   ca-certificates curl gh git git-man gosu libbrotli1 libcom-err2
-#7 3.955   libcurl3t64-gnutls libcurl4t64 liberror-perl libexpat1 libffi8
-#7 3.955   libgdbm-compat4t64 libgdbm6t64 libgnutls30t64 libgssapi-krb5-2 libidn2-0
-#7 3.955   libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap2 libncursesw6
-#7 3.955   libnghttp2-14 libnghttp3-9 libngtcp2-16 libngtcp2-crypto-gnutls8 libp11-kit0
-#7 3.955   libperl5.40 libpsl5t64 libpython3-stdlib libpython3.13-minimal
-#7 3.956   libpython3.13-stdlib libreadline8t64 librtmp1 libsasl2-2 libsasl2-modules-db
-#7 3.956   libssh2-1t64 libtasn1-6 libunistring5 media-types netbase openssl perl
-#7 3.956   perl-modules-5.40 python3 python3-minimal python3.13 python3.13-minimal
-#7 3.956   readline-common ripgrep wget
-#7 4.150 0 upgraded, 53 newly installed, 0 to remove and 0 not upgraded.
-#7 4.150 Need to get 43.3 MB of archives.
-#7 4.150 After this operation, 195 MB of additional disk space will be used.
-#7 4.150 Get:1 http://deb.debian.org/debian trixie/main amd64 libexpat1 amd64 2.7.1-2 [108 kB]
-#7 4.346 Get:2 http://deb.debian.org/debian trixie/main amd64 libpython3.13-minimal amd64 3.13.5-2 [862 kB]
-#7 4.835 Get:3 http://deb.debian.org/debian trixie/main amd64 python3.13-minimal amd64 3.13.5-2 [2224 kB]
-#7 4.998 Get:4 http://deb.debian.org/debian trixie/main amd64 python3-minimal amd64 3.13.5-1 [27.2 kB]
-#7 5.095 Get:5 http://deb.debian.org/debian trixie/main amd64 media-types all 13.0.0 [29.3 kB]
-#7 5.097 Get:6 http://deb.debian.org/debian trixie/main amd64 netbase all 6.5 [12.4 kB]
-#7 5.097 Get:7 http://deb.debian.org/debian trixie/main amd64 libffi8 amd64 3.4.8-2 [24.1 kB]
-#7 5.099 Get:8 http://deb.debian.org/debian trixie/main amd64 libncursesw6 amd64 6.5+20250216-2 [135 kB]
-#7 5.109 Get:9 http://deb.debian.org/debian trixie/main amd64 readline-common all 8.2-6 [69.4 kB]
-#7 5.115 Get:10 http://deb.debian.org/debian trixie/main amd64 libreadline8t64 amd64 8.2-6 [169 kB]
-#7 5.122 Get:11 http://deb.debian.org/debian trixie/main amd64 libpython3.13-stdlib amd64 3.13.5-2 [1956 kB]
-#7 5.498 Get:12 http://deb.debian.org/debian trixie/main amd64 python3.13 amd64 3.13.5-2 [757 kB]
-#7 5.964 Get:13 http://deb.debian.org/debian trixie/main amd64 libpython3-stdlib amd64 3.13.5-1 [10.2 kB]
-#7 5.964 Get:14 http://deb.debian.org/debian trixie/main amd64 python3 amd64 3.13.5-1 [28.2 kB]
-#7 5.966 Get:15 http://deb.debian.org/debian-security trixie-security/main amd64 openssl amd64 3.5.5-1~deb13u2 [1500 kB]
-#7 6.063 Get:16 http://deb.debian.org/debian trixie/main amd64 ca-certificates all 20250419 [162 kB]
-#7 6.997 Get:17 http://deb.debian.org/debian trixie/main amd64 perl-modules-5.40 all 5.40.1-6 [3019 kB]
-#7 7.209 Get:18 http://deb.debian.org/debian trixie/main amd64 libgdbm6t64 amd64 1.24-2 [75.2 kB]
-#7 7.214 Get:19 http://deb.debian.org/debian trixie/main amd64 libgdbm-compat4t64 amd64 1.24-2 [50.3 kB]
-#7 7.625 Get:20 http://deb.debian.org/debian trixie/main amd64 libperl5.40 amd64 5.40.1-6 [4341 kB]
-#7 7.869 Get:21 http://deb.debian.org/debian trixie/main amd64 perl amd64 5.40.1-6 [267 kB]
-#7 7.890 Get:22 http://deb.debian.org/debian trixie/main amd64 libunistring5 amd64 1.3-2 [477 kB]
-#7 7.918 Get:23 http://deb.debian.org/debian trixie/main amd64 libidn2-0 amd64 2.3.8-2 [109 kB]
-#7 7.925 Get:24 http://deb.debian.org/debian trixie/main amd64 libp11-kit0 amd64 0.25.5-3 [425 kB]
-#7 7.957 Get:25 http://deb.debian.org/debian trixie/main amd64 libtasn1-6 amd64 4.20.0-2 [49.9 kB]
-#7 7.961 Get:26 http://deb.debian.org/debian trixie/main amd64 libgnutls30t64 amd64 3.8.9-3+deb13u2 [1468 kB]
-#7 8.062 Get:27 http://deb.debian.org/debian trixie/main amd64 libpsl5t64 amd64 0.21.2-1.1+b1 [57.2 kB]
-#7 8.065 Get:28 http://deb.debian.org/debian trixie/main amd64 wget amd64 1.25.0-2 [984 kB]
-#7 8.110 Get:29 http://deb.debian.org/debian trixie/main amd64 libbrotli1 amd64 1.1.0-2+b7 [307 kB]
-#7 8.119 Get:30 http://deb.debian.org/debian trixie/main amd64 libkrb5support0 amd64 1.21.3-5 [33.0 kB]
-#7 8.119 Get:31 http://deb.debian.org/debian trixie/main amd64 libcom-err2 amd64 1.47.2-3+b10 [25.0 kB]
-#7 8.152 Get:32 http://deb.debian.org/debian trixie/main amd64 libk5crypto3 amd64 1.21.3-5 [81.5 kB]
-#7 8.178 Get:33 http://deb.debian.org/debian trixie/main amd64 libkeyutils1 amd64 1.6.3-6 [9456 B]
-#7 8.187 Get:34 http://deb.debian.org/debian trixie/main amd64 libkrb5-3 amd64 1.21.3-5 [326 kB]
-#7 8.230 Get:35 http://deb.debian.org/debian trixie/main amd64 libgssapi-krb5-2 amd64 1.21.3-5 [138 kB]
-#7 8.317 Get:36 http://deb.debian.org/debian trixie/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-9 [19.8 kB]
-#7 8.318 Get:37 http://deb.debian.org/debian trixie/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-9 [57.5 kB]
-#7 8.323 Get:38 http://deb.debian.org/debian trixie/main amd64 libldap2 amd64 2.6.10+dfsg-1 [194 kB]
-#7 8.334 Get:39 http://deb.debian.org/debian trixie/main amd64 libnghttp2-14 amd64 1.64.0-1.1 [76.0 kB]
-#7 8.338 Get:40 http://deb.debian.org/debian trixie/main amd64 libnghttp3-9 amd64 1.8.0-1 [67.7 kB]
-#7 8.344 Get:41 http://deb.debian.org/debian trixie/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b5 [58.8 kB]
-#7 8.371 Get:42 http://deb.debian.org/debian trixie/main amd64 libssh2-1t64 amd64 1.11.1-1 [245 kB]
-#7 8.390 Get:43 http://deb.debian.org/debian trixie/main amd64 libcurl4t64 amd64 8.14.1-2+deb13u2 [391 kB]
-#7 8.421 Get:44 http://deb.debian.org/debian trixie/main amd64 curl amd64 8.14.1-2+deb13u2 [270 kB]
-#7 8.454 Get:45 http://deb.debian.org/debian trixie/main amd64 gh amd64 2.46.0-3 [7616 kB]
-#7 9.470 Get:46 http://deb.debian.org/debian-security trixie-security/main amd64 libngtcp2-16 amd64 1.11.0-1+deb13u1 [132 kB]
-#7 9.482 Get:47 http://deb.debian.org/debian-security trixie-security/main amd64 libngtcp2-crypto-gnutls8 amd64 1.11.0-1+deb13u1 [29.5 kB]
-#7 9.483 Get:48 http://deb.debian.org/debian trixie/main amd64 libcurl3t64-gnutls amd64 8.14.1-2+deb13u2 [383 kB]
-#7 9.494 Get:49 http://deb.debian.org/debian trixie/main amd64 liberror-perl all 0.17030-1 [26.9 kB]
-#7 9.494 Get:50 http://deb.debian.org/debian trixie/main amd64 git-man all 1:2.47.3-0+deb13u1 [2205 kB]
-#7 9.792 Get:51 http://deb.debian.org/debian trixie/main amd64 git amd64 1:2.47.3-0+deb13u1 [8862 kB]
-#7 11.07 Get:52 http://deb.debian.org/debian trixie/main amd64 gosu amd64 1.17-3+b4 [940 kB]
-#7 11.13 Get:53 http://deb.debian.org/debian trixie/main amd64 ripgrep amd64 14.1.1-1+b4 [1434 kB]
-#7 11.34 debconf: unable to initialize frontend: Dialog
-#7 11.34 debconf: (TERM is not set, so the dialog frontend is not usable.)
-#7 11.34 debconf: falling back to frontend: Readline
-#7 11.34 debconf: unable to initialize frontend: Readline
-#7 11.34 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 53.)
-#7 11.34 debconf: falling back to frontend: Teletype
-#7 11.35 debconf: unable to initialize frontend: Teletype
-#7 11.35 debconf: (This frontend requires a controlling tty.)
-#7 11.35 debconf: falling back to frontend: Noninteractive
-#7 12.10 Preconfiguring packages ...
-#7 12.16 Fetched 43.3 MB in 7s (6010 kB/s)
-#7 12.19 Selecting previously unselected package libexpat1:amd64.
+#7 0.678 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+#7 0.877 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.955 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 1.030 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9671 kB]
+#7 3.690 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 3.789 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [127 kB]
+#7 4.133 Fetched 10.0 MB in 4s (2712 kB/s)
+#7 4.133 Reading package lists...
+#7 4.539 Reading package lists...
+#7 4.942 Building dependency tree...
+#7 5.049 Reading state information...
+#7 5.204 The following additional packages will be installed:
+#7 5.204   git-man libbrotli1 libcom-err2 libcurl3t64-gnutls libcurl4t64 liberror-perl
+#7 5.204   libexpat1 libffi8 libgdbm-compat4t64 libgdbm6t64 libgnutls30t64
+#7 5.204   libgssapi-krb5-2 libidn2-0 libk5crypto3 libkeyutils1 libkrb5-3
+#7 5.205   libkrb5support0 libldap2 libncursesw6 libnghttp2-14 libnghttp3-9
+#7 5.205   libngtcp2-16 libngtcp2-crypto-gnutls8 libp11-kit0 libperl5.40 libpsl5t64
+#7 5.205   libpython3-stdlib libpython3.13-minimal libpython3.13-stdlib libreadline8t64
+#7 5.205   librtmp1 libsasl2-2 libsasl2-modules-db libssh2-1t64 libtasn1-6
+#7 5.205   libunistring5 media-types netbase openssl perl perl-modules-5.40
+#7 5.206   python3-minimal python3.13 python3.13-minimal readline-common
+#7 5.207 Suggested packages:
+#7 5.207   gettext-base git-doc git-email git-gui gitk gitweb git-cvs git-mediawiki
+#7 5.207   git-svn gdbm-l10n gnutls-bin krb5-doc krb5-user sensible-utils perl-doc
+#7 5.207   libterm-readline-gnu-perl | libterm-readline-perl-perl make
+#7 5.207   libtap-harness-archive-perl python3-doc python3-tk python3-venv
+#7 5.207   python3.13-venv python3.13-doc binutils binfmt-support readline-doc
+#7 5.207 Recommended packages:
+#7 5.207   bash-completion patch less ssh-client krb5-locales libldap-common libgpm2
+#7 5.207   publicsuffix libsasl2-modules
+#7 5.417 The following NEW packages will be installed:
+#7 5.418   ca-certificates curl gh git git-man gosu libbrotli1 libcom-err2
+#7 5.418   libcurl3t64-gnutls libcurl4t64 liberror-perl libexpat1 libffi8
+#7 5.418   libgdbm-compat4t64 libgdbm6t64 libgnutls30t64 libgssapi-krb5-2 libidn2-0
+#7 5.418   libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap2 libncursesw6
+#7 5.418   libnghttp2-14 libnghttp3-9 libngtcp2-16 libngtcp2-crypto-gnutls8 libp11-kit0
+#7 5.418   libperl5.40 libpsl5t64 libpython3-stdlib libpython3.13-minimal
+#7 5.418   libpython3.13-stdlib libreadline8t64 librtmp1 libsasl2-2 libsasl2-modules-db
+#7 5.418   libssh2-1t64 libtasn1-6 libunistring5 media-types netbase openssl perl
+#7 5.418   perl-modules-5.40 python3 python3-minimal python3.13 python3.13-minimal
+#7 5.418   readline-common ripgrep wget
+#7 5.599 0 upgraded, 53 newly installed, 0 to remove and 0 not upgraded.
+#7 5.599 Need to get 43.3 MB of archives.
+#7 5.599 After this operation, 195 MB of additional disk space will be used.
+#7 5.599 Get:1 http://deb.debian.org/debian trixie/main amd64 libexpat1 amd64 2.7.1-2 [108 kB]
+#7 5.855 Get:2 http://deb.debian.org/debian trixie/main amd64 libpython3.13-minimal amd64 3.13.5-2 [862 kB]
+#7 6.424 Get:3 http://deb.debian.org/debian trixie/main amd64 python3.13-minimal amd64 3.13.5-2 [2224 kB]
+#7 7.011 Get:4 http://deb.debian.org/debian trixie/main amd64 python3-minimal amd64 3.13.5-1 [27.2 kB]
+#7 7.049 Get:5 http://deb.debian.org/debian trixie/main amd64 media-types all 13.0.0 [29.3 kB]
+#7 7.050 Get:6 http://deb.debian.org/debian trixie/main amd64 netbase all 6.5 [12.4 kB]
+#7 7.050 Get:7 http://deb.debian.org/debian trixie/main amd64 libffi8 amd64 3.4.8-2 [24.1 kB]
+#7 7.070 Get:8 http://deb.debian.org/debian trixie/main amd64 libncursesw6 amd64 6.5+20250216-2 [135 kB]
+#7 7.174 Get:9 http://deb.debian.org/debian trixie/main amd64 readline-common all 8.2-6 [69.4 kB]
+#7 7.272 Get:10 http://deb.debian.org/debian trixie/main amd64 libreadline8t64 amd64 8.2-6 [169 kB]
+#7 7.478 Get:11 http://deb.debian.org/debian trixie/main amd64 libpython3.13-stdlib amd64 3.13.5-2 [1956 kB]
+#7 8.304 Get:12 http://deb.debian.org/debian trixie/main amd64 python3.13 amd64 3.13.5-2 [757 kB]
+#7 8.359 Get:13 http://deb.debian.org/debian trixie/main amd64 libpython3-stdlib amd64 3.13.5-1 [10.2 kB]
+#7 8.360 Get:14 http://deb.debian.org/debian trixie/main amd64 python3 amd64 3.13.5-1 [28.2 kB]
+#7 8.361 Get:15 http://deb.debian.org/debian-security trixie-security/main amd64 openssl amd64 3.5.5-1~deb13u2 [1500 kB]
+#7 8.837 Get:16 http://deb.debian.org/debian trixie/main amd64 ca-certificates all 20250419 [162 kB]
+#7 8.850 Get:17 http://deb.debian.org/debian trixie/main amd64 perl-modules-5.40 all 5.40.1-6 [3019 kB]
+#7 10.60 Get:18 http://deb.debian.org/debian trixie/main amd64 libgdbm6t64 amd64 1.24-2 [75.2 kB]
+#7 10.60 Get:19 http://deb.debian.org/debian trixie/main amd64 libgdbm-compat4t64 amd64 1.24-2 [50.3 kB]
+#7 10.61 Get:20 http://deb.debian.org/debian trixie/main amd64 libperl5.40 amd64 5.40.1-6 [4341 kB]
+#7 11.66 Get:21 http://deb.debian.org/debian trixie/main amd64 perl amd64 5.40.1-6 [267 kB]
+#7 11.67 Get:22 http://deb.debian.org/debian trixie/main amd64 libunistring5 amd64 1.3-2 [477 kB]
+#7 11.71 Get:23 http://deb.debian.org/debian trixie/main amd64 libidn2-0 amd64 2.3.8-2 [109 kB]
+#7 11.72 Get:24 http://deb.debian.org/debian trixie/main amd64 libp11-kit0 amd64 0.25.5-3 [425 kB]
+#7 11.75 Get:25 http://deb.debian.org/debian trixie/main amd64 libtasn1-6 amd64 4.20.0-2 [49.9 kB]
+#7 11.76 Get:26 http://deb.debian.org/debian trixie/main amd64 libgnutls30t64 amd64 3.8.9-3+deb13u2 [1468 kB]
+#7 11.87 Get:27 http://deb.debian.org/debian trixie/main amd64 libpsl5t64 amd64 0.21.2-1.1+b1 [57.2 kB]
+#7 11.87 Get:28 http://deb.debian.org/debian trixie/main amd64 wget amd64 1.25.0-2 [984 kB]
+#7 11.97 Get:29 http://deb.debian.org/debian trixie/main amd64 libbrotli1 amd64 1.1.0-2+b7 [307 kB]
+#7 11.99 Get:30 http://deb.debian.org/debian trixie/main amd64 libkrb5support0 amd64 1.21.3-5 [33.0 kB]
+#7 11.99 Get:31 http://deb.debian.org/debian trixie/main amd64 libcom-err2 amd64 1.47.2-3+b10 [25.0 kB]
+#7 11.99 Get:32 http://deb.debian.org/debian trixie/main amd64 libk5crypto3 amd64 1.21.3-5 [81.5 kB]
+#7 12.00 Get:33 http://deb.debian.org/debian trixie/main amd64 libkeyutils1 amd64 1.6.3-6 [9456 B]
+#7 12.02 Get:34 http://deb.debian.org/debian trixie/main amd64 libkrb5-3 amd64 1.21.3-5 [326 kB]
+#7 12.20 Get:35 http://deb.debian.org/debian trixie/main amd64 libgssapi-krb5-2 amd64 1.21.3-5 [138 kB]
+#7 12.29 Get:36 http://deb.debian.org/debian trixie/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-9 [19.8 kB]
+#7 12.29 Get:37 http://deb.debian.org/debian trixie/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-9 [57.5 kB]
+#7 12.29 Get:38 http://deb.debian.org/debian trixie/main amd64 libldap2 amd64 2.6.10+dfsg-1 [194 kB]
+#7 12.35 Get:39 http://deb.debian.org/debian trixie/main amd64 libnghttp2-14 amd64 1.64.0-1.1 [76.0 kB]
+#7 12.37 Get:40 http://deb.debian.org/debian trixie/main amd64 libnghttp3-9 amd64 1.8.0-1 [67.7 kB]
+#7 12.39 Get:41 http://deb.debian.org/debian trixie/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b5 [58.8 kB]
+#7 12.45 Get:42 http://deb.debian.org/debian trixie/main amd64 libssh2-1t64 amd64 1.11.1-1 [245 kB]
+#7 12.61 Get:43 http://deb.debian.org/debian trixie/main amd64 libcurl4t64 amd64 8.14.1-2+deb13u2 [391 kB]
+#7 12.68 Get:44 http://deb.debian.org/debian trixie/main amd64 curl amd64 8.14.1-2+deb13u2 [270 kB]
+#7 12.81 Get:45 http://deb.debian.org/debian trixie/main amd64 gh amd64 2.46.0-3 [7616 kB]
+#7 14.74 Get:46 http://deb.debian.org/debian-security trixie-security/main amd64 libngtcp2-16 amd64 1.11.0-1+deb13u1 [132 kB]
+#7 14.75 Get:47 http://deb.debian.org/debian-security trixie-security/main amd64 libngtcp2-crypto-gnutls8 amd64 1.11.0-1+deb13u1 [29.5 kB]
+#7 14.75 Get:48 http://deb.debian.org/debian trixie/main amd64 libcurl3t64-gnutls amd64 8.14.1-2+deb13u2 [383 kB]
+#7 14.78 Get:49 http://deb.debian.org/debian trixie/main amd64 liberror-perl all 0.17030-1 [26.9 kB]
+#7 14.78 Get:50 http://deb.debian.org/debian trixie/main amd64 git-man all 1:2.47.3-0+deb13u1 [2205 kB]
+#7 15.16 Get:51 http://deb.debian.org/debian trixie/main amd64 git amd64 1:2.47.3-0+deb13u1 [8862 kB]
+#7 17.36 Get:52 http://deb.debian.org/debian trixie/main amd64 gosu amd64 1.17-3+b4 [940 kB]
+#7 17.41 Get:53 http://deb.debian.org/debian trixie/main amd64 ripgrep amd64 14.1.1-1+b4 [1434 kB]
+#7 17.62 debconf: unable to initialize frontend: Dialog
+#7 17.62 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#7 17.62 debconf: falling back to frontend: Readline
+#7 17.62 debconf: unable to initialize frontend: Readline
+#7 17.62 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 53.)
+#7 17.62 debconf: falling back to frontend: Teletype
+#7 17.62 debconf: unable to initialize frontend: Teletype
+#7 17.62 debconf: (This frontend requires a controlling tty.)
+#7 17.62 debconf: falling back to frontend: Noninteractive
+#7 18.41 Preconfiguring packages ...
+#7 18.47 Fetched 43.3 MB in 12s (3599 kB/s)
+#7 18.49 Selecting previously unselected package libexpat1:amd64.
 (Reading database ... 5021 files and directories currently installed.)
-#7 12.22 Preparing to unpack .../libexpat1_2.7.1-2_amd64.deb ...
-#7 12.22 Unpacking libexpat1:amd64 (2.7.1-2) ...
-#7 12.26 Selecting previously unselected package libpython3.13-minimal:amd64.
-#7 12.26 Preparing to unpack .../libpython3.13-minimal_3.13.5-2_amd64.deb ...
-#7 12.26 Unpacking libpython3.13-minimal:amd64 (3.13.5-2) ...
-#7 12.38 Selecting previously unselected package python3.13-minimal.
-#7 12.38 Preparing to unpack .../python3.13-minimal_3.13.5-2_amd64.deb ...
-#7 12.39 Unpacking python3.13-minimal (3.13.5-2) ...
-#7 12.49 Setting up libpython3.13-minimal:amd64 (3.13.5-2) ...
-#7 12.50 Setting up libexpat1:amd64 (2.7.1-2) ...
-#7 12.51 Setting up python3.13-minimal (3.13.5-2) ...
-#7 12.97 Selecting previously unselected package python3-minimal.
+#7 18.52 Preparing to unpack .../libexpat1_2.7.1-2_amd64.deb ...
+#7 18.52 Unpacking libexpat1:amd64 (2.7.1-2) ...
+#7 18.57 Selecting previously unselected package libpython3.13-minimal:amd64.
+#7 18.57 Preparing to unpack .../libpython3.13-minimal_3.13.5-2_amd64.deb ...
+#7 18.57 Unpacking libpython3.13-minimal:amd64 (3.13.5-2) ...
+#7 18.66 Selecting previously unselected package python3.13-minimal.
+#7 18.66 Preparing to unpack .../python3.13-minimal_3.13.5-2_amd64.deb ...
+#7 18.67 Unpacking python3.13-minimal (3.13.5-2) ...
+#7 18.77 Setting up libpython3.13-minimal:amd64 (3.13.5-2) ...
+#7 18.78 Setting up libexpat1:amd64 (2.7.1-2) ...
+#7 18.79 Setting up python3.13-minimal (3.13.5-2) ...
+#7 19.22 Selecting previously unselected package python3-minimal.
 (Reading database ... 5355 files and directories currently installed.)
-#7 12.97 Preparing to unpack .../0-python3-minimal_3.13.5-1_amd64.deb ...
-#7 12.98 Unpacking python3-minimal (3.13.5-1) ...
-#7 13.01 Selecting previously unselected package media-types.
-#7 13.01 Preparing to unpack .../1-media-types_13.0.0_all.deb ...
-#7 13.01 Unpacking media-types (13.0.0) ...
-#7 13.04 Selecting previously unselected package netbase.
-#7 13.05 Preparing to unpack .../2-netbase_6.5_all.deb ...
-#7 13.05 Unpacking netbase (6.5) ...
-#7 13.08 Selecting previously unselected package libffi8:amd64.
-#7 13.08 Preparing to unpack .../3-libffi8_3.4.8-2_amd64.deb ...
-#7 13.08 Unpacking libffi8:amd64 (3.4.8-2) ...
-#7 13.11 Selecting previously unselected package libncursesw6:amd64.
-#7 13.11 Preparing to unpack .../4-libncursesw6_6.5+20250216-2_amd64.deb ...
-#7 13.11 Unpacking libncursesw6:amd64 (6.5+20250216-2) ...
-#7 13.15 Selecting previously unselected package readline-common.
-#7 13.15 Preparing to unpack .../5-readline-common_8.2-6_all.deb ...
-#7 13.15 Unpacking readline-common (8.2-6) ...
-#7 13.18 Selecting previously unselected package libreadline8t64:amd64.
-#7 13.18 Preparing to unpack .../6-libreadline8t64_8.2-6_amd64.deb ...
-#7 13.19 Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8 to /lib/x86_64-linux-gnu/libhistory.so.8.usr-is-merged by libreadline8t64'
-#7 13.20 Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8.2 to /lib/x86_64-linux-gnu/libhistory.so.8.2.usr-is-merged by libreadline8t64'
-#7 13.20 Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8 to /lib/x86_64-linux-gnu/libreadline.so.8.usr-is-merged by libreadline8t64'
-#7 13.21 Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8.2 to /lib/x86_64-linux-gnu/libreadline.so.8.2.usr-is-merged by libreadline8t64'
-#7 13.21 Unpacking libreadline8t64:amd64 (8.2-6) ...
-#7 13.25 Selecting previously unselected package libpython3.13-stdlib:amd64.
-#7 13.25 Preparing to unpack .../7-libpython3.13-stdlib_3.13.5-2_amd64.deb ...
-#7 13.25 Unpacking libpython3.13-stdlib:amd64 (3.13.5-2) ...
-#7 13.39 Selecting previously unselected package python3.13.
-#7 13.40 Preparing to unpack .../8-python3.13_3.13.5-2_amd64.deb ...
-#7 13.40 Unpacking python3.13 (3.13.5-2) ...
-#7 13.43 Selecting previously unselected package libpython3-stdlib:amd64.
-#7 13.43 Preparing to unpack .../9-libpython3-stdlib_3.13.5-1_amd64.deb ...
-#7 13.44 Unpacking libpython3-stdlib:amd64 (3.13.5-1) ...
-#7 13.46 Setting up python3-minimal (3.13.5-1) ...
-#7 13.58 Selecting previously unselected package python3.
+#7 19.23 Preparing to unpack .../0-python3-minimal_3.13.5-1_amd64.deb ...
+#7 19.23 Unpacking python3-minimal (3.13.5-1) ...
+#7 19.26 Selecting previously unselected package media-types.
+#7 19.26 Preparing to unpack .../1-media-types_13.0.0_all.deb ...
+#7 19.26 Unpacking media-types (13.0.0) ...
+#7 19.29 Selecting previously unselected package netbase.
+#7 19.29 Preparing to unpack .../2-netbase_6.5_all.deb ...
+#7 19.29 Unpacking netbase (6.5) ...
+#7 19.32 Selecting previously unselected package libffi8:amd64.
+#7 19.32 Preparing to unpack .../3-libffi8_3.4.8-2_amd64.deb ...
+#7 19.33 Unpacking libffi8:amd64 (3.4.8-2) ...
+#7 19.35 Selecting previously unselected package libncursesw6:amd64.
+#7 19.35 Preparing to unpack .../4-libncursesw6_6.5+20250216-2_amd64.deb ...
+#7 19.36 Unpacking libncursesw6:amd64 (6.5+20250216-2) ...
+#7 19.38 Selecting previously unselected package readline-common.
+#7 19.39 Preparing to unpack .../5-readline-common_8.2-6_all.deb ...
+#7 19.39 Unpacking readline-common (8.2-6) ...
+#7 19.42 Selecting previously unselected package libreadline8t64:amd64.
+#7 19.42 Preparing to unpack .../6-libreadline8t64_8.2-6_amd64.deb ...
+#7 19.43 Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8 to /lib/x86_64-linux-gnu/libhistory.so.8.usr-is-merged by libreadline8t64'
+#7 19.43 Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8.2 to /lib/x86_64-linux-gnu/libhistory.so.8.2.usr-is-merged by libreadline8t64'
+#7 19.44 Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8 to /lib/x86_64-linux-gnu/libreadline.so.8.usr-is-merged by libreadline8t64'
+#7 19.44 Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8.2 to /lib/x86_64-linux-gnu/libreadline.so.8.2.usr-is-merged by libreadline8t64'
+#7 19.44 Unpacking libreadline8t64:amd64 (8.2-6) ...
+#7 19.47 Selecting previously unselected package libpython3.13-stdlib:amd64.
+#7 19.47 Preparing to unpack .../7-libpython3.13-stdlib_3.13.5-2_amd64.deb ...
+#7 19.48 Unpacking libpython3.13-stdlib:amd64 (3.13.5-2) ...
+#7 19.62 Selecting previously unselected package python3.13.
+#7 19.62 Preparing to unpack .../8-python3.13_3.13.5-2_amd64.deb ...
+#7 19.62 Unpacking python3.13 (3.13.5-2) ...
+#7 19.65 Selecting previously unselected package libpython3-stdlib:amd64.
+#7 19.65 Preparing to unpack .../9-libpython3-stdlib_3.13.5-1_amd64.deb ...
+#7 19.65 Unpacking libpython3-stdlib:amd64 (3.13.5-1) ...
+#7 19.68 Setting up python3-minimal (3.13.5-1) ...
+#7 19.79 Selecting previously unselected package python3.
 (Reading database ... 5863 files and directories currently installed.)
-#7 13.59 Preparing to unpack .../00-python3_3.13.5-1_amd64.deb ...
-#7 13.60 Unpacking python3 (3.13.5-1) ...
-#7 13.63 Selecting previously unselected package openssl.
-#7 13.63 Preparing to unpack .../01-openssl_3.5.5-1~deb13u2_amd64.deb ...
-#7 13.64 Unpacking openssl (3.5.5-1~deb13u2) ...
-#7 13.70 Selecting previously unselected package ca-certificates.
-#7 13.70 Preparing to unpack .../02-ca-certificates_20250419_all.deb ...
-#7 13.71 Unpacking ca-certificates (20250419) ...
-#7 13.77 Selecting previously unselected package perl-modules-5.40.
-#7 13.77 Preparing to unpack .../03-perl-modules-5.40_5.40.1-6_all.deb ...
-#7 13.78 Unpacking perl-modules-5.40 (5.40.1-6) ...
-#7 14.18 Selecting previously unselected package libgdbm6t64:amd64.
-#7 14.18 Preparing to unpack .../04-libgdbm6t64_1.24-2_amd64.deb ...
-#7 14.19 Unpacking libgdbm6t64:amd64 (1.24-2) ...
-#7 14.21 Selecting previously unselected package libgdbm-compat4t64:amd64.
-#7 14.22 Preparing to unpack .../05-libgdbm-compat4t64_1.24-2_amd64.deb ...
-#7 14.22 Unpacking libgdbm-compat4t64:amd64 (1.24-2) ...
-#7 14.25 Selecting previously unselected package libperl5.40:amd64.
-#7 14.25 Preparing to unpack .../06-libperl5.40_5.40.1-6_amd64.deb ...
-#7 14.25 Unpacking libperl5.40:amd64 (5.40.1-6) ...
-#7 14.52 Selecting previously unselected package perl.
-#7 14.52 Preparing to unpack .../07-perl_5.40.1-6_amd64.deb ...
-#7 14.52 Unpacking perl (5.40.1-6) ...
-#7 14.57 Selecting previously unselected package libunistring5:amd64.
-#7 14.57 Preparing to unpack .../08-libunistring5_1.3-2_amd64.deb ...
-#7 14.57 Unpacking libunistring5:amd64 (1.3-2) ...
-#7 14.61 Selecting previously unselected package libidn2-0:amd64.
-#7 14.62 Preparing to unpack .../09-libidn2-0_2.3.8-2_amd64.deb ...
-#7 14.62 Unpacking libidn2-0:amd64 (2.3.8-2) ...
-#7 14.65 Selecting previously unselected package libp11-kit0:amd64.
-#7 14.65 Preparing to unpack .../10-libp11-kit0_0.25.5-3_amd64.deb ...
-#7 14.66 Unpacking libp11-kit0:amd64 (0.25.5-3) ...
-#7 14.69 Selecting previously unselected package libtasn1-6:amd64.
-#7 14.70 Preparing to unpack .../11-libtasn1-6_4.20.0-2_amd64.deb ...
-#7 14.70 Unpacking libtasn1-6:amd64 (4.20.0-2) ...
-#7 14.73 Selecting previously unselected package libgnutls30t64:amd64.
-#7 14.73 Preparing to unpack .../12-libgnutls30t64_3.8.9-3+deb13u2_amd64.deb ...
-#7 14.73 Unpacking libgnutls30t64:amd64 (3.8.9-3+deb13u2) ...
-#7 14.79 Selecting previously unselected package libpsl5t64:amd64.
-#7 14.79 Preparing to unpack .../13-libpsl5t64_0.21.2-1.1+b1_amd64.deb ...
-#7 14.79 Unpacking libpsl5t64:amd64 (0.21.2-1.1+b1) ...
-#7 14.82 Selecting previously unselected package wget.
-#7 14.82 Preparing to unpack .../14-wget_1.25.0-2_amd64.deb ...
-#7 14.83 Unpacking wget (1.25.0-2) ...
-#7 14.88 Selecting previously unselected package libbrotli1:amd64.
-#7 14.88 Preparing to unpack .../15-libbrotli1_1.1.0-2+b7_amd64.deb ...
-#7 14.88 Unpacking libbrotli1:amd64 (1.1.0-2+b7) ...
-#7 14.92 Selecting previously unselected package libkrb5support0:amd64.
-#7 14.92 Preparing to unpack .../16-libkrb5support0_1.21.3-5_amd64.deb ...
-#7 14.93 Unpacking libkrb5support0:amd64 (1.21.3-5) ...
-#7 14.96 Selecting previously unselected package libcom-err2:amd64.
-#7 14.97 Preparing to unpack .../17-libcom-err2_1.47.2-3+b10_amd64.deb ...
-#7 14.97 Unpacking libcom-err2:amd64 (1.47.2-3+b10) ...
-#7 15.00 Selecting previously unselected package libk5crypto3:amd64.
-#7 15.00 Preparing to unpack .../18-libk5crypto3_1.21.3-5_amd64.deb ...
-#7 15.00 Unpacking libk5crypto3:amd64 (1.21.3-5) ...
-#7 15.03 Selecting previously unselected package libkeyutils1:amd64.
-#7 15.04 Preparing to unpack .../19-libkeyutils1_1.6.3-6_amd64.deb ...
-#7 15.04 Unpacking libkeyutils1:amd64 (1.6.3-6) ...
-#7 15.07 Selecting previously unselected package libkrb5-3:amd64.
-#7 15.07 Preparing to unpack .../20-libkrb5-3_1.21.3-5_amd64.deb ...
-#7 15.07 Unpacking libkrb5-3:amd64 (1.21.3-5) ...
-#7 15.11 Selecting previously unselected package libgssapi-krb5-2:amd64.
-#7 15.12 Preparing to unpack .../21-libgssapi-krb5-2_1.21.3-5_amd64.deb ...
-#7 15.12 Unpacking libgssapi-krb5-2:amd64 (1.21.3-5) ...
-#7 15.15 Selecting previously unselected package libsasl2-modules-db:amd64.
-#7 15.15 Preparing to unpack .../22-libsasl2-modules-db_2.1.28+dfsg1-9_amd64.deb ...
-#7 15.15 Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-9) ...
-#7 15.18 Selecting previously unselected package libsasl2-2:amd64.
-#7 15.18 Preparing to unpack .../23-libsasl2-2_2.1.28+dfsg1-9_amd64.deb ...
-#7 15.19 Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-9) ...
-#7 15.22 Selecting previously unselected package libldap2:amd64.
-#7 15.22 Preparing to unpack .../24-libldap2_2.6.10+dfsg-1_amd64.deb ...
-#7 15.22 Unpacking libldap2:amd64 (2.6.10+dfsg-1) ...
-#7 15.26 Selecting previously unselected package libnghttp2-14:amd64.
-#7 15.26 Preparing to unpack .../25-libnghttp2-14_1.64.0-1.1_amd64.deb ...
-#7 15.26 Unpacking libnghttp2-14:amd64 (1.64.0-1.1) ...
-#7 15.29 Selecting previously unselected package libnghttp3-9:amd64.
-#7 15.29 Preparing to unpack .../26-libnghttp3-9_1.8.0-1_amd64.deb ...
-#7 15.30 Unpacking libnghttp3-9:amd64 (1.8.0-1) ...
-#7 15.33 Selecting previously unselected package librtmp1:amd64.
-#7 15.33 Preparing to unpack .../27-librtmp1_2.4+20151223.gitfa8646d.1-2+b5_amd64.deb ...
-#7 15.33 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b5) ...
-#7 15.36 Selecting previously unselected package libssh2-1t64:amd64.
-#7 15.36 Preparing to unpack .../28-libssh2-1t64_1.11.1-1_amd64.deb ...
-#7 15.37 Unpacking libssh2-1t64:amd64 (1.11.1-1) ...
-#7 15.40 Selecting previously unselected package libcurl4t64:amd64.
-#7 15.40 Preparing to unpack .../29-libcurl4t64_8.14.1-2+deb13u2_amd64.deb ...
-#7 15.41 Unpacking libcurl4t64:amd64 (8.14.1-2+deb13u2) ...
-#7 15.44 Selecting previously unselected package curl.
-#7 15.44 Preparing to unpack .../30-curl_8.14.1-2+deb13u2_amd64.deb ...
-#7 15.44 Unpacking curl (8.14.1-2+deb13u2) ...
-#7 15.47 Selecting previously unselected package gh.
-#7 15.48 Preparing to unpack .../31-gh_2.46.0-3_amd64.deb ...
-#7 15.48 Unpacking gh (2.46.0-3) ...
-#7 15.74 Selecting previously unselected package libngtcp2-16:amd64.
-#7 15.74 Preparing to unpack .../32-libngtcp2-16_1.11.0-1+deb13u1_amd64.deb ...
-#7 15.75 Unpacking libngtcp2-16:amd64 (1.11.0-1+deb13u1) ...
-#7 15.78 Selecting previously unselected package libngtcp2-crypto-gnutls8:amd64.
-#7 15.78 Preparing to unpack .../33-libngtcp2-crypto-gnutls8_1.11.0-1+deb13u1_amd64.deb ...
-#7 15.79 Unpacking libngtcp2-crypto-gnutls8:amd64 (1.11.0-1+deb13u1) ...
-#7 15.82 Selecting previously unselected package libcurl3t64-gnutls:amd64.
-#7 15.82 Preparing to unpack .../34-libcurl3t64-gnutls_8.14.1-2+deb13u2_amd64.deb ...
-#7 15.82 Unpacking libcurl3t64-gnutls:amd64 (8.14.1-2+deb13u2) ...
-#7 15.86 Selecting previously unselected package liberror-perl.
-#7 15.86 Preparing to unpack .../35-liberror-perl_0.17030-1_all.deb ...
-#7 15.86 Unpacking liberror-perl (0.17030-1) ...
-#7 15.89 Selecting previously unselected package git-man.
-#7 15.89 Preparing to unpack .../36-git-man_1%3a2.47.3-0+deb13u1_all.deb ...
-#7 15.89 Unpacking git-man (1:2.47.3-0+deb13u1) ...
-#7 15.95 Selecting previously unselected package git.
-#7 15.95 Preparing to unpack .../37-git_1%3a2.47.3-0+deb13u1_amd64.deb ...
-#7 15.96 Unpacking git (1:2.47.3-0+deb13u1) ...
-#7 16.22 Selecting previously unselected package gosu.
-#7 16.22 Preparing to unpack .../38-gosu_1.17-3+b4_amd64.deb ...
-#7 16.22 Unpacking gosu (1.17-3+b4) ...
-#7 16.28 Selecting previously unselected package ripgrep.
-#7 16.28 Preparing to unpack .../39-ripgrep_14.1.1-1+b4_amd64.deb ...
-#7 16.28 Unpacking ripgrep (14.1.1-1+b4) ...
-#7 16.36 Setting up media-types (13.0.0) ...
-#7 16.37 Setting up libkeyutils1:amd64 (1.6.3-6) ...
-#7 16.38 Setting up libgdbm6t64:amd64 (1.24-2) ...
-#7 16.39 Setting up libgdbm-compat4t64:amd64 (1.24-2) ...
-#7 16.40 Setting up libbrotli1:amd64 (1.1.0-2+b7) ...
-#7 16.42 Setting up libnghttp2-14:amd64 (1.64.0-1.1) ...
-#7 16.42 Setting up libcom-err2:amd64 (1.47.2-3+b10) ...
-#7 16.43 Setting up libkrb5support0:amd64 (1.21.3-5) ...
-#7 16.44 Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-9) ...
-#7 16.45 Setting up gosu (1.17-3+b4) ...
-#7 16.46 Setting up libunistring5:amd64 (1.3-2) ...
-#7 16.47 Setting up gh (2.46.0-3) ...
-#7 16.48 Setting up libncursesw6:amd64 (6.5+20250216-2) ...
-#7 16.49 Setting up libk5crypto3:amd64 (1.21.3-5) ...
-#7 16.49 Setting up libsasl2-2:amd64 (2.1.28+dfsg1-9) ...
-#7 16.50 Setting up libnghttp3-9:amd64 (1.8.0-1) ...
-#7 16.51 Setting up libffi8:amd64 (3.4.8-2) ...
-#7 16.52 Setting up perl-modules-5.40 (5.40.1-6) ...
-#7 16.53 Setting up ripgrep (14.1.1-1+b4) ...
-#7 16.54 Setting up libtasn1-6:amd64 (4.20.0-2) ...
-#7 16.55 Setting up git-man (1:2.47.3-0+deb13u1) ...
-#7 16.55 Setting up netbase (6.5) ...
-#7 16.58 Setting up libngtcp2-16:amd64 (1.11.0-1+deb13u1) ...
-#7 16.58 Setting up libkrb5-3:amd64 (1.21.3-5) ...
-#7 16.59 Setting up libssh2-1t64:amd64 (1.11.1-1) ...
-#7 16.60 Setting up openssl (3.5.5-1~deb13u2) ...
-#7 16.62 Setting up readline-common (8.2-6) ...
-#7 16.63 Setting up libldap2:amd64 (2.6.10+dfsg-1) ...
-#7 16.64 Setting up libidn2-0:amd64 (2.3.8-2) ...
-#7 16.64 Setting up libperl5.40:amd64 (5.40.1-6) ...
-#7 16.65 Setting up ca-certificates (20250419) ...
-#7 16.71 debconf: unable to initialize frontend: Dialog
-#7 16.71 debconf: (TERM is not set, so the dialog frontend is not usable.)
-#7 16.71 debconf: falling back to frontend: Readline
-#7 16.71 debconf: unable to initialize frontend: Readline
-#7 16.71 debconf: (This frontend requires a controlling tty.)
-#7 16.71 debconf: falling back to frontend: Teletype
-#7 16.72 debconf: unable to initialize frontend: Teletype
-#7 16.72 debconf: (This frontend requires a controlling tty.)
-#7 16.72 debconf: falling back to frontend: Noninteractive
-#7 17.24 Updating certificates in /etc/ssl/certs...
-#7 17.96 150 added, 0 removed; done.
-#7 17.99 Setting up perl (5.40.1-6) ...
-#7 18.01 Setting up libp11-kit0:amd64 (0.25.5-3) ...
-#7 18.02 Setting up libgssapi-krb5-2:amd64 (1.21.3-5) ...
-#7 18.03 Setting up libreadline8t64:amd64 (8.2-6) ...
-#7 18.03 Setting up libpython3.13-stdlib:amd64 (3.13.5-2) ...
-#7 18.04 Setting up libpython3-stdlib:amd64 (3.13.5-1) ...
-#7 18.05 Setting up libgnutls30t64:amd64 (3.8.9-3+deb13u2) ...
-#7 18.06 Setting up python3.13 (3.13.5-2) ...
-#7 18.54 Setting up libpsl5t64:amd64 (0.21.2-1.1+b1) ...
-#7 18.54 Setting up python3 (3.13.5-1) ...
-#7 18.55 running python rtupdate hooks for python3.13...
-#7 18.55 running python post-rtupdate hooks for python3.13...
-#7 18.61 Setting up liberror-perl (0.17030-1) ...
-#7 18.62 Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b5) ...
-#7 18.62 Setting up libngtcp2-crypto-gnutls8:amd64 (1.11.0-1+deb13u1) ...
-#7 18.63 Setting up wget (1.25.0-2) ...
-#7 18.64 Setting up libcurl4t64:amd64 (8.14.1-2+deb13u2) ...
-#7 18.65 Setting up libcurl3t64-gnutls:amd64 (8.14.1-2+deb13u2) ...
-#7 18.65 Setting up git (1:2.47.3-0+deb13u1) ...
-#7 18.67 Setting up curl (8.14.1-2+deb13u2) ...
-#7 18.68 Processing triggers for libc-bin (2.41-12+deb13u2) ...
-#7 18.71 Processing triggers for ca-certificates (20250419) ...
-#7 18.72 Updating certificates in /etc/ssl/certs...
-#7 19.26 0 added, 0 removed; done.
-#7 19.26 Running hooks in /etc/ca-certificates/update.d...
-#7 19.26 done.
-#7 DONE 20.1s
+#7 19.79 Preparing to unpack .../00-python3_3.13.5-1_amd64.deb ...
+#7 19.80 Unpacking python3 (3.13.5-1) ...
+#7 19.82 Selecting previously unselected package openssl.
+#7 19.82 Preparing to unpack .../01-openssl_3.5.5-1~deb13u2_amd64.deb ...
+#7 19.83 Unpacking openssl (3.5.5-1~deb13u2) ...
+#7 19.88 Selecting previously unselected package ca-certificates.
+#7 19.88 Preparing to unpack .../02-ca-certificates_20250419_all.deb ...
+#7 19.89 Unpacking ca-certificates (20250419) ...
+#7 19.94 Selecting previously unselected package perl-modules-5.40.
+#7 19.94 Preparing to unpack .../03-perl-modules-5.40_5.40.1-6_all.deb ...
+#7 19.95 Unpacking perl-modules-5.40 (5.40.1-6) ...
+#7 20.34 Selecting previously unselected package libgdbm6t64:amd64.
+#7 20.34 Preparing to unpack .../04-libgdbm6t64_1.24-2_amd64.deb ...
+#7 20.35 Unpacking libgdbm6t64:amd64 (1.24-2) ...
+#7 20.38 Selecting previously unselected package libgdbm-compat4t64:amd64.
+#7 20.38 Preparing to unpack .../05-libgdbm-compat4t64_1.24-2_amd64.deb ...
+#7 20.38 Unpacking libgdbm-compat4t64:amd64 (1.24-2) ...
+#7 20.41 Selecting previously unselected package libperl5.40:amd64.
+#7 20.41 Preparing to unpack .../06-libperl5.40_5.40.1-6_amd64.deb ...
+#7 20.41 Unpacking libperl5.40:amd64 (5.40.1-6) ...
+#7 20.67 Selecting previously unselected package perl.
+#7 20.67 Preparing to unpack .../07-perl_5.40.1-6_amd64.deb ...
+#7 20.67 Unpacking perl (5.40.1-6) ...
+#7 20.71 Selecting previously unselected package libunistring5:amd64.
+#7 20.71 Preparing to unpack .../08-libunistring5_1.3-2_amd64.deb ...
+#7 20.71 Unpacking libunistring5:amd64 (1.3-2) ...
+#7 20.76 Selecting previously unselected package libidn2-0:amd64.
+#7 20.76 Preparing to unpack .../09-libidn2-0_2.3.8-2_amd64.deb ...
+#7 20.76 Unpacking libidn2-0:amd64 (2.3.8-2) ...
+#7 20.79 Selecting previously unselected package libp11-kit0:amd64.
+#7 20.79 Preparing to unpack .../10-libp11-kit0_0.25.5-3_amd64.deb ...
+#7 20.79 Unpacking libp11-kit0:amd64 (0.25.5-3) ...
+#7 20.83 Selecting previously unselected package libtasn1-6:amd64.
+#7 20.83 Preparing to unpack .../11-libtasn1-6_4.20.0-2_amd64.deb ...
+#7 20.83 Unpacking libtasn1-6:amd64 (4.20.0-2) ...
+#7 20.87 Selecting previously unselected package libgnutls30t64:amd64.
+#7 20.87 Preparing to unpack .../12-libgnutls30t64_3.8.9-3+deb13u2_amd64.deb ...
+#7 20.87 Unpacking libgnutls30t64:amd64 (3.8.9-3+deb13u2) ...
+#7 20.93 Selecting previously unselected package libpsl5t64:amd64.
+#7 20.93 Preparing to unpack .../13-libpsl5t64_0.21.2-1.1+b1_amd64.deb ...
+#7 20.93 Unpacking libpsl5t64:amd64 (0.21.2-1.1+b1) ...
+#7 20.96 Selecting previously unselected package wget.
+#7 20.96 Preparing to unpack .../14-wget_1.25.0-2_amd64.deb ...
+#7 20.96 Unpacking wget (1.25.0-2) ...
+#7 21.01 Selecting previously unselected package libbrotli1:amd64.
+#7 21.01 Preparing to unpack .../15-libbrotli1_1.1.0-2+b7_amd64.deb ...
+#7 21.01 Unpacking libbrotli1:amd64 (1.1.0-2+b7) ...
+#7 21.05 Selecting previously unselected package libkrb5support0:amd64.
+#7 21.05 Preparing to unpack .../16-libkrb5support0_1.21.3-5_amd64.deb ...
+#7 21.06 Unpacking libkrb5support0:amd64 (1.21.3-5) ...
+#7 21.08 Selecting previously unselected package libcom-err2:amd64.
+#7 21.08 Preparing to unpack .../17-libcom-err2_1.47.2-3+b10_amd64.deb ...
+#7 21.09 Unpacking libcom-err2:amd64 (1.47.2-3+b10) ...
+#7 21.11 Selecting previously unselected package libk5crypto3:amd64.
+#7 21.11 Preparing to unpack .../18-libk5crypto3_1.21.3-5_amd64.deb ...
+#7 21.12 Unpacking libk5crypto3:amd64 (1.21.3-5) ...
+#7 21.15 Selecting previously unselected package libkeyutils1:amd64.
+#7 21.15 Preparing to unpack .../19-libkeyutils1_1.6.3-6_amd64.deb ...
+#7 21.15 Unpacking libkeyutils1:amd64 (1.6.3-6) ...
+#7 21.19 Selecting previously unselected package libkrb5-3:amd64.
+#7 21.19 Preparing to unpack .../20-libkrb5-3_1.21.3-5_amd64.deb ...
+#7 21.19 Unpacking libkrb5-3:amd64 (1.21.3-5) ...
+#7 21.23 Selecting previously unselected package libgssapi-krb5-2:amd64.
+#7 21.23 Preparing to unpack .../21-libgssapi-krb5-2_1.21.3-5_amd64.deb ...
+#7 21.23 Unpacking libgssapi-krb5-2:amd64 (1.21.3-5) ...
+#7 21.26 Selecting previously unselected package libsasl2-modules-db:amd64.
+#7 21.26 Preparing to unpack .../22-libsasl2-modules-db_2.1.28+dfsg1-9_amd64.deb ...
+#7 21.26 Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-9) ...
+#7 21.29 Selecting previously unselected package libsasl2-2:amd64.
+#7 21.29 Preparing to unpack .../23-libsasl2-2_2.1.28+dfsg1-9_amd64.deb ...
+#7 21.29 Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-9) ...
+#7 21.32 Selecting previously unselected package libldap2:amd64.
+#7 21.32 Preparing to unpack .../24-libldap2_2.6.10+dfsg-1_amd64.deb ...
+#7 21.33 Unpacking libldap2:amd64 (2.6.10+dfsg-1) ...
+#7 21.36 Selecting previously unselected package libnghttp2-14:amd64.
+#7 21.36 Preparing to unpack .../25-libnghttp2-14_1.64.0-1.1_amd64.deb ...
+#7 21.36 Unpacking libnghttp2-14:amd64 (1.64.0-1.1) ...
+#7 21.40 Selecting previously unselected package libnghttp3-9:amd64.
+#7 21.40 Preparing to unpack .../26-libnghttp3-9_1.8.0-1_amd64.deb ...
+#7 21.40 Unpacking libnghttp3-9:amd64 (1.8.0-1) ...
+#7 21.43 Selecting previously unselected package librtmp1:amd64.
+#7 21.43 Preparing to unpack .../27-librtmp1_2.4+20151223.gitfa8646d.1-2+b5_amd64.deb ...
+#7 21.43 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b5) ...
+#7 21.46 Selecting previously unselected package libssh2-1t64:amd64.
+#7 21.46 Preparing to unpack .../28-libssh2-1t64_1.11.1-1_amd64.deb ...
+#7 21.47 Unpacking libssh2-1t64:amd64 (1.11.1-1) ...
+#7 21.50 Selecting previously unselected package libcurl4t64:amd64.
+#7 21.50 Preparing to unpack .../29-libcurl4t64_8.14.1-2+deb13u2_amd64.deb ...
+#7 21.51 Unpacking libcurl4t64:amd64 (8.14.1-2+deb13u2) ...
+#7 21.54 Selecting previously unselected package curl.
+#7 21.54 Preparing to unpack .../30-curl_8.14.1-2+deb13u2_amd64.deb ...
+#7 21.54 Unpacking curl (8.14.1-2+deb13u2) ...
+#7 21.57 Selecting previously unselected package gh.
+#7 21.58 Preparing to unpack .../31-gh_2.46.0-3_amd64.deb ...
+#7 21.58 Unpacking gh (2.46.0-3) ...
+#7 21.82 Selecting previously unselected package libngtcp2-16:amd64.
+#7 21.82 Preparing to unpack .../32-libngtcp2-16_1.11.0-1+deb13u1_amd64.deb ...
+#7 21.82 Unpacking libngtcp2-16:amd64 (1.11.0-1+deb13u1) ...
+#7 21.85 Selecting previously unselected package libngtcp2-crypto-gnutls8:amd64.
+#7 21.85 Preparing to unpack .../33-libngtcp2-crypto-gnutls8_1.11.0-1+deb13u1_amd64.deb ...
+#7 21.85 Unpacking libngtcp2-crypto-gnutls8:amd64 (1.11.0-1+deb13u1) ...
+#7 21.88 Selecting previously unselected package libcurl3t64-gnutls:amd64.
+#7 21.88 Preparing to unpack .../34-libcurl3t64-gnutls_8.14.1-2+deb13u2_amd64.deb ...
+#7 21.88 Unpacking libcurl3t64-gnutls:amd64 (8.14.1-2+deb13u2) ...
+#7 21.92 Selecting previously unselected package liberror-perl.
+#7 21.92 Preparing to unpack .../35-liberror-perl_0.17030-1_all.deb ...
+#7 21.92 Unpacking liberror-perl (0.17030-1) ...
+#7 21.95 Selecting previously unselected package git-man.
+#7 21.95 Preparing to unpack .../36-git-man_1%3a2.47.3-0+deb13u1_all.deb ...
+#7 21.95 Unpacking git-man (1:2.47.3-0+deb13u1) ...
+#7 22.00 Selecting previously unselected package git.
+#7 22.01 Preparing to unpack .../37-git_1%3a2.47.3-0+deb13u1_amd64.deb ...
+#7 22.01 Unpacking git (1:2.47.3-0+deb13u1) ...
+#7 22.26 Selecting previously unselected package gosu.
+#7 22.26 Preparing to unpack .../38-gosu_1.17-3+b4_amd64.deb ...
+#7 22.27 Unpacking gosu (1.17-3+b4) ...
+#7 22.33 Selecting previously unselected package ripgrep.
+#7 22.33 Preparing to unpack .../39-ripgrep_14.1.1-1+b4_amd64.deb ...
+#7 22.33 Unpacking ripgrep (14.1.1-1+b4) ...
+#7 22.40 Setting up media-types (13.0.0) ...
+#7 22.41 Setting up libkeyutils1:amd64 (1.6.3-6) ...
+#7 22.42 Setting up libgdbm6t64:amd64 (1.24-2) ...
+#7 22.43 Setting up libgdbm-compat4t64:amd64 (1.24-2) ...
+#7 22.44 Setting up libbrotli1:amd64 (1.1.0-2+b7) ...
+#7 22.44 Setting up libnghttp2-14:amd64 (1.64.0-1.1) ...
+#7 22.45 Setting up libcom-err2:amd64 (1.47.2-3+b10) ...
+#7 22.46 Setting up libkrb5support0:amd64 (1.21.3-5) ...
+#7 22.47 Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-9) ...
+#7 22.48 Setting up gosu (1.17-3+b4) ...
+#7 22.48 Setting up libunistring5:amd64 (1.3-2) ...
+#7 22.49 Setting up gh (2.46.0-3) ...
+#7 22.50 Setting up libncursesw6:amd64 (6.5+20250216-2) ...
+#7 22.50 Setting up libk5crypto3:amd64 (1.21.3-5) ...
+#7 22.51 Setting up libsasl2-2:amd64 (2.1.28+dfsg1-9) ...
+#7 22.52 Setting up libnghttp3-9:amd64 (1.8.0-1) ...
+#7 22.53 Setting up libffi8:amd64 (3.4.8-2) ...
+#7 22.54 Setting up perl-modules-5.40 (5.40.1-6) ...
+#7 22.54 Setting up ripgrep (14.1.1-1+b4) ...
+#7 22.56 Setting up libtasn1-6:amd64 (4.20.0-2) ...
+#7 22.56 Setting up git-man (1:2.47.3-0+deb13u1) ...
+#7 22.57 Setting up netbase (6.5) ...
+#7 22.59 Setting up libngtcp2-16:amd64 (1.11.0-1+deb13u1) ...
+#7 22.60 Setting up libkrb5-3:amd64 (1.21.3-5) ...
+#7 22.61 Setting up libssh2-1t64:amd64 (1.11.1-1) ...
+#7 22.62 Setting up openssl (3.5.5-1~deb13u2) ...
+#7 22.63 Setting up readline-common (8.2-6) ...
+#7 22.64 Setting up libldap2:amd64 (2.6.10+dfsg-1) ...
+#7 22.65 Setting up libidn2-0:amd64 (2.3.8-2) ...
+#7 22.66 Setting up libperl5.40:amd64 (5.40.1-6) ...
+#7 22.66 Setting up ca-certificates (20250419) ...
+#7 22.72 debconf: unable to initialize frontend: Dialog
+#7 22.72 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#7 22.72 debconf: falling back to frontend: Readline
+#7 22.72 debconf: unable to initialize frontend: Readline
+#7 22.72 debconf: (This frontend requires a controlling tty.)
+#7 22.72 debconf: falling back to frontend: Teletype
+#7 22.73 debconf: unable to initialize frontend: Teletype
+#7 22.73 debconf: (This frontend requires a controlling tty.)
+#7 22.73 debconf: falling back to frontend: Noninteractive
+#7 23.25 Updating certificates in /etc/ssl/certs...
+#7 23.98 150 added, 0 removed; done.
+#7 24.00 Setting up perl (5.40.1-6) ...
+#7 24.02 Setting up libp11-kit0:amd64 (0.25.5-3) ...
+#7 24.03 Setting up libgssapi-krb5-2:amd64 (1.21.3-5) ...
+#7 24.03 Setting up libreadline8t64:amd64 (8.2-6) ...
+#7 24.04 Setting up libpython3.13-stdlib:amd64 (3.13.5-2) ...
+#7 24.05 Setting up libpython3-stdlib:amd64 (3.13.5-1) ...
+#7 24.06 Setting up libgnutls30t64:amd64 (3.8.9-3+deb13u2) ...
+#7 24.06 Setting up python3.13 (3.13.5-2) ...
+#7 24.55 Setting up libpsl5t64:amd64 (0.21.2-1.1+b1) ...
+#7 24.56 Setting up python3 (3.13.5-1) ...
+#7 24.57 running python rtupdate hooks for python3.13...
+#7 24.57 running python post-rtupdate hooks for python3.13...
+#7 24.63 Setting up liberror-perl (0.17030-1) ...
+#7 24.64 Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b5) ...
+#7 24.65 Setting up libngtcp2-crypto-gnutls8:amd64 (1.11.0-1+deb13u1) ...
+#7 24.66 Setting up wget (1.25.0-2) ...
+#7 24.67 Setting up libcurl4t64:amd64 (8.14.1-2+deb13u2) ...
+#7 24.67 Setting up libcurl3t64-gnutls:amd64 (8.14.1-2+deb13u2) ...
+#7 24.68 Setting up git (1:2.47.3-0+deb13u1) ...
+#7 24.70 Setting up curl (8.14.1-2+deb13u2) ...
+#7 24.71 Processing triggers for libc-bin (2.41-12+deb13u2) ...
+#7 24.74 Processing triggers for ca-certificates (20250419) ...
+#7 24.75 Updating certificates in /etc/ssl/certs...
+#7 25.33 0 added, 0 removed; done.
+#7 25.33 Running hooks in /etc/ca-certificates/update.d...
+#7 25.33 done.
+#7 DONE 25.7s
 
 #8 [base 3/3] RUN usermod -u 1000 --non-unique node   && groupmod -g 1000 --non-unique node   && usermod -g 1000 -d /paperclip node
-#8 0.320 usermod: no changes
-#8 DONE 0.4s
+#8 0.245 usermod: no changes
+#8 DONE 0.3s
 
 #9 [deps  1/19] WORKDIR /app
-#9 DONE 0.0s
+#9 DONE 0.1s
 
 #10 [deps  2/19] COPY package.json pnpm-workspace.yaml pnpm-lock.yaml .npmrc ./
-#10 DONE 0.1s
+#10 DONE 0.0s
 
 #11 [deps  3/19] COPY cli/package.json cli/
 #11 DONE 0.0s
@@ -434,357 +434,378 @@ F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & cond
 #26 DONE 0.0s
 
 #27 [deps 19/19] RUN pnpm install --frozen-lockfile
-#27 0.285 ! Corepack is about to download https://registry.npmjs.org/pnpm/-/pnpm-9.15.4.tgz
-#27 2.500 Scope: all 16 workspace projects
-#27 2.510 (node:7) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
-#27 2.510 (Use `node --trace-deprecation ...` to show where the warning was created)
-#27 2.557 Lockfile is up to date, resolution step is skipped
-#27 2.602 Progress: resolved 1, reused 0, downloaded 0, added 0
-#27 2.708 Packages: +1065
-#27 2.708 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#27 3.285 
-#27 3.285    ╭───────────────────────────────────────────────────────────────────╮
-#27 3.285    │                                                                   │
-#27 3.285    │                Update available! 9.15.4 → 10.33.1.                │
-#27 3.285    │   Changelog: https://github.com/pnpm/pnpm/releases/tag/v10.33.1   │
-#27 3.285    │         Run "corepack install -g pnpm@10.33.1" to update.         │
-#27 3.285    │                                                                   │
-#27 3.285    ╰───────────────────────────────────────────────────────────────────╯
-#27 3.285
-#27 3.602 Progress: resolved 1065, reused 0, downloaded 39, added 37
-#27 4.602 Progress: resolved 1065, reused 0, downloaded 71, added 73
-#27 5.602 Progress: resolved 1065, reused 0, downloaded 112, added 116
-#27 6.602 Progress: resolved 1065, reused 0, downloaded 174, added 178
-#27 7.601 Progress: resolved 1065, reused 0, downloaded 255, added 259
-#27 8.602 Progress: resolved 1065, reused 0, downloaded 292, added 297
-#27 9.602 Progress: resolved 1065, reused 0, downloaded 353, added 357
-#27 10.60 Progress: resolved 1065, reused 0, downloaded 435, added 440
-#27 11.60 Progress: resolved 1065, reused 0, downloaded 517, added 522
-#27 12.60 Progress: resolved 1065, reused 0, downloaded 568, added 573
-#27 13.60 Progress: resolved 1065, reused 0, downloaded 607, added 612
-#27 14.60 Progress: resolved 1065, reused 0, downloaded 707, added 712
-#27 15.60 Progress: resolved 1065, reused 0, downloaded 773, added 778
-#27 16.60 Progress: resolved 1065, reused 0, downloaded 839, added 844
-#27 17.60 Progress: resolved 1065, reused 0, downloaded 947, added 952
-#27 18.60 Progress: resolved 1065, reused 0, downloaded 1032, added 1037
-#27 19.40 Progress: resolved 1065, reused 0, downloaded 1060, added 1065, done
-#27 19.85 .../@embedded-postgres/linux-x64 postinstall$ node scripts/hydrate-symlinks.js
-#27 19.87 .../sharp@0.34.5/node_modules/sharp install$ node install/check.js || npm run build
-#27 19.89 .../esbuild@0.25.12/node_modules/esbuild postinstall$ node install.js
-#27 19.89 .../esbuild@0.18.20/node_modules/esbuild postinstall$ node install.js
-#27 19.92 .../esbuild@0.27.3/node_modules/esbuild postinstall$ node install.js
-#27 19.92 .../@embedded-postgres/linux-x64 postinstall: Done
-#27 19.94 .../sharp@0.34.5/node_modules/sharp install: Done
-#27 19.95 .../esbuild@0.25.12/node_modules/esbuild postinstall: Done
-#27 19.96 .../esbuild@0.18.20/node_modules/esbuild postinstall: Done
-#27 19.99 .../esbuild@0.27.3/node_modules/esbuild postinstall: Done
-#27 20.38 .../es5-ext@0.10.64/node_modules/es5-ext postinstall$  node -e "try{require('./_postinstall')}catch(e){}" || exit 0
-#27 20.46 .../es5-ext@0.10.64/node_modules/es5-ext postinstall: Done
-#27 20.56  WARN  Failed to create bin at /app/server/node_modules/.bin/paperclip-plugin-dev-server. ENOENT: no such file or directory, open '/app/packages/plugins/sdk/dist/dev-cli.js'
-#27 20.74 
-#27 20.74 devDependencies:
-#27 20.74 + @playwright/test 1.58.2
-#27 20.74 + cross-env 10.1.0
-#27 20.74 + esbuild 0.27.3
-#27 20.74 + typescript 5.9.3
-#27 20.74 + vitest 3.2.4
-#27 20.74
-#27 20.86  WARN  Failed to create bin at /app/server/node_modules/.bin/paperclip-plugin-dev-server. ENOENT: no such file or directory, open '/app/server/node_modules/@paperclipai/plugin-sdk/dist/dev-cli.js'
-#27 20.87 Done in 18.6s
-#27 DONE 22.0s
+#27 0.254 ! Corepack is about to download https://registry.npmjs.org/pnpm/-/pnpm-9.15.4.tgz
+#27 2.743 Scope: all 16 workspace projects
+#27 2.751 (node:7) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+#27 2.751 (Use `node --trace-deprecation ...` to show where the warning was created)
+#27 2.804 Lockfile is up to date, resolution step is skipped
+#27 2.860 Progress: resolved 1, reused 0, downloaded 0, added 0
+#27 2.961 Packages: +1065
+#27 2.961 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#27 3.718 
+#27 3.718    ╭───────────────────────────────────────────────────────────────────╮
+#27 3.718    │                                                                   │
+#27 3.718    │                Update available! 9.15.4 → 10.33.1.                │
+#27 3.718    │   Changelog: https://github.com/pnpm/pnpm/releases/tag/v10.33.1   │
+#27 3.718    │         Run "corepack install -g pnpm@10.33.1" to update.         │
+#27 3.718    │                                                                   │
+#27 3.718    ╰───────────────────────────────────────────────────────────────────╯
+#27 3.718
+#27 3.860 Progress: resolved 1065, reused 0, downloaded 28, added 28
+#27 4.861 Progress: resolved 1065, reused 0, downloaded 44, added 44
+#27 5.861 Progress: resolved 1065, reused 0, downloaded 72, added 74
+#27 6.862 Progress: resolved 1065, reused 0, downloaded 81, added 83
+#27 7.862 Progress: resolved 1065, reused 0, downloaded 100, added 105
+#27 8.862 Progress: resolved 1065, reused 0, downloaded 120, added 125
+#27 9.863 Progress: resolved 1065, reused 0, downloaded 144, added 149
+#27 10.86 Progress: resolved 1065, reused 0, downloaded 187, added 192
+#27 11.86 Progress: resolved 1065, reused 0, downloaded 230, added 235
+#27 12.86 Progress: resolved 1065, reused 0, downloaded 258, added 263
+#27 13.86 Progress: resolved 1065, reused 0, downloaded 305, added 309
+#27 14.86 Progress: resolved 1065, reused 0, downloaded 337, added 342
+#27 15.86 Progress: resolved 1065, reused 0, downloaded 390, added 395
+#27 16.86 Progress: resolved 1065, reused 0, downloaded 424, added 429
+#27 17.86 Progress: resolved 1065, reused 0, downloaded 472, added 477
+#27 18.87 Progress: resolved 1065, reused 0, downloaded 519, added 524
+#27 19.87 Progress: resolved 1065, reused 0, downloaded 542, added 547
+#27 20.87 Progress: resolved 1065, reused 0, downloaded 580, added 585
+#27 21.87 Progress: resolved 1065, reused 0, downloaded 610, added 613
+#27 22.87 Progress: resolved 1065, reused 0, downloaded 647, added 651
+#27 23.87 Progress: resolved 1065, reused 0, downloaded 718, added 723
+#27 24.87 Progress: resolved 1065, reused 0, downloaded 742, added 747
+#27 25.87 Progress: resolved 1065, reused 0, downloaded 770, added 775
+#27 26.87 Progress: resolved 1065, reused 0, downloaded 794, added 799
+#27 27.87 Progress: resolved 1065, reused 0, downloaded 819, added 824
+#27 28.87 Progress: resolved 1065, reused 0, downloaded 873, added 878
+#27 29.87 Progress: resolved 1065, reused 0, downloaded 892, added 897
+#27 30.87 Progress: resolved 1065, reused 0, downloaded 915, added 920
+#27 31.87 Progress: resolved 1065, reused 0, downloaded 938, added 942
+#27 32.87 Progress: resolved 1065, reused 0, downloaded 973, added 978
+#27 33.87 Progress: resolved 1065, reused 0, downloaded 1003, added 1008
+#27 34.87 Progress: resolved 1065, reused 0, downloaded 1027, added 1032
+#27 35.87 Progress: resolved 1065, reused 0, downloaded 1054, added 1059
+#27 36.87 Progress: resolved 1065, reused 0, downloaded 1056, added 1061
+#27 39.80 Progress: resolved 1065, reused 0, downloaded 1057, added 1061
+#27 40.80 Progress: resolved 1065, reused 0, downloaded 1059, added 1064
+#27 43.68 Progress: resolved 1065, reused 0, downloaded 1060, added 1064
+#27 43.73 Progress: resolved 1065, reused 0, downloaded 1060, added 1065, done
+#27 44.18 .../@embedded-postgres/linux-x64 postinstall$ node scripts/hydrate-symlinks.js
+#27 44.21 .../sharp@0.34.5/node_modules/sharp install$ node install/check.js || npm run build
+#27 44.23 .../esbuild@0.25.12/node_modules/esbuild postinstall$ node install.js
+#27 44.23 .../esbuild@0.18.20/node_modules/esbuild postinstall$ node install.js
+#27 44.23 .../esbuild@0.27.3/node_modules/esbuild postinstall$ node install.js
+#27 44.29 .../@embedded-postgres/linux-x64 postinstall: Done
+#27 44.30 .../sharp@0.34.5/node_modules/sharp install: Done
+#27 44.30 .../esbuild@0.18.20/node_modules/esbuild postinstall: Done
+#27 44.32 .../esbuild@0.25.12/node_modules/esbuild postinstall: Done
+#27 44.34 .../esbuild@0.27.3/node_modules/esbuild postinstall: Done
+#27 44.78 .../es5-ext@0.10.64/node_modules/es5-ext postinstall$  node -e "try{require('./_postinstall')}catch(e){}" || exit 0
+#27 44.85 .../es5-ext@0.10.64/node_modules/es5-ext postinstall: Done
+#27 44.94  WARN  Failed to create bin at /app/server/node_modules/.bin/paperclip-plugin-dev-server. ENOENT: no such file or directory, open '/app/packages/plugins/sdk/dist/dev-cli.js'
+#27 45.11 
+#27 45.11 devDependencies:
+#27 45.11 + @playwright/test 1.58.2
+#27 45.11 + cross-env 10.1.0
+#27 45.11 + esbuild 0.27.3
+#27 45.11 + typescript 5.9.3
+#27 45.11 + vitest 3.2.4
+#27 45.11
+#27 45.23  WARN  Failed to create bin at /app/server/node_modules/.bin/paperclip-plugin-dev-server. ENOENT: no such file or directory, open '/app/server/node_modules/@paperclipai/plugin-sdk/dist/dev-cli.js'
+#27 45.25 Done in 42.7s
+#27 DONE 46.2s
 
 #28 [build 2/7] COPY --from=deps /app /app
-#28 DONE 12.0s
+#28 DONE 11.9s
 
 #29 [build 3/7] COPY . .
-#29 DONE 0.7s
+#29 DONE 0.8s
 
 #30 [build 4/7] RUN pnpm --filter @paperclipai/ui build
-#30 0.273 ! Corepack is about to download https://registry.npmjs.org/pnpm/-/pnpm-9.15.4.tgz
-#30 2.084 
-#30 2.084 > @paperclipai/ui@0.3.1 build /app/ui
-#30 2.084 > tsc -b && vite build
-#30 2.084
-#30 15.43 vite v6.4.1 building for production...
-#30 15.48 transforming...
-#30 26.22 ✓ 5327 modules transformed.
-#30 27.02 rendering chunks...
-#30 27.89 computing gzip size...
-#30 28.00 dist/index.html                                           2.28 kB │ gzip:   0.85 kB
-#30 28.00 dist/assets/index-AYr4k2sd.css                          274.56 kB │ gzip:  42.07 kB
-#30 28.00 dist/assets/clone-CXchKn_H.js                             0.10 kB │ gzip:   0.11 kB
-#30 28.00 dist/assets/channel-CJh29_EX.js                           0.11 kB │ gzip:   0.13 kB
-#30 28.00 dist/assets/init-Gi6I4Gst.js                              0.15 kB │ gzip:   0.13 kB
-#30 28.00 dist/assets/chunk-QZHKN3VN-BrP_tbTd.js                    0.19 kB │ gzip:   0.16 kB
-#30 28.00 dist/assets/chunk-55IACEB6-DSyLnxqp.js                    0.24 kB │ gzip:   0.21 kB
-#30 28.00 dist/assets/chunk-4BX2VUAB-DJDIu5dr.js                    0.30 kB │ gzip:   0.20 kB
-#30 28.00 dist/assets/diff-DbItnlRl.js                              0.31 kB │ gzip:   0.24 kB
-#30 28.00 dist/assets/chunk-FMBD7UC4-OJHoPB0i.js                    0.37 kB │ gzip:   0.27 kB
-#30 28.00 dist/assets/stateDiagram-v2-4FDKWEC3-Cct7mPgv.js          0.39 kB │ gzip:   0.29 kB
-#30 28.00 dist/assets/classDiagram-2ON5EDUG-BdxVeBmu.js             0.43 kB │ gzip:   0.30 kB
-#30 28.00 dist/assets/classDiagram-v2-WZHVMYZB-BdxVeBmu.js          0.43 kB │ gzip:   0.30 kB
-#30 28.00 dist/assets/chunk-QN33PNHL-DjPSR7CU.js                    0.53 kB │ gzip:   0.38 kB
-#30 28.00 dist/assets/brainfuck-C4LP7Hcl.js                         0.61 kB │ gzip:   0.33 kB
-#30 28.00 dist/assets/properties-C78fOPTZ.js                        0.67 kB │ gzip:   0.35 kB
-#30 28.00 dist/assets/infoDiagram-HS3SLOUP-eZ0sqKfx.js              0.69 kB │ gzip:   0.46 kB
-#30 28.00 dist/assets/cmake-BQqOBYOt.js                             0.78 kB │ gzip:   0.46 kB
-#30 28.00 dist/assets/asciiarmor-Df11BRmG.js                        0.79 kB │ gzip:   0.41 kB
-#30 28.00 dist/assets/http-DBlCnlav.js                              0.85 kB │ gzip:   0.41 kB
-#30 28.00 dist/assets/protobuf-ChK-085T.js                          0.86 kB │ gzip:   0.52 kB
-#30 28.00 dist/assets/solr-DehyRSwq.js                              0.87 kB │ gzip:   0.46 kB
-#30 28.00 dist/assets/troff-wAsdV37c.js                             0.96 kB │ gzip:   0.44 kB
-#30 28.00 dist/assets/spreadsheet-BCZA_wO0.js                       1.14 kB │ gzip:   0.54 kB
-#30 28.00 dist/assets/toml-Bm5Em-hy.js                              1.14 kB │ gzip:   0.54 kB
-#30 28.00 dist/assets/ordinal-Cboi1Yqb.js                           1.19 kB │ gzip:   0.57 kB
-#30 28.00 dist/assets/mbox-CNhZ1qSd.js                              1.40 kB │ gzip:   0.66 kB
-#30 28.00 dist/assets/chunk-TZMSLE5B-BVPkK03G.js                    1.44 kB │ gzip:   0.63 kB
-#30 28.00 dist/assets/sieve-C3Gn_uJK.js                             1.62 kB │ gzip:   0.77 kB
-#30 28.00 dist/assets/rpm-CTu-6PCP.js                               1.62 kB │ gzip:   0.83 kB
-#30 28.00 dist/assets/factor-kuTfRLto.js                            1.67 kB │ gzip:   0.61 kB
-#30 28.00 dist/assets/z80-Hz9HOZM7.js                               1.75 kB │ gzip:   0.81 kB
-#30 28.00 dist/assets/eiffel-CnydiIhH.js                            1.81 kB │ gzip:   0.92 kB
-#30 28.00 dist/assets/elm-vLlmbW-K.js                               1.89 kB │ gzip:   0.82 kB
-#30 28.00 dist/assets/mathematica-DTrFuWx2.js                       1.92 kB │ gzip:   0.82 kB
-#30 28.00 dist/assets/dockerfile-BKs6k2Af.js                        1.95 kB │ gzip:   0.67 kB
-#30 28.00 dist/assets/turtle-B1tBg_DP.js                            1.98 kB │ gzip:   0.90 kB
-#30 28.00 dist/assets/ebnf-CDyGwa7X.js                              1.99 kB │ gzip:   0.81 kB
-#30 28.00 dist/assets/smalltalk-CnHTOXQT.js                         2.01 kB │ gzip:   0.85 kB
-#30 28.00 dist/assets/dtd-DF_7sFjM.js                               2.06 kB │ gzip:   0.87 kB
-#30 28.00 dist/assets/mumps-BT43cFF4.js                             2.07 kB │ gzip:   0.98 kB
-#30 28.00 dist/assets/fcl-Kvtd6kyn.js                               2.08 kB │ gzip:   0.95 kB
-#30 28.00 dist/assets/ntriples-BfvgReVJ.js                          2.10 kB │ gzip:   0.75 kB
-#30 28.00 dist/assets/yacas-BJ4BC0dw.js                             2.15 kB │ gzip:   1.09 kB
-#30 28.00 dist/assets/simple-mode-GW_nhZxv.js                       2.28 kB │ gzip:   1.09 kB
-#30 28.00 dist/assets/apl-B4CMkyY2.js                               2.30 kB │ gzip:   1.23 kB
-#30 28.00 dist/assets/pascal--L3eBynH.js                            2.30 kB │ gzip:   1.19 kB
-#30 28.00 dist/assets/octave-Ck1zUtKM.js                            2.31 kB │ gzip:   1.09 kB
-#30 28.00 dist/assets/commonlisp-DBKNyK5s.js                        2.32 kB │ gzip:   1.10 kB
-#30 28.00 dist/assets/tcl-DVfN8rqt.js                               2.36 kB │ gzip:   1.23 kB
-#30 28.00 dist/assets/index-BySVZqvp.js                             2.42 kB │ gzip:   1.50 kB
-#30 28.00 dist/assets/webidl-ZXfAyPTL.js                            2.52 kB │ gzip:   1.26 kB
-#30 28.00 dist/assets/pig-CevX1Tat.js                               2.53 kB │ gzip:   1.38 kB
-#30 28.00 dist/assets/puppet-DMA9R1ak.js                            2.54 kB │ gzip:   1.20 kB
-#30 28.00 dist/assets/forth-Ffai-XNe.js                             2.54 kB │ gzip:   1.33 kB
-#30 28.00 dist/assets/shell-CjFT_Tl9.js                             2.57 kB │ gzip:   1.21 kB
-#30 28.00 dist/assets/_basePickBy-DszlG_CM.js                       2.59 kB │ gzip:   1.29 kB
-#30 28.00 dist/assets/index-D-asW3Pb.js                             2.63 kB │ gzip:   1.50 kB
-#30 28.00 dist/assets/velocity-D8B20fx6.js                          2.67 kB │ gzip:   1.11 kB
-#30 28.00 dist/assets/tiddlywiki-DO-Gjzrf.js                        2.78 kB │ gzip:   1.07 kB
-#30 28.00 dist/assets/modelica-Dc1JOy9r.js                          2.79 kB │ gzip:   1.29 kB
-#30 28.00 dist/assets/oz-BzwKVEFT.js                                2.90 kB │ gzip:   1.28 kB
-#30 28.00 dist/assets/r-B6wPVr8A.js                                 2.94 kB │ gzip:   1.36 kB
-#30 28.00 dist/assets/stex-C3f8Ysf7.js                              3.12 kB │ gzip:   1.20 kB
-#30 28.00 dist/assets/tiki-DGYXhP31.js                              3.25 kB │ gzip:   1.26 kB
-#30 28.00 dist/assets/vhdl-lSbBsy5d.js                              3.35 kB │ gzip:   1.51 kB
-#30 28.00 dist/assets/lua-BgMRiT3U.js                               3.40 kB │ gzip:   1.44 kB
-#30 28.00 dist/assets/index-FZSdtazS.js                             3.40 kB │ gzip:   1.72 kB
-#30 28.00 dist/assets/arc-DQ8Ilxot.js                               3.42 kB │ gzip:   1.47 kB
-#30 28.00 dist/assets/mscgen-BA5vi2Kp.js                            3.51 kB │ gzip:   0.98 kB
-#30 28.00 dist/assets/sparql-DkYu6x3z.js                            3.55 kB │ gzip:   1.63 kB
-#30 28.00 dist/assets/cypher-C_CwsFkJ.js                            3.56 kB │ gzip:   1.52 kB
-#30 28.00 dist/assets/d-pRatUO7H.js                                 3.72 kB │ gzip:   1.68 kB
-#30 28.00 dist/assets/coffeescript-S37ZYGWr.js                      3.87 kB │ gzip:   1.69 kB
-#30 28.00 dist/assets/vb-CmGdzxic.js                                3.90 kB │ gzip:   1.79 kB
-#30 28.00 dist/assets/swift-BzpIVaGY.js                             3.96 kB │ gzip:   1.79 kB
-#30 28.00 dist/assets/asn1-EdZsLKOL.js                              3.98 kB │ gzip:   1.96 kB
-#30 28.00 dist/assets/q-pXgVlZs6.js                                 4.03 kB │ gzip:   1.67 kB
-#30 28.00 dist/assets/ttcn-cfg-B9xdYoR4.js                          4.05 kB │ gzip:   1.71 kB
-#30 28.00 dist/assets/dylan-DwRh75JA.js                             4.05 kB │ gzip:   1.65 kB
-#30 28.00 dist/assets/livescript-BwQOo05w.js                        4.09 kB │ gzip:   1.64 kB
-#30 28.00 dist/assets/groovy-D9Dt4D0W.js                            4.14 kB │ gzip:   1.77 kB
-#30 28.00 dist/assets/haskell-Cw1EW3IL.js                           4.17 kB │ gzip:   1.89 kB
-#30 28.00 dist/assets/diagram-S2PKOQOG-DJaN77gn.js                  4.34 kB │ gzip:   1.91 kB
-#30 28.01 dist/assets/asterisk-B-8jnY81.js                          4.48 kB │ gzip:   1.78 kB
-#30 28.01 dist/assets/gas-Bneqetm1.js                               4.57 kB │ gzip:   1.28 kB
-#30 28.01 dist/assets/fortran-DYz_wnZ1.js                           4.65 kB │ gzip:   2.01 kB
-#30 28.01 dist/assets/defaultLocale-DX6XiGOO.js                     4.69 kB │ gzip:   2.18 kB
-#30 28.01 dist/assets/mllike-CXdrOF99.js                            4.79 kB │ gzip:   1.53 kB
-#30 28.01 dist/assets/ttcn-CfJYG6tj.js                              4.80 kB │ gzip:   2.13 kB
-#30 28.01 dist/assets/index-etdkiTAc.js                             5.07 kB │ gzip:   2.41 kB
-#30 28.01 dist/assets/ecl-Cabwm37j.js                               5.13 kB │ gzip:   2.31 kB
-#30 28.01 dist/assets/crystal-SjHAIU92.js                           5.13 kB │ gzip:   2.07 kB
-#30 28.01 dist/assets/ruby-B2Rjki9n.js                              5.16 kB │ gzip:   2.15 kB
-#30 28.01 dist/assets/pieDiagram-ADFJNKIX-CML4OfHg.js               5.26 kB │ gzip:   2.33 kB
-#30 28.01 dist/assets/julia-DuME0IfC.js                             5.39 kB │ gzip:   2.14 kB
-#30 28.01 dist/assets/linear-a85bs0D0.js                            5.66 kB │ gzip:   2.31 kB
-#30 28.01 dist/assets/vbscript-BuJXcnF6.js                          5.82 kB │ gzip:   2.57 kB
-#30 28.01 dist/assets/mirc-CjQqDB4T.js                              5.92 kB │ gzip:   2.68 kB
-#30 28.01 dist/assets/graph-DgmjXV3-.js                             5.92 kB │ gzip:   1.87 kB
-#30 28.01 dist/assets/diagram-QEK2KX5R-5H89Y9xz.js                  6.06 kB │ gzip:   2.55 kB
-#30 28.01 dist/assets/cobol-CWcv1MsR.js                             6.20 kB │ gzip:   2.96 kB
-#30 28.01 dist/assets/scheme-C41bIUwD.js                            6.37 kB │ gzip:   2.39 kB
-#30 28.01 dist/assets/python-BuPzkPfP.js                            6.48 kB │ gzip:   2.73 kB
-#30 28.01 dist/assets/xquery-DzFWVndE.js                            6.62 kB │ gzip:   2.56 kB
-#30 28.01 dist/assets/pug-DeIclll2.js                               6.67 kB │ gzip:   1.94 kB
-#30 28.01 dist/assets/textile-CnDTJFAw.js                           6.80 kB │ gzip:   2.44 kB
-#30 28.01 dist/assets/nsis-LdVXkNf5.js                              6.81 kB │ gzip:   2.99 kB
-#30 28.01 dist/assets/nginx-DdIZxoE0.js                             7.34 kB │ gzip:   2.72 kB
-#30 28.01 dist/assets/powershell-CFHJl5sT.js                        7.77 kB │ gzip:   3.33 kB
-#30 28.01 dist/assets/haxe-H-WmDvRZ.js                              7.89 kB │ gzip:   2.95 kB
-#30 28.01 dist/assets/erlang-BNw1qcRV.js                            8.10 kB │ gzip:   2.89 kB
-#30 28.01 dist/assets/verilog-C6RDOZhf.js                           8.24 kB │ gzip:   3.52 kB
-#30 28.01 dist/assets/sas-B4kiWyti.js                               9.33 kB │ gzip:   4.11 kB
-#30 28.01 dist/assets/perl-CdXCOZ3F.js                              9.75 kB │ gzip:   3.46 kB
-#30 28.01 dist/assets/gherkin-heZmZLOM.js                          10.16 kB │ gzip:   5.09 kB
-#30 28.01 dist/assets/stateDiagram-FKZM4ZOC-FRhfGYg8.js            10.39 kB │ gzip:   3.64 kB
-#30 28.01 dist/assets/clojure-BMjYHr_A.js                          10.82 kB │ gzip:   3.99 kB
-#30 28.01 dist/assets/dagre-6UL2VRFP-Cyqj55Gt.js                   11.27 kB │ gzip:   4.20 kB
-#30 28.01 dist/assets/idl-BEugSyMb.js                              11.63 kB │ gzip:   4.52 kB
-#30 28.01 dist/assets/_baseUniq-BDzYM4sy.js                        11.90 kB │ gzip:   4.65 kB
-#30 28.01 dist/assets/index-DqsQ88kf.js                            12.70 kB │ gzip:   5.59 kB
-#30 28.01 dist/assets/index-BFCNlY1e.js                            14.79 kB │ gzip:   5.98 kB
-#30 28.01 dist/assets/diagram-PSM6KHXK-DUw_PHnZ.js                 15.98 kB │ gzip:   5.71 kB
-#30 28.01 dist/assets/index-DbrsSjLZ.js                            16.31 kB │ gzip:   7.44 kB
-#30 28.01 dist/assets/javascript-iXu5QeM3.js                       17.08 kB │ gzip:   5.75 kB
-#30 28.01 dist/assets/index-DlmLuP29.js                            19.68 kB │ gzip:   9.29 kB
-#30 28.01 dist/assets/kanban-definition-3W4ZIXB7-D84W6dCt.js       20.61 kB │ gzip:   7.25 kB
-#30 28.01 dist/assets/index-BSKmHh01.js                            20.92 kB │ gzip:   9.34 kB
-#30 28.01 dist/assets/mindmap-definition-VGOIOE7T-DWjC06ot.js      21.04 kB │ gzip:   7.34 kB
-#30 28.01 dist/assets/sankeyDiagram-TZEHDZUN-Bg7jh20T.js           22.24 kB │ gzip:   8.15 kB
-#30 28.01 dist/assets/clike-B9uivgTg.js                            22.30 kB │ gzip:   7.86 kB
-#30 28.01 dist/assets/index-V7ooILHD.js                            23.06 kB │ gzip:  10.38 kB
-#30 28.01 dist/assets/journeyDiagram-XKPGCS4Q-b7riBmjl.js          23.54 kB │ gzip:   8.32 kB
-#30 28.01 dist/assets/timeline-definition-IT6M3QCI-B_eRvHsZ.js     23.72 kB │ gzip:   8.28 kB
-#30 28.01 dist/assets/gitGraphDiagram-V2S2FVAM-CzKd9W_G.js         24.73 kB │ gzip:   7.60 kB
-#30 28.01 dist/assets/erDiagram-Q2GNP2WA-yjULlS7G.js               25.34 kB │ gzip:   8.86 kB
-#30 28.01 dist/assets/index-CWwFT4ti.js                            25.62 kB │ gzip:   8.57 kB
-#30 28.01 dist/assets/stylus-B533Al4x.js                           25.80 kB │ gzip:   8.60 kB
-#30 28.01 dist/assets/index-BJPvkZkt.js                            25.85 kB │ gzip:  11.61 kB
-#30 28.01 dist/assets/css-BnMrqG3P.js                              27.13 kB │ gzip:   8.47 kB
-#30 28.01 dist/assets/layout-xeUePkdy.js                           27.39 kB │ gzip:   9.73 kB
-#30 28.01 dist/assets/index-DDWXQEE6.js                            28.69 kB │ gzip:  11.65 kB
-#30 28.01 dist/assets/requirementDiagram-UZGBJVZJ-C7oFX60v.js      30.27 kB │ gzip:   9.50 kB
-#30 28.01 dist/assets/index-D5oP1fAP.js                            30.79 kB │ gzip:  12.64 kB
-#30 28.01 dist/assets/index-C7FCGyYt.js                            32.32 kB │ gzip:  13.06 kB
-#30 28.01 dist/assets/quadrantDiagram-AYHSOK5B-DB2nYcD5.js         34.33 kB │ gzip:  10.10 kB
-#30 28.01 dist/assets/chunk-DI55MBZ5-c9SkCA4Y.js                   36.80 kB │ gzip:  11.98 kB
-#30 28.01 dist/assets/sql-D0XecflT.js                              37.05 kB │ gzip:  10.94 kB
-#30 28.01 dist/assets/xychartDiagram-PRI3JC2R-DXbbRpNL.js          40.21 kB │ gzip:  11.45 kB
-#30 28.01 dist/assets/index-C0Zan0W8.js                            40.73 kB │ gzip:  16.74 kB
-#30 28.01 dist/assets/index-D_rHolHV.js                            44.15 kB │ gzip:  15.31 kB
-#30 28.01 dist/assets/index-RhLUVuwA.js                            45.10 kB │ gzip:  19.16 kB
-#30 28.01 dist/assets/chunk-B4BG7PRW-CMxZdQgU.js                   45.41 kB │ gzip:  14.73 kB
-#30 28.01 dist/assets/flowDiagram-NV44I4VS-Bu79cXs3.js             61.11 kB │ gzip:  19.58 kB
-#30 28.01 dist/assets/ganttDiagram-JELNMOA3-DlfVptqX.js            68.31 kB │ gzip:  23.14 kB
-#30 28.01 dist/assets/c4Diagram-YG6GDRKO-CqJtuvd-.js               70.16 kB │ gzip:  19.70 kB
-#30 28.01 dist/assets/index-CeSruR3N.js                            70.81 kB │ gzip:  25.84 kB
-#30 28.01 dist/assets/blockDiagram-VD42YOAC-CqxRkSgp.js            73.16 kB │ gzip:  20.83 kB
-#30 28.01 dist/assets/cose-bilkent-S5V4N54A-DizE4rgn.js            81.72 kB │ gzip:  22.48 kB
-#30 28.01 dist/assets/index-DF_X5i1y.js                            86.63 kB │ gzip:  34.40 kB
-#30 28.01 dist/assets/index-CUorBuIX.js                            97.86 kB │ gzip:  28.45 kB
-#30 28.01 dist/assets/sequenceDiagram-WL72ISMW-34ACDDMc.js         98.14 kB │ gzip:  26.96 kB
-#30 28.01 dist/assets/index-Dh8RqfHI.js                           100.55 kB │ gzip:  33.62 kB
-#30 28.01 dist/assets/architectureDiagram-VXUJARFQ-B7BzwKgS.js    148.86 kB │ gzip:  42.15 kB
-#30 28.01 dist/assets/katex-B95LWT_Q.js                           257.69 kB │ gzip:  76.70 kB
-#30 28.01 dist/assets/cytoscape.esm-jbPEKk2Y.js                   441.21 kB │ gzip: 141.29 kB
-#30 28.01 dist/assets/treemap-GDKQZRPO-ChMr7l9f.js                453.20 kB │ gzip: 107.47 kB
-#30 28.01 dist/assets/mermaid.core-C1Mc6T6e.js                    497.76 kB │ gzip: 139.61 kB
-#30 28.01 dist/assets/index-DfxLEIr-.js                         3,374.22 kB │ gzip: 960.91 kB
-#30 28.01
-#30 28.01 (!) Some chunks are larger than 500 kB after minification. Consider:
-#30 28.01 - Using dynamic import() to code-split the application
-#30 28.01 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
-#30 28.01 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-#30 28.01 ✓ built in 12.56s
-#30 DONE 28.7s
+#30 0.296 ! Corepack is about to download https://registry.npmjs.org/pnpm/-/pnpm-9.15.4.tgz
+#30 2.566 
+#30 2.566 > @paperclipai/ui@0.3.1 build /app/ui
+#30 2.566 > tsc -b && vite build
+#30 2.566
+#30 16.54 vite v6.4.1 building for production...
+#30 16.60 transforming...
+#30 28.09 ✓ 5327 modules transformed.
+#30 28.94 rendering chunks...
+#30 30.05 computing gzip size...
+#30 30.16 dist/index.html                                           2.28 kB │ gzip:   0.85 kB
+#30 30.16 dist/assets/index-AYr4k2sd.css                          274.56 kB │ gzip:  42.07 kB
+#30 30.16 dist/assets/clone-CXchKn_H.js                             0.10 kB │ gzip:   0.11 kB
+#30 30.16 dist/assets/channel-CJh29_EX.js                           0.11 kB │ gzip:   0.13 kB
+#30 30.16 dist/assets/init-Gi6I4Gst.js                              0.15 kB │ gzip:   0.13 kB
+#30 30.16 dist/assets/chunk-QZHKN3VN-BrP_tbTd.js                    0.19 kB │ gzip:   0.16 kB
+#30 30.16 dist/assets/chunk-55IACEB6-DSyLnxqp.js                    0.24 kB │ gzip:   0.21 kB
+#30 30.16 dist/assets/chunk-4BX2VUAB-DJDIu5dr.js                    0.30 kB │ gzip:   0.20 kB
+#30 30.16 dist/assets/diff-DbItnlRl.js                              0.31 kB │ gzip:   0.24 kB
+#30 30.16 dist/assets/chunk-FMBD7UC4-OJHoPB0i.js                    0.37 kB │ gzip:   0.27 kB
+#30 30.16 dist/assets/stateDiagram-v2-4FDKWEC3-Cct7mPgv.js          0.39 kB │ gzip:   0.29 kB
+#30 30.16 dist/assets/classDiagram-2ON5EDUG-BdxVeBmu.js             0.43 kB │ gzip:   0.30 kB
+#30 30.16 dist/assets/classDiagram-v2-WZHVMYZB-BdxVeBmu.js          0.43 kB │ gzip:   0.30 kB
+#30 30.16 dist/assets/chunk-QN33PNHL-DjPSR7CU.js                    0.53 kB │ gzip:   0.38 kB
+#30 30.16 dist/assets/brainfuck-C4LP7Hcl.js                         0.61 kB │ gzip:   0.33 kB
+#30 30.16 dist/assets/properties-C78fOPTZ.js                        0.67 kB │ gzip:   0.35 kB
+#30 30.16 dist/assets/infoDiagram-HS3SLOUP-eZ0sqKfx.js              0.69 kB │ gzip:   0.46 kB
+#30 30.16 dist/assets/cmake-BQqOBYOt.js                             0.78 kB │ gzip:   0.46 kB
+#30 30.16 dist/assets/asciiarmor-Df11BRmG.js                        0.79 kB │ gzip:   0.41 kB
+#30 30.16 dist/assets/http-DBlCnlav.js                              0.85 kB │ gzip:   0.41 kB
+#30 30.16 dist/assets/protobuf-ChK-085T.js                          0.86 kB │ gzip:   0.52 kB
+#30 30.16 dist/assets/solr-DehyRSwq.js                              0.87 kB │ gzip:   0.46 kB
+#30 30.16 dist/assets/troff-wAsdV37c.js                             0.96 kB │ gzip:   0.44 kB
+#30 30.16 dist/assets/spreadsheet-BCZA_wO0.js                       1.14 kB │ gzip:   0.54 kB
+#30 30.16 dist/assets/toml-Bm5Em-hy.js                              1.14 kB │ gzip:   0.54 kB
+#30 30.16 dist/assets/ordinal-Cboi1Yqb.js                           1.19 kB │ gzip:   0.57 kB
+#30 30.16 dist/assets/mbox-CNhZ1qSd.js                              1.40 kB │ gzip:   0.66 kB
+#30 30.16 dist/assets/chunk-TZMSLE5B-BVPkK03G.js                    1.44 kB │ gzip:   0.63 kB
+#30 30.16 dist/assets/sieve-C3Gn_uJK.js                             1.62 kB │ gzip:   0.77 kB
+#30 30.16 dist/assets/rpm-CTu-6PCP.js                               1.62 kB │ gzip:   0.83 kB
+#30 30.16 dist/assets/factor-kuTfRLto.js                            1.67 kB │ gzip:   0.61 kB
+#30 30.16 dist/assets/z80-Hz9HOZM7.js                               1.75 kB │ gzip:   0.81 kB
+#30 30.16 dist/assets/eiffel-CnydiIhH.js                            1.81 kB │ gzip:   0.92 kB
+#30 30.16 dist/assets/elm-vLlmbW-K.js                               1.89 kB │ gzip:   0.82 kB
+#30 30.16 dist/assets/mathematica-DTrFuWx2.js                       1.92 kB │ gzip:   0.82 kB
+#30 30.16 dist/assets/dockerfile-BKs6k2Af.js                        1.95 kB │ gzip:   0.67 kB
+#30 30.16 dist/assets/turtle-B1tBg_DP.js                            1.98 kB │ gzip:   0.90 kB
+#30 30.16 dist/assets/ebnf-CDyGwa7X.js                              1.99 kB │ gzip:   0.81 kB
+#30 30.16 dist/assets/smalltalk-CnHTOXQT.js                         2.01 kB │ gzip:   0.85 kB
+#30 30.16 dist/assets/dtd-DF_7sFjM.js                               2.06 kB │ gzip:   0.87 kB
+#30 30.16 dist/assets/mumps-BT43cFF4.js                             2.07 kB │ gzip:   0.98 kB
+#30 30.16 dist/assets/fcl-Kvtd6kyn.js                               2.08 kB │ gzip:   0.95 kB
+#30 30.16 dist/assets/ntriples-BfvgReVJ.js                          2.10 kB │ gzip:   0.75 kB
+#30 30.16 dist/assets/yacas-BJ4BC0dw.js                             2.15 kB │ gzip:   1.09 kB
+#30 30.16 dist/assets/simple-mode-GW_nhZxv.js                       2.28 kB │ gzip:   1.09 kB
+#30 30.16 dist/assets/apl-B4CMkyY2.js                               2.30 kB │ gzip:   1.23 kB
+#30 30.16 dist/assets/pascal--L3eBynH.js                            2.30 kB │ gzip:   1.19 kB
+#30 30.16 dist/assets/octave-Ck1zUtKM.js                            2.31 kB │ gzip:   1.09 kB
+#30 30.16 dist/assets/commonlisp-DBKNyK5s.js                        2.32 kB │ gzip:   1.10 kB
+#30 30.16 dist/assets/tcl-DVfN8rqt.js                               2.36 kB │ gzip:   1.23 kB
+#30 30.16 dist/assets/index-BySVZqvp.js                             2.42 kB │ gzip:   1.50 kB
+#30 30.16 dist/assets/webidl-ZXfAyPTL.js                            2.52 kB │ gzip:   1.26 kB
+#30 30.16 dist/assets/pig-CevX1Tat.js                               2.53 kB │ gzip:   1.38 kB
+#30 30.16 dist/assets/puppet-DMA9R1ak.js                            2.54 kB │ gzip:   1.20 kB
+#30 30.16 dist/assets/forth-Ffai-XNe.js                             2.54 kB │ gzip:   1.33 kB
+#30 30.16 dist/assets/shell-CjFT_Tl9.js                             2.57 kB │ gzip:   1.21 kB
+#30 30.16 dist/assets/_basePickBy-DszlG_CM.js                       2.59 kB │ gzip:   1.29 kB
+#30 30.16 dist/assets/index-D-asW3Pb.js                             2.63 kB │ gzip:   1.50 kB
+#30 30.16 dist/assets/velocity-D8B20fx6.js                          2.67 kB │ gzip:   1.11 kB
+#30 30.16 dist/assets/tiddlywiki-DO-Gjzrf.js                        2.78 kB │ gzip:   1.07 kB
+#30 30.16 dist/assets/modelica-Dc1JOy9r.js                          2.79 kB │ gzip:   1.29 kB
+#30 30.16 dist/assets/oz-BzwKVEFT.js                                2.90 kB │ gzip:   1.28 kB
+#30 30.16 dist/assets/r-B6wPVr8A.js                                 2.94 kB │ gzip:   1.36 kB
+#30 30.16 dist/assets/stex-C3f8Ysf7.js                              3.12 kB │ gzip:   1.20 kB
+#30 30.16 dist/assets/tiki-DGYXhP31.js                              3.25 kB │ gzip:   1.26 kB
+#30 30.16 dist/assets/vhdl-lSbBsy5d.js                              3.35 kB │ gzip:   1.51 kB
+#30 30.16 dist/assets/lua-BgMRiT3U.js                               3.40 kB │ gzip:   1.44 kB
+#30 30.16 dist/assets/index-FZSdtazS.js                             3.40 kB │ gzip:   1.72 kB
+#30 30.16 dist/assets/arc-DQ8Ilxot.js                               3.42 kB │ gzip:   1.47 kB
+#30 30.16 dist/assets/mscgen-BA5vi2Kp.js                            3.51 kB │ gzip:   0.98 kB
+#30 30.16 dist/assets/sparql-DkYu6x3z.js                            3.55 kB │ gzip:   1.63 kB
+#30 30.16 dist/assets/cypher-C_CwsFkJ.js                            3.56 kB │ gzip:   1.52 kB
+#30 30.16 dist/assets/d-pRatUO7H.js                                 3.72 kB │ gzip:   1.68 kB
+#30 30.16 dist/assets/coffeescript-S37ZYGWr.js                      3.87 kB │ gzip:   1.69 kB
+#30 30.16 dist/assets/vb-CmGdzxic.js                                3.90 kB │ gzip:   1.79 kB
+#30 30.16 dist/assets/swift-BzpIVaGY.js                             3.96 kB │ gzip:   1.79 kB
+#30 30.16 dist/assets/asn1-EdZsLKOL.js                              3.98 kB │ gzip:   1.96 kB
+#30 30.16 dist/assets/q-pXgVlZs6.js                                 4.03 kB │ gzip:   1.67 kB
+#30 30.16 dist/assets/ttcn-cfg-B9xdYoR4.js                          4.05 kB │ gzip:   1.71 kB
+#30 30.16 dist/assets/dylan-DwRh75JA.js                             4.05 kB │ gzip:   1.65 kB
+#30 30.16 dist/assets/livescript-BwQOo05w.js                        4.09 kB │ gzip:   1.64 kB
+#30 30.16 dist/assets/groovy-D9Dt4D0W.js                            4.14 kB │ gzip:   1.77 kB
+#30 30.16 dist/assets/haskell-Cw1EW3IL.js                           4.17 kB │ gzip:   1.89 kB
+#30 30.16 dist/assets/diagram-S2PKOQOG-DJaN77gn.js                  4.34 kB │ gzip:   1.91 kB
+#30 30.16 dist/assets/asterisk-B-8jnY81.js                          4.48 kB │ gzip:   1.78 kB
+#30 30.16 dist/assets/gas-Bneqetm1.js                               4.57 kB │ gzip:   1.28 kB
+#30 30.17 dist/assets/fortran-DYz_wnZ1.js                           4.65 kB │ gzip:   2.01 kB
+#30 30.17 dist/assets/defaultLocale-DX6XiGOO.js                     4.69 kB │ gzip:   2.18 kB
+#30 30.17 dist/assets/mllike-CXdrOF99.js                            4.79 kB │ gzip:   1.53 kB
+#30 30.17 dist/assets/ttcn-CfJYG6tj.js                              4.80 kB │ gzip:   2.13 kB
+#30 30.17 dist/assets/index-etdkiTAc.js                             5.07 kB │ gzip:   2.41 kB
+#30 30.17 dist/assets/ecl-Cabwm37j.js                               5.13 kB │ gzip:   2.31 kB
+#30 30.17 dist/assets/crystal-SjHAIU92.js                           5.13 kB │ gzip:   2.07 kB
+#30 30.17 dist/assets/ruby-B2Rjki9n.js                              5.16 kB │ gzip:   2.15 kB
+#30 30.17 dist/assets/pieDiagram-ADFJNKIX-CML4OfHg.js               5.26 kB │ gzip:   2.33 kB
+#30 30.17 dist/assets/julia-DuME0IfC.js                             5.39 kB │ gzip:   2.14 kB
+#30 30.17 dist/assets/linear-a85bs0D0.js                            5.66 kB │ gzip:   2.31 kB
+#30 30.17 dist/assets/vbscript-BuJXcnF6.js                          5.82 kB │ gzip:   2.57 kB
+#30 30.17 dist/assets/mirc-CjQqDB4T.js                              5.92 kB │ gzip:   2.68 kB
+#30 30.17 dist/assets/graph-DgmjXV3-.js                             5.92 kB │ gzip:   1.87 kB
+#30 30.17 dist/assets/diagram-QEK2KX5R-5H89Y9xz.js                  6.06 kB │ gzip:   2.55 kB
+#30 30.17 dist/assets/cobol-CWcv1MsR.js                             6.20 kB │ gzip:   2.96 kB
+#30 30.17 dist/assets/scheme-C41bIUwD.js                            6.37 kB │ gzip:   2.39 kB
+#30 30.17 dist/assets/python-BuPzkPfP.js                            6.48 kB │ gzip:   2.73 kB
+#30 30.17 dist/assets/xquery-DzFWVndE.js                            6.62 kB │ gzip:   2.56 kB
+#30 30.17 dist/assets/pug-DeIclll2.js                               6.67 kB │ gzip:   1.94 kB
+#30 30.17 dist/assets/textile-CnDTJFAw.js                           6.80 kB │ gzip:   2.44 kB
+#30 30.17 dist/assets/nsis-LdVXkNf5.js                              6.81 kB │ gzip:   2.99 kB
+#30 30.17 dist/assets/nginx-DdIZxoE0.js                             7.34 kB │ gzip:   2.72 kB
+#30 30.17 dist/assets/powershell-CFHJl5sT.js                        7.77 kB │ gzip:   3.33 kB
+#30 30.17 dist/assets/haxe-H-WmDvRZ.js                              7.89 kB │ gzip:   2.95 kB
+#30 30.17 dist/assets/erlang-BNw1qcRV.js                            8.10 kB │ gzip:   2.89 kB
+#30 30.17 dist/assets/verilog-C6RDOZhf.js                           8.24 kB │ gzip:   3.52 kB
+#30 30.17 dist/assets/sas-B4kiWyti.js                               9.33 kB │ gzip:   4.11 kB
+#30 30.17 dist/assets/perl-CdXCOZ3F.js                              9.75 kB │ gzip:   3.46 kB
+#30 30.17 dist/assets/gherkin-heZmZLOM.js                          10.16 kB │ gzip:   5.09 kB
+#30 30.17 dist/assets/stateDiagram-FKZM4ZOC-FRhfGYg8.js            10.39 kB │ gzip:   3.64 kB
+#30 30.17 dist/assets/clojure-BMjYHr_A.js                          10.82 kB │ gzip:   3.99 kB
+#30 30.17 dist/assets/dagre-6UL2VRFP-Cyqj55Gt.js                   11.27 kB │ gzip:   4.20 kB
+#30 30.17 dist/assets/idl-BEugSyMb.js                              11.63 kB │ gzip:   4.52 kB
+#30 30.17 dist/assets/_baseUniq-BDzYM4sy.js                        11.90 kB │ gzip:   4.65 kB
+#30 30.17 dist/assets/index-DqsQ88kf.js                            12.70 kB │ gzip:   5.59 kB
+#30 30.17 dist/assets/index-BFCNlY1e.js                            14.79 kB │ gzip:   5.98 kB
+#30 30.17 dist/assets/diagram-PSM6KHXK-DUw_PHnZ.js                 15.98 kB │ gzip:   5.71 kB
+#30 30.17 dist/assets/index-DbrsSjLZ.js                            16.31 kB │ gzip:   7.44 kB
+#30 30.17 dist/assets/javascript-iXu5QeM3.js                       17.08 kB │ gzip:   5.75 kB
+#30 30.17 dist/assets/index-DlmLuP29.js                            19.68 kB │ gzip:   9.29 kB
+#30 30.17 dist/assets/kanban-definition-3W4ZIXB7-D84W6dCt.js       20.61 kB │ gzip:   7.25 kB
+#30 30.17 dist/assets/index-BSKmHh01.js                            20.92 kB │ gzip:   9.34 kB
+#30 30.17 dist/assets/mindmap-definition-VGOIOE7T-DWjC06ot.js      21.04 kB │ gzip:   7.34 kB
+#30 30.17 dist/assets/sankeyDiagram-TZEHDZUN-Bg7jh20T.js           22.24 kB │ gzip:   8.15 kB
+#30 30.17 dist/assets/clike-B9uivgTg.js                            22.30 kB │ gzip:   7.86 kB
+#30 30.17 dist/assets/index-V7ooILHD.js                            23.06 kB │ gzip:  10.38 kB
+#30 30.17 dist/assets/journeyDiagram-XKPGCS4Q-b7riBmjl.js          23.54 kB │ gzip:   8.32 kB
+#30 30.17 dist/assets/timeline-definition-IT6M3QCI-B_eRvHsZ.js     23.72 kB │ gzip:   8.28 kB
+#30 30.17 dist/assets/gitGraphDiagram-V2S2FVAM-CzKd9W_G.js         24.73 kB │ gzip:   7.60 kB
+#30 30.17 dist/assets/erDiagram-Q2GNP2WA-yjULlS7G.js               25.34 kB │ gzip:   8.86 kB
+#30 30.17 dist/assets/index-CWwFT4ti.js                            25.62 kB │ gzip:   8.57 kB
+#30 30.17 dist/assets/stylus-B533Al4x.js                           25.80 kB │ gzip:   8.60 kB
+#30 30.17 dist/assets/index-BJPvkZkt.js                            25.85 kB │ gzip:  11.61 kB
+#30 30.17 dist/assets/css-BnMrqG3P.js                              27.13 kB │ gzip:   8.47 kB
+#30 30.17 dist/assets/layout-xeUePkdy.js                           27.39 kB │ gzip:   9.73 kB
+#30 30.17 dist/assets/index-DDWXQEE6.js                            28.69 kB │ gzip:  11.65 kB
+#30 30.17 dist/assets/requirementDiagram-UZGBJVZJ-C7oFX60v.js      30.27 kB │ gzip:   9.50 kB
+#30 30.17 dist/assets/index-D5oP1fAP.js                            30.79 kB │ gzip:  12.64 kB
+#30 30.17 dist/assets/index-C7FCGyYt.js                            32.32 kB │ gzip:  13.06 kB
+#30 30.17 dist/assets/quadrantDiagram-AYHSOK5B-DB2nYcD5.js         34.33 kB │ gzip:  10.10 kB
+#30 30.17 dist/assets/chunk-DI55MBZ5-c9SkCA4Y.js                   36.80 kB │ gzip:  11.98 kB
+#30 30.17 dist/assets/sql-D0XecflT.js                              37.05 kB │ gzip:  10.94 kB
+#30 30.17 dist/assets/xychartDiagram-PRI3JC2R-DXbbRpNL.js          40.21 kB │ gzip:  11.45 kB
+#30 30.17 dist/assets/index-C0Zan0W8.js                            40.73 kB │ gzip:  16.74 kB
+#30 30.17 dist/assets/index-D_rHolHV.js                            44.15 kB │ gzip:  15.31 kB
+#30 30.17 dist/assets/index-RhLUVuwA.js                            45.10 kB │ gzip:  19.16 kB
+#30 30.17 dist/assets/chunk-B4BG7PRW-CMxZdQgU.js                   45.41 kB │ gzip:  14.73 kB
+#30 30.17 dist/assets/flowDiagram-NV44I4VS-Bu79cXs3.js             61.11 kB │ gzip:  19.58 kB
+#30 30.17 dist/assets/ganttDiagram-JELNMOA3-DlfVptqX.js            68.31 kB │ gzip:  23.14 kB
+#30 30.17 dist/assets/c4Diagram-YG6GDRKO-CqJtuvd-.js               70.16 kB │ gzip:  19.70 kB
+#30 30.17 dist/assets/index-CeSruR3N.js                            70.81 kB │ gzip:  25.84 kB
+#30 30.17 dist/assets/blockDiagram-VD42YOAC-CqxRkSgp.js            73.16 kB │ gzip:  20.83 kB
+#30 30.17 dist/assets/cose-bilkent-S5V4N54A-DizE4rgn.js            81.72 kB │ gzip:  22.48 kB
+#30 30.17 dist/assets/index-DF_X5i1y.js                            86.63 kB │ gzip:  34.40 kB
+#30 30.17 dist/assets/index-CUorBuIX.js                            97.86 kB │ gzip:  28.45 kB
+#30 30.17 dist/assets/sequenceDiagram-WL72ISMW-34ACDDMc.js         98.14 kB │ gzip:  26.96 kB
+#30 30.17 dist/assets/index-Dh8RqfHI.js                           100.55 kB │ gzip:  33.62 kB
+#30 30.17 dist/assets/architectureDiagram-VXUJARFQ-B7BzwKgS.js    148.86 kB │ gzip:  42.15 kB
+#30 30.17 dist/assets/katex-B95LWT_Q.js                           257.69 kB │ gzip:  76.70 kB
+#30 30.17 dist/assets/cytoscape.esm-jbPEKk2Y.js                   441.21 kB │ gzip: 141.29 kB
+#30 30.17 dist/assets/treemap-GDKQZRPO-ChMr7l9f.js                453.20 kB │ gzip: 107.47 kB
+#30 30.17 dist/assets/mermaid.core-C1Mc6T6e.js                    497.76 kB │ gzip: 139.61 kB
+#30 30.17 dist/assets/index-DfxLEIr-.js                         3,374.22 kB │ gzip: 960.91 kB
+#30 30.17
+#30 30.17 (!) Some chunks are larger than 500 kB after minification. Consider:
+#30 30.17 - Using dynamic import() to code-split the application
+#30 30.17 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+#30 30.17 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+#30 30.17 ✓ built in 13.61s
+#30 DONE 31.0s
 
 #31 [build 5/7] RUN pnpm --filter @paperclipai/plugin-sdk build
-#31 0.602 
-#31 0.602 > @paperclipai/plugin-sdk@1.0.0 build /app/packages/plugins/sdk
-#31 0.602 > pnpm --filter @paperclipai/shared build && tsc
-#31 0.602
-#31 0.879 
-#31 0.879 > @paperclipai/shared@0.3.1 build /app/packages/shared
-#31 0.879 > tsc
-#31 0.879
-#31 DONE 5.3s
+#31 0.710 
+#31 0.710 > @paperclipai/plugin-sdk@1.0.0 build /app/packages/plugins/sdk
+#31 0.710 > pnpm --filter @paperclipai/shared build && tsc
+#31 0.710
+#31 0.992 
+#31 0.992 > @paperclipai/shared@0.3.1 build /app/packages/shared
+#31 0.992 > tsc
+#31 0.992
+#31 DONE 5.6s
 
 #32 [build 6/7] RUN pnpm --filter @paperclipai/server build
-#32 0.562 
-#32 0.562 > @paperclipai/server@0.3.1 build /app/server
-#32 0.562 > tsc && mkdir -p dist/onboarding-assets && cp -R src/onboarding-assets/. dist/onboarding-assets/
-#32 0.562
-#32 DONE 8.7s
+#32 0.581 
+#32 0.581 > @paperclipai/server@0.3.1 build /app/server
+#32 0.581 > tsc && mkdir -p dist/onboarding-assets && cp -R src/onboarding-assets/. dist/onboarding-assets/
+#32 0.581
+#32 DONE 9.4s
 
 #33 [build 7/7] RUN test -f server/dist/index.js || (echo "ERROR: server build output missing" && exit 1)
 #33 DONE 0.3s
 
 #34 [production 2/5] COPY --chown=node:node --from=build /app /app
-#34 DONE 12.0s
+#34 DONE 14.2s
 
 #35 [production 3/5] RUN npm install --global --omit=dev @anthropic-ai/claude-code@latest @openai/codex@latest opencode-ai   && apt-get update   && apt-get install -y --no-install-recommends openssh-client jq   && rm -rf /var/lib/apt/lists/*   && mkdir -p /paperclip   && chown node:node /paperclip
-#35 21.62 
-#35 21.62 added 9 packages in 21s
-#35 22.00 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
-#35 22.20 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
-#35 22.27 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
-#35 22.34 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9671 kB]
-#35 23.40 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
-#35 23.46 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [127 kB]
-#35 23.81 Fetched 10.0 MB in 2s (4830 kB/s)
-#35 23.81 Reading package lists...
-#35 24.19 Reading package lists...
-#35 24.53 Building dependency tree...
-#35 24.66 Reading state information...
-#35 24.77 The following additional packages will be installed:
-#35 24.77   libcbor0.10 libedit2 libfido2-1 libjq1 libonig5
-#35 24.77 Suggested packages:
-#35 24.77   keychain libpam-ssh monkeysphere ssh-askpass
-#35 24.77 Recommended packages:
-#35 24.77   xauth
-#35 24.80 The following NEW packages will be installed:
-#35 24.80   jq libcbor0.10 libedit2 libfido2-1 libjq1 libonig5 openssh-client
-#35 24.95 0 upgraded, 7 newly installed, 0 to remove and 0 not upgraded.
-#35 24.95 Need to get 1618 kB of archives.
-#35 24.95 After this operation, 7003 kB of additional disk space will be used.
-#35 24.95 Get:1 http://deb.debian.org/debian trixie/main amd64 libedit2 amd64 3.1-20250104-1 [93.8 kB]
-#35 25.12 Get:2 http://deb.debian.org/debian trixie/main amd64 libcbor0.10 amd64 0.10.2-2 [28.3 kB]
-#35 25.14 Get:3 http://deb.debian.org/debian trixie/main amd64 libfido2-1 amd64 1.15.0-1+b1 [78.7 kB]
-#35 25.25 Get:4 http://deb.debian.org/debian-security trixie-security/main amd64 openssh-client amd64 1:10.0p1-7+deb13u2 [986 kB]
-#35 25.48 Get:5 http://deb.debian.org/debian trixie/main amd64 libonig5 amd64 6.9.9-1+b1 [189 kB]
-#35 25.62 Get:6 http://deb.debian.org/debian trixie/main amd64 libjq1 amd64 1.7.1-6+deb13u1 [164 kB]
-#35 25.66 Get:7 http://deb.debian.org/debian trixie/main amd64 jq amd64 1.7.1-6+deb13u1 [77.7 kB]
-#35 25.78 debconf: unable to initialize frontend: Dialog
-#35 25.78 debconf: (TERM is not set, so the dialog frontend is not usable.)
-#35 25.78 debconf: falling back to frontend: Readline
-#35 25.79 debconf: unable to initialize frontend: Readline
-#35 25.79 debconf: (This frontend requires a controlling tty.)
-#35 25.79 debconf: falling back to frontend: Teletype
-#35 25.79 debconf: unable to initialize frontend: Teletype
-#35 25.79 debconf: (This frontend requires a controlling tty.)
-#35 25.79 debconf: falling back to frontend: Noninteractive
-#35 26.24 Fetched 1618 kB in 1s (1891 kB/s)
-#35 26.26 Selecting previously unselected package libedit2:amd64.
+#35 96.35 
+#35 96.35 added 9 packages in 2m
+#35 96.80 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+#35 97.05 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#35 97.15 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#35 97.22 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9671 kB]
+#35 100.7 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#35 100.8 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [127 kB]
+#35 101.2 Fetched 10.0 MB in 5s (2146 kB/s)
+#35 101.2 Reading package lists...
+#35 101.5 Reading package lists...
+#35 101.9 Building dependency tree...
+#35 102.0 Reading state information...
+#35 102.2 The following additional packages will be installed:
+#35 102.2   libcbor0.10 libedit2 libfido2-1 libjq1 libonig5
+#35 102.2 Suggested packages:
+#35 102.2   keychain libpam-ssh monkeysphere ssh-askpass
+#35 102.2 Recommended packages:
+#35 102.2   xauth
+#35 102.2 The following NEW packages will be installed:
+#35 102.2   jq libcbor0.10 libedit2 libfido2-1 libjq1 libonig5 openssh-client
+#35 102.4 0 upgraded, 7 newly installed, 0 to remove and 0 not upgraded.
+#35 102.4 Need to get 1618 kB of archives.
+#35 102.4 After this operation, 7003 kB of additional disk space will be used.
+#35 102.4 Get:1 http://deb.debian.org/debian trixie/main amd64 libedit2 amd64 3.1-20250104-1 [93.8 kB]
+#35 102.6 Get:2 http://deb.debian.org/debian trixie/main amd64 libcbor0.10 amd64 0.10.2-2 [28.3 kB]
+#35 102.6 Get:3 http://deb.debian.org/debian trixie/main amd64 libfido2-1 amd64 1.15.0-1+b1 [78.7 kB]
+#35 102.7 Get:4 http://deb.debian.org/debian-security trixie-security/main amd64 openssh-client amd64 1:10.0p1-7+deb13u2 [986 kB]
+#35 103.3 Get:5 http://deb.debian.org/debian trixie/main amd64 libonig5 amd64 6.9.9-1+b1 [189 kB]
+#35 103.4 Get:6 http://deb.debian.org/debian trixie/main amd64 libjq1 amd64 1.7.1-6+deb13u1 [164 kB]
+#35 103.5 Get:7 http://deb.debian.org/debian trixie/main amd64 jq amd64 1.7.1-6+deb13u1 [77.7 kB]
+#35 103.7 debconf: unable to initialize frontend: Dialog
+#35 103.7 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#35 103.7 debconf: falling back to frontend: Readline
+#35 103.7 debconf: unable to initialize frontend: Readline
+#35 103.7 debconf: (This frontend requires a controlling tty.)
+#35 103.7 debconf: falling back to frontend: Teletype
+#35 103.7 debconf: unable to initialize frontend: Teletype
+#35 103.7 debconf: (This frontend requires a controlling tty.)
+#35 103.7 debconf: falling back to frontend: Noninteractive
+#35 104.2 Fetched 1618 kB in 1s (1234 kB/s)
+#35 104.2 Selecting previously unselected package libedit2:amd64.
 (Reading database ... 10307 files and directories currently installed.)
-#35 26.28 Preparing to unpack .../0-libedit2_3.1-20250104-1_amd64.deb ...
-#35 26.29 Unpacking libedit2:amd64 (3.1-20250104-1) ...
-#35 26.32 Selecting previously unselected package libcbor0.10:amd64.
-#35 26.32 Preparing to unpack .../1-libcbor0.10_0.10.2-2_amd64.deb ...
-#35 26.33 Unpacking libcbor0.10:amd64 (0.10.2-2) ...
-#35 26.36 Selecting previously unselected package libfido2-1:amd64.
-#35 26.36 Preparing to unpack .../2-libfido2-1_1.15.0-1+b1_amd64.deb ...
-#35 26.36 Unpacking libfido2-1:amd64 (1.15.0-1+b1) ...
-#35 26.40 Selecting previously unselected package openssh-client.
-#35 26.40 Preparing to unpack .../3-openssh-client_1%3a10.0p1-7+deb13u2_amd64.deb ...
-#35 26.41 Unpacking openssh-client (1:10.0p1-7+deb13u2) ...
-#35 26.47 Selecting previously unselected package libonig5:amd64.
-#35 26.47 Preparing to unpack .../4-libonig5_6.9.9-1+b1_amd64.deb ...
-#35 26.47 Unpacking libonig5:amd64 (6.9.9-1+b1) ...
-#35 26.51 Selecting previously unselected package libjq1:amd64.
-#35 26.51 Preparing to unpack .../5-libjq1_1.7.1-6+deb13u1_amd64.deb ...
-#35 26.51 Unpacking libjq1:amd64 (1.7.1-6+deb13u1) ...
-#35 26.54 Selecting previously unselected package jq.
-#35 26.54 Preparing to unpack .../6-jq_1.7.1-6+deb13u1_amd64.deb ...
-#35 26.54 Unpacking jq (1.7.1-6+deb13u1) ...
-#35 26.58 Setting up libcbor0.10:amd64 (0.10.2-2) ...
-#35 26.59 Setting up libedit2:amd64 (3.1-20250104-1) ...
-#35 26.60 Setting up libfido2-1:amd64 (1.15.0-1+b1) ...
-#35 26.60 Setting up libonig5:amd64 (6.9.9-1+b1) ...
-#35 26.61 Setting up libjq1:amd64 (1.7.1-6+deb13u1) ...
-#35 26.62 Setting up openssh-client (1:10.0p1-7+deb13u2) ...
-#35 26.78 Setting up jq (1.7.1-6+deb13u1) ...
-#35 26.79 Processing triggers for libc-bin (2.41-12+deb13u2) ...
-#35 DONE 27.2s
+#35 104.3 Preparing to unpack .../0-libedit2_3.1-20250104-1_amd64.deb ...
+#35 104.3 Unpacking libedit2:amd64 (3.1-20250104-1) ...
+#35 104.3 Selecting previously unselected package libcbor0.10:amd64.
+#35 104.3 Preparing to unpack .../1-libcbor0.10_0.10.2-2_amd64.deb ...
+#35 104.3 Unpacking libcbor0.10:amd64 (0.10.2-2) ...
+#35 104.3 Selecting previously unselected package libfido2-1:amd64.
+#35 104.3 Preparing to unpack .../2-libfido2-1_1.15.0-1+b1_amd64.deb ...
+#35 104.3 Unpacking libfido2-1:amd64 (1.15.0-1+b1) ...
+#35 104.4 Selecting previously unselected package openssh-client.
+#35 104.4 Preparing to unpack .../3-openssh-client_1%3a10.0p1-7+deb13u2_amd64.deb ...
+#35 104.4 Unpacking openssh-client (1:10.0p1-7+deb13u2) ...
+#35 104.4 Selecting previously unselected package libonig5:amd64.
+#35 104.4 Preparing to unpack .../4-libonig5_6.9.9-1+b1_amd64.deb ...
+#35 104.5 Unpacking libonig5:amd64 (6.9.9-1+b1) ...
+#35 104.5 Selecting previously unselected package libjq1:amd64.
+#35 104.5 Preparing to unpack .../5-libjq1_1.7.1-6+deb13u1_amd64.deb ...
+#35 104.5 Unpacking libjq1:amd64 (1.7.1-6+deb13u1) ...
+#35 104.5 Selecting previously unselected package jq.
+#35 104.5 Preparing to unpack .../6-jq_1.7.1-6+deb13u1_amd64.deb ...
+#35 104.5 Unpacking jq (1.7.1-6+deb13u1) ...
+#35 104.6 Setting up libcbor0.10:amd64 (0.10.2-2) ...
+#35 104.6 Setting up libedit2:amd64 (3.1-20250104-1) ...
+#35 104.6 Setting up libfido2-1:amd64 (1.15.0-1+b1) ...
+#35 104.6 Setting up libonig5:amd64 (6.9.9-1+b1) ...
+#35 104.6 Setting up libjq1:amd64 (1.7.1-6+deb13u1) ...
+#35 104.6 Setting up openssh-client (1:10.0p1-7+deb13u2) ...
+#35 104.8 Setting up jq (1.7.1-6+deb13u1) ...
+#35 104.8 Processing triggers for libc-bin (2.41-12+deb13u2) ...
+#35 DONE 104.9s
 
 #36 [production 4/5] COPY scripts/docker-entrypoint.sh /usr/local/bin/
 #36 DONE 0.0s
@@ -794,19 +815,19 @@ F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & cond
 
 #38 exporting to image
 #38 exporting layers
-#38 exporting layers 28.6s done
-#38 exporting manifest sha256:1accb45644524c5ae01ade02c11bae3d46e91fcadf6261f8567efaeb93dfbeba done
-#38 exporting config sha256:1cf506658483fe2d4f008a8b3d3cdf08a673af12c317100ae28643c312f00e17 done
-#38 exporting attestation manifest sha256:838e5c635dac03ffcfb503a85d6e8798335dd28e1f3065b7cb1f2565f300c916 0.0s done
-#38 exporting manifest list sha256:dd491435269dd01c1f807b919edd7a555786c9ddc979aa253bd635e2ea45ad50 0.0s done
+#38 exporting layers 28.7s done
+#38 exporting manifest sha256:a904c711196635e3bdf6bd5a6607fd4ab6f312df59afc9879d0c5f73a234c9e0 done
+#38 exporting config sha256:653817117258b306d082ab586479eb610937475604a42cbb9614fe0c891e7309 done
+#38 exporting attestation manifest sha256:8567efca66005dda7474a9dd1d00cef1557fb3a4beacb2df8e42688162a6676b 0.0s done
+#38 exporting manifest list sha256:0481d4d01639363e27718feea0c41d648153b7718e051fbfd50602bfd7823d67 done
 #38 naming to docker.io/library/paperclip-sql-traefik-by-dgh-paperclip:latest done
 #38 unpacking to docker.io/library/paperclip-sql-traefik-by-dgh-paperclip:latest
-#38 unpacking to docker.io/library/paperclip-sql-traefik-by-dgh-paperclip:latest 23.1s done
-#38 DONE 51.8s
+#38 unpacking to docker.io/library/paperclip-sql-traefik-by-dgh-paperclip:latest 24.5s done
+#38 DONE 53.3s
 
 #39 resolving provenance for metadata file
-#39 DONE 0.1s
+#39 DONE 0.0s
 [+] build 1/1
- ✔ Image paperclip-sql-traefik-by-dgh-paperclip Built212.0s
+ ✔ Image paperclip-sql-traefik-by-dgh-paperclip Built329.1s
 
 (base) F:\pinokio\api\paperclip-sql-traefik-by-dgh>

@@ -1,63 +1,107 @@
-[shell shell]
+[api shell.run]
 Microsoft Windows [Versione 10.0.26200.8246]
 (c) Microsoft Corporation. Tutti i diritti riservati.
 
-F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker compose up --force-recreate
-[+] up 3/3
- ✔ Container traefik       Recreated1.3s
- ✔ Container paperclip_db  Recreated0.6s
- ✔ Container paperclip_app Recreated1.1s
+F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker compose --env-file .env up --force-recreate
+[+] up 22/22
+ ✔ Image postgres:15-alpinePulled37.4s
+ ✔ Image traefik:v3.0Pulled15.0s
+ ✔ Network paperclip-sql-traefik-by-dgh_default Created0.1s
+ ✔ Container paperclip_dbCreated0.7s
+ ✔ Container traefikCreated0.7s
+ ✔ Container paperclip_appCreated0.1s
 
 Attaching to paperclip_app, paperclip_db, traefik
 Container paperclip_db Waiting 
-paperclip_db  | 
-paperclip_db  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+paperclip_db  | The files belonging to this database system will be owned by user "postgres".
+paperclip_db  | This user must also own the server process.
 paperclip_db  |
-paperclip_db  | 2026-04-22 18:19:06.837 UTC [1] LOG:  starting PostgreSQL 15.17 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
-paperclip_db  | 2026-04-22 18:19:06.838 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-paperclip_db  | 2026-04-22 18:19:06.838 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-paperclip_db  | 2026-04-22 18:19:06.843 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-paperclip_db  | 2026-04-22 18:19:06.865 UTC [29] LOG:  database system was shut down at 2026-04-22 18:19:03 UTC
-paperclip_db  | 2026-04-22 18:19:06.916 UTC [1] LOG:  database system is ready to accept connections
-traefik       | 2026-04-22T18:19:08Z ERR Unable to obtain ACME certificate for domains error="cannot get ACME client acme: error: 400 :: POST :: https://acme-v02.api.letsencrypt.org/acme/new-acct :: urn:ietf:params:acme:error:invalidContact :: Error validating contact(s) :: contact email has forbidden domain \"example.com\"" ACME CA=https://acme-v02.api.letsencrypt.org/directory acmeCA=https://acme-v02.api.letsencrypt.org/directory domains=["paperclip.localhost","127.0.0.1","localhost"] providerName=myresolver.acme routerName=paperclip-secure@file rule="Host(\"paperclip.localhost\") || Host(\"127.0.0.1\") || Host(\"localhost\")"
+paperclip_db  | The database cluster will be initialized with locale "en_US.utf8".
+paperclip_db  | The default database encoding has accordingly been set to "UTF8".
+paperclip_db  | The default text search configuration will be set to "english".
+paperclip_db  |
+paperclip_db  | Data page checksums are disabled.
+paperclip_db  |
+paperclip_db  | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+paperclip_db  | creating subdirectories ... ok
+paperclip_db  | selecting dynamic shared memory implementation ... posix
+paperclip_db  | selecting default max_connections ... 100
+paperclip_db  | selecting default shared_buffers ... 128MB
+paperclip_db  | selecting default time zone ... UTC
+paperclip_db  | creating configuration files ... ok
+paperclip_db  | running bootstrap script ... ok
+paperclip_db  | sh: locale: not found
+paperclip_db  | 2026-04-22 19:35:45.038 UTC [36] WARNING:  no usable system locales were found
+traefik       | 2026-04-22T19:35:45Z ERR Unable to obtain ACME certificate for domains error="cannot get ACME client acme: error: 400 :: POST :: https://acme-v02.api.letsencrypt.org/acme/new-acct :: urn:ietf:params:acme:error:invalidContact :: Error validating contact(s) :: contact email has invalid domain: Domain name does not end with a valid public suffix (TLD)" ACME CA=https://acme-v02.api.letsencrypt.org/directory acmeCA=https://acme-v02.api.letsencrypt.org/directory domains=["paperclip.localhost","127.0.0.1","localhost"] providerName=myresolver.acme routerName=paperclip-secure@file rule="Host(\"paperclip.localhost\") || Host(\"127.0.0.1\") || Host(\"localhost\")"
+paperclip_db  | performing post-bootstrap initialization ... ok
+paperclip_db  | initdb: warning: enabling "trust" authentication for local connections
+paperclip_db  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+paperclip_db  | syncing data to disk ... ok
+paperclip_db  |
+paperclip_db  |
+paperclip_db  | Success. You can now start the database server using:
+paperclip_db  | 
+paperclip_db  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+paperclip_db  |
+paperclip_db  | waiting for server to start....2026-04-22 19:35:51.325 UTC [48] LOG:  starting PostgreSQL 15.17 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+paperclip_db  | 2026-04-22 19:35:51.328 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+paperclip_db  | 2026-04-22 19:35:51.356 UTC [51] LOG:  database system was shut down at 2026-04-22 19:35:48 UTC
+paperclip_db  | 2026-04-22 19:35:51.392 UTC [48] LOG:  database system is ready to accept connections
+paperclip_db  |  done
+paperclip_db  | server started
+paperclip_db  | 2026-04-22 19:35:52.303 UTC [66] FATAL:  database "paperclip" does not exist
 Container paperclip_db Healthy 
-paperclip_app  | 2026-04-22T18:19:15.315Z WARN [Better Auth]: [better-auth] Warning: your BETTER_AUTH_SECRET should be at least 32 characters long for adequate security. Generate one with `npx @better-auth/cli secret` or `openssl rand -base64 32`.
-paperclip_app  | 2026-04-22T18:19:15.317Z WARN [Better Auth]: [better-auth] Warning: your BETTER_AUTH_SECRET appears low-entropy. Use a randomly generated secret for production.
-paperclip_app  | [18:19:14] INFO: Using external PostgreSQL via DATABASE_URL/config
-paperclip_app  | [18:19:15] INFO: Authenticated mode auth origin configuration {"authBaseUrlMode":"explicit","authPublicBaseUrl":"http://paperclip.localhost","trustedOrigins":["http://paperclip.localhost","https://paperclip.localhost"],"trustedOriginsSource":{"derived":2,"env":0}}
-paperclip_app  | 
-paperclip_app  | ██████╗  █████╗ ██████╗ ███████╗██████╗  ██████╗██╗     ██╗██████╗
-paperclip_app  | ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗██╔════╝██║     ██║██╔══██╗
-paperclip_app  | ██████╔╝███████║██████╔╝█████╗  ██████╔╝██║     ██║     ██║██████╔╝
-paperclip_app  | ██╔═══╝ ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗██║     ██║     ██║██╔═══╝
-paperclip_app  | ██║     ██║  ██║██║     ███████╗██║  ██║╚██████╗███████╗██║██║
-paperclip_app  | ╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝╚══════╝╚═╝╚═╝     
-paperclip_app  |   ───────────────────────────────────────────────────────
-paperclip_app  | Mode             external-postgres  |  static-ui
-paperclip_app  | Deploy           authenticated (private)
-paperclip_app  | Bind             lan (0.0.0.0)
-paperclip_app  | Auth             ready
-paperclip_app  | Server           3100
-paperclip_app  | API              http://localhost:3100/api (health: http://localhost:3100/api/health)
-paperclip_app  | UI               http://localhost:3100
-paperclip_app  | Database         postgres://paperclip:***@db:5432/paperclip
-paperclip_app  | Migrations       already applied
-paperclip_app  | Agent JWT        set
-paperclip_app  | Heartbeat        enabled (30000ms)
-paperclip_app  | DB Backup        enabled (every 60m, keep 7d)
-paperclip_app  | Backup Dir       /paperclip/instances/default/data/backups
-paperclip_app  | Config           /paperclip/instances/default/config.json
-paperclip_app  |   ───────────────────────────────────────────────────────
-paperclip_app  | 
-paperclip_app  | [18:19:15] INFO: plugin job coordinator started — listening to lifecycle events {"service":"plugin-job-coordinator"}                                                                             
-paperclip_app  | [18:19:15] INFO: plugin job scheduler started {"service":"plugin-job-scheduler","tickIntervalMs":30000,"maxConcurrentJobs":10}                                                                   
-paperclip_app  | [18:19:15] INFO: initializing plugin tool dispatcher {"service":"plugin-tool-dispatcher"}
-paperclip_app  | [18:19:15] INFO: plugin-loader: loading all ready plugins {"service":"plugin-loader"}                                                                                                            
-paperclip_app  | [18:19:15] INFO: Automatic database backups enabled {"intervalMinutes":60,"retentionSource":"instance-settings-db","backupDir":"/paperclip/instances/default/data/backups"}                      
-paperclip_app  | [18:19:15] INFO: Server listening on 0.0.0.0:3100                                                                                                                                                
-paperclip_app  | [18:19:15] INFO: plugin-loader: no ready plugins to load {"service":"plugin-loader"}
-paperclip_app  | [18:19:15] INFO: loaded tools from ready plugins {"service":"plugin-tool-dispatcher","readyPlugins":0,"registeredTools":0}                                                                       
-paperclip_app  | [18:19:15] INFO: plugin tool dispatcher initialized {"service":"plugin-tool-dispatcher","totalTools":0}                                                                                          
+paperclip_db  | CREATE DATABASE
+paperclip_db  | 
+paperclip_db  |                                                                                                                                                                                                   
+paperclip_db  | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+paperclip_db  |                                                                                                                                                                                                   
+paperclip_db  | waiting for server to shut down...2026-04-22 19:35:52.827 UTC [48] LOG:  received fast shutdown request
+paperclip_app  | exec /usr/local/bin/docker-entrypoint.sh: no such file or directory                                                                                                                              
+                                                                                                                                                                                                                  
+                                                                                                                                                                                                                  
 
 
-v View in Docker Desktop   o View Config   w Enable Watch   d Detachch
+paperclip_db   | .2026-04-22 19:35:52.830 UTC [48] LOG:  aborting any active transactions
+paperclip_db   | 2026-04-22 19:35:52.832 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+paperclip_db   | 2026-04-22 19:35:52.833 UTC [49] LOG:  shutting down
+paperclip_db   | 2026-04-22 19:35:52.835 UTC [49] LOG:  checkpoint starting: shutdown immediate                                                                                                                   
+paperclip_app exited with code 255 (restarting)
+paperclip_app exited with code 255 (restarting)
+
+paperclip_db   | 2026-04-22 19:35:53.505 UTC [49] LOG:  checkpoint complete: wrote 921 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.311 s, sync=0.332 s, total=0.672 s; sync files=301, longest=0.006 s, average=0.002 s; distance=4239 kB, estimate=4239 kB
+paperclip_db   | 2026-04-22 19:35:53.589 UTC [48] LOG:  database system is shut down
+paperclip_db   |  done
+paperclip_db   | server stopped
+paperclip_db   | 
+paperclip_db   | PostgreSQL init process complete; ready for start up.                                                                                                                                            
+paperclip_db   |                                                                                                                                                                                                  
+paperclip_db   | 2026-04-22 19:35:53.686 UTC [1] LOG:  starting PostgreSQL 15.17 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit                                                          
+paperclip_db   | 2026-04-22 19:35:53.686 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+paperclip_db   | 2026-04-22 19:35:53.686 UTC [1] LOG:  listening on IPv6 address "::", port 5432                                                                                                                  
+paperclip_db   | 2026-04-22 19:35:53.691 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"                                                                                               
+paperclip_db   | 2026-04-22 19:35:53.716 UTC [71] LOG:  database system was shut down at 2026-04-22 19:35:53 UTC
+paperclip_db   | 2026-04-22 19:35:53.752 UTC [1] LOG:  database system is ready to accept connections
+paperclip_app exited with code 255 (restarting)
+paperclip_app  | exec /usr/local/bin/docker-entrypoint.sh: no such file or directory
+
+paperclip_app exited with code 255 (restarting)                                                                                                                                                                   
+paperclip_app exited with code 255 (restarting)
+paperclip_app  | exec /usr/local/bin/docker-entrypoint.sh: no such file or directory
+paperclip_app  | exec /usr/local/bin/docker-entrypoint.sh: no such file or directory
+paperclip_app exited with code 255 (restarting)
+paperclip_app exited with code 255 (restarting)
+paperclip_app  | exec /usr/local/bin/docker-entrypoint.sh: no such file or directory
+paperclip_app exited with code 255 (restarting)
+paperclip_app  | exec /usr/local/bin/docker-entrypoint.sh: no such file or directory
+
+paperclip_app exited with code 255 (restarting)                                                                                                                                                                   
+traefik        | 2026-04-22T19:36:42Z ERR Error while Peeking first byte error="read tcp 172.18.0.3:80->172.18.0.1:34134: i/o timeout"                                                                            
+traefik        | 2026-04-22T19:36:42Z ERR Error while Peeking first byte error="read tcp 172.18.0.3:80->172.18.0.1:34120: i/o timeout"
+paperclip_app  | exec /usr/local/bin/docker-entrypoint.sh: no such file or directory                                                                                                                              
+paperclip_app exited with code 255 (restarting)
+paperclip_app exited with code 255 (restarting)
+paperclip_app  | exec /usr/local/bin/docker-entrypoint.sh: no such file or directory
+
+
+v View in Docker Desktop   o View Config   w Enable Watch   d Detach

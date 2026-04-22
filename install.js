@@ -4,29 +4,11 @@ module.exports = {
       method: "input",
       params: {
         title: "Digithole Interactive Setup",
-        description: "Configure your Paperclip + Postgres + Traefik stack carefully. These settings will be saved to your .env file.",
+        description: "Configure your Paperclip + Postgres + Traefik stack. Use a 32+ character secret.",
         form: [
-          {
-            key: "domain",
-            label: "Domain Name",
-            type: "text",
-            default: "paperclip.localhost",
-            placeholder: "e.g. paperclip.yourdomain.com or paperclip.localhost"
-          },
-          {
-            key: "email",
-            label: "Email for SSL (Optional)",
-            type: "text",
-            default: "admin@paperclip.local",
-            placeholder: "Used for Let's Encrypt"
-          },
-          {
-            key: "secret",
-            label: "Better Auth Secret",
-            type: "text",
-            default: "paperclip-very-secure-random-secret-32-chars-long",
-            placeholder: "Enter a random string for security"
-          }
+          { key: "domain", label: "Domain Name", type: "text", default: "paperclip.localhost" },
+          { key: "email", label: "Email for SSL", type: "text", default: "admin@paperclip.local" },
+          { key: "secret", label: "Better Auth Secret", type: "text", default: "paperclip-very-secure-random-secret-32-chars-long" }
         ]
       }
     },
@@ -38,35 +20,16 @@ module.exports = {
       }
     },
     {
-      method: "json.set",
+      method: "shell.run",
       params: {
-        file: "conf.json",
-        data: {
-          domain: "{{input.domain}}",
-          secret: "{{input.secret}}"
-        }
+        message: "git clone https://github.com/paperclipai/paperclip.git app"
       }
     },
     {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/paperclipai/paperclip.git app",
-        ]
-      }
-    },
-    {
-      method: "shell.run",
-      params: {
-        message: [
-          "node fix.js"
-        ]
-      }
-    },
-    {
-      method: "shell.run",
-      params: {
-        message: [
+          "powershell -Command \"(gc app/scripts/docker-entrypoint.sh) -join \"\"`n\"\" | Out-File -FilePath app/scripts/docker-entrypoint.sh -Encoding ascii -NoNewline\"",
           "mkdir -p data/traefik data/postgres data/paperclip",
           "touch data/traefik/acme.json"
         ]
@@ -75,15 +38,13 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        message: [
-          "docker compose build --no-cache"
-        ]
+        message: "docker compose build --no-cache"
       }
     },
     {
       method: "notify",
       params: {
-        html: "Installation successful! Click <b>Start</b> to launch the stack."
+        html: "Installation Finished! You can now click Start."
       }
     }
   ]
