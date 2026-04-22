@@ -19,11 +19,23 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        message: [
-          "powershell -Command \"docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)\"",
-          "powershell -Command \"if (Test-Path dynamic_conf.yml) { Remove-Item -Recurse -Force dynamic_conf.yml -ErrorAction SilentlyContinue }\"",
-          "powershell -Command \"if (Test-Path data/traefik) { Remove-Item -Recurse -Force data/traefik -ErrorAction SilentlyContinue }\""
-        ]
+        message: "type .env",
+        on: [{
+          "event": "/DOMAIN=(.+)/",
+          "done": true
+        }]
+      }
+    },
+    {
+      method: "local.set",
+      params: {
+        domain: "{{input.event[1].trim()}}"
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        message: "powershell -Command \"if (Test-Path dynamic_conf.yml) { Remove-Item -Recurse -Force dynamic_conf.yml -ErrorAction SilentlyContinue }\""
       }
     },
     {
@@ -49,7 +61,10 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        message: "docker compose exec paperclip_app pnpm paperclipai auth bootstrap-ceo"
+        message: [
+          "powershell -Command \"Start-Sleep -Seconds 15\"",
+          "docker compose exec paperclip_app pnpm paperclipai auth bootstrap-ceo"
+        ]
       }
     },
     {
