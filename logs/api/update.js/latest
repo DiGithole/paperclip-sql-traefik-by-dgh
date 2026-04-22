@@ -1,0 +1,58 @@
+[api shell.run]
+Microsoft Windows [Versione 10.0.26200.8246]
+(c) Microsoft Corporation. Tutti i diritti riservati.
+
+F:\pinokio\api\paperclip>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker build -t paperclip app
+[+] Building 149.2s (37/37) FINISHED                                                                                                                                                                             docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                                                                                                                             0.0s
+ => => transferring dockerfile: 3.04kB                                                                                                                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/node:lts-trixie-slim                                                                                                                                                          1.4s
+ => [internal] load .dockerignore                                                                                                                                                                                                0.0s
+ => => transferring context: 139B                                                                                                                                                                                                0.0s
+ => [base 1/3] FROM docker.io/library/node:lts-trixie-slim@sha256:735dd688da64d22ebd9dd374b3e7e5a874635668fd2a6ec20ca1f99264294086                                                                                               0.0s
+ => => resolve docker.io/library/node:lts-trixie-slim@sha256:735dd688da64d22ebd9dd374b3e7e5a874635668fd2a6ec20ca1f99264294086                                                                                                    0.0s
+ => [internal] load build context                                                                                                                                                                                                0.1s
+ => => transferring context: 115.97kB                                                                                                                                                                                            0.1s
+ => CACHED [base 2/3] RUN apt-get update   && apt-get install -y --no-install-recommends ca-certificates gosu curl gh git wget ripgrep python3   && rm -rf /var/lib/apt/lists/*   && corepack enable                             0.0s
+ => CACHED [base 3/3] RUN usermod -u 1000 --non-unique node   && groupmod -g 1000 --non-unique node   && usermod -g 1000 -d /paperclip node                                                                                      0.0s
+ => CACHED [deps  1/19] WORKDIR /app                                                                                                                                                                                             0.0s
+ => CACHED [deps  2/19] COPY package.json pnpm-workspace.yaml pnpm-lock.yaml .npmrc ./                                                                                                                                           0.0s
+ => CACHED [deps  3/19] COPY cli/package.json cli/                                                                                                                                                                               0.0s
+ => CACHED [deps  4/19] COPY server/package.json server/                                                                                                                                                                         0.0s
+ => CACHED [deps  5/19] COPY ui/package.json ui/                                                                                                                                                                                 0.0s
+ => CACHED [deps  6/19] COPY packages/shared/package.json packages/shared/                                                                                                                                                       0.0s
+ => CACHED [deps  7/19] COPY packages/db/package.json packages/db/                                                                                                                                                               0.0s
+ => CACHED [deps  8/19] COPY packages/adapter-utils/package.json packages/adapter-utils/                                                                                                                                         0.0s
+ => CACHED [deps  9/19] COPY packages/mcp-server/package.json packages/mcp-server/                                                                                                                                               0.0s
+ => CACHED [deps 10/19] COPY packages/adapters/claude-local/package.json packages/adapters/claude-local/                                                                                                                         0.0s
+ => CACHED [deps 11/19] COPY packages/adapters/codex-local/package.json packages/adapters/codex-local/                                                                                                                           0.0s
+ => CACHED [deps 12/19] COPY packages/adapters/cursor-local/package.json packages/adapters/cursor-local/                                                                                                                         0.0s
+ => CACHED [deps 13/19] COPY packages/adapters/gemini-local/package.json packages/adapters/gemini-local/                                                                                                                         0.0s
+ => CACHED [deps 14/19] COPY packages/adapters/openclaw-gateway/package.json packages/adapters/openclaw-gateway/                                                                                                                 0.0s
+ => CACHED [deps 15/19] COPY packages/adapters/opencode-local/package.json packages/adapters/opencode-local/                                                                                                                     0.0s
+ => CACHED [deps 16/19] COPY packages/adapters/pi-local/package.json packages/adapters/pi-local/                                                                                                                                 0.0s
+ => CACHED [deps 17/19] COPY packages/plugins/sdk/package.json packages/plugins/sdk/                                                                                                                                             0.0s
+ => CACHED [deps 18/19] COPY patches/ patches/                                                                                                                                                                                   0.0s
+ => CACHED [deps 19/19] RUN pnpm install --frozen-lockfile                                                                                                                                                                       0.0s
+ => CACHED [build 2/7] COPY --from=deps /app /app                                                                                                                                                                                0.0s
+ => [build 3/7] COPY . .                                                                                                                                                                                                         0.7s
+ => [build 4/7] RUN pnpm --filter @paperclipai/ui build                                                                                                                                                                         31.9s
+ => [build 5/7] RUN pnpm --filter @paperclipai/plugin-sdk build                                                                                                                                                                  5.1s
+ => [build 6/7] RUN pnpm --filter @paperclipai/server build                                                                                                                                                                      9.0s
+ => [build 7/7] RUN test -f server/dist/index.js || (echo "ERROR: server build output missing" && exit 1)                                                                                                                        0.3s
+ => [production 2/5] COPY --chown=node:node --from=build /app /app                                                                                                                                                              11.1s
+ => [production 3/5] RUN npm install --global --omit=dev @anthropic-ai/claude-code@latest @openai/codex@latest opencode-ai   && apt-get update   && apt-get install -y --no-install-recommends openssh-client jq   && rm -rf /  36.2s
+ => [production 4/5] COPY scripts/docker-entrypoint.sh /usr/local/bin/                                                                                                                                                           0.0s
+ => [production 5/5] RUN chmod +x /usr/local/bin/docker-entrypoint.sh                                                                                                                                                            0.2s
+ => exporting to image                                                                                                                                                                                                          49.1s
+ => => exporting layers                                                                                                                                                                                                         28.9s
+ => => exporting manifest sha256:af8252a195d0bfad50fcce93cedaaf059af6a53bb42a22b0510386c617f3bdca                                                                                                                                0.0s
+ => => exporting config sha256:781110a579c0e0cfa0d316ae6894b161ef7b5b0239d3f876a0fc786111994e16                                                                                                                                  0.0s
+ => => exporting attestation manifest sha256:d4e0c8f5ffdb11495df39a7436da38fa51680e829e31f332dbb575fa17ac3f6f                                                                                                                    0.0s
+ => => exporting manifest list sha256:a099c85601f0ada62a728d648f12be4b1b31b88058ea59e538fca5634c26d29e                                                                                                                           0.0s
+ => => naming to docker.io/library/paperclip:latest                                                                                                                                                                              0.0s
+ => => unpacking to docker.io/library/paperclip:latest                                                                                                                                                                          20.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/rb13snleyae6j0rtum17nuxcw
+
+(base) F:\pinokio\api\paperclip>

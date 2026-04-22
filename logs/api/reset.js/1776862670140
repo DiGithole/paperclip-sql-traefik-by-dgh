@@ -1,0 +1,15 @@
+[api shell.run]
+Microsoft Windows [Versione 10.0.26200.8246]
+(c) Microsoft Corporation. Tutti i diritti riservati.
+
+F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker-compose down --rmi all --volumes
+[+] down 7/7
+ ✔ Container traefikRemoved0.6s
+ ✔ Container paperclip_appRemoved0.7s
+ ✔ Container paperclip_dbRemoved0.3s
+ ✔ Image traefik:v2.10Removed3.9s
+ ✔ Image paperclip-sql-traefik-by-dgh-paperclip:latest Removed3.9s
+ ✔ Image postgres:15-alpineRemoved3.9s
+ ✔ Network paperclip-sql-traefik-by-dgh_default        Removed0.3s
+
+(base) F:\pinokio\api\paperclip-sql-traefik-by-dgh>

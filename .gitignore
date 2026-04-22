@@ -1,0 +1,7 @@
+app/
+data/
+env/
+.env
+conf.json
+*.log
+node_modules/

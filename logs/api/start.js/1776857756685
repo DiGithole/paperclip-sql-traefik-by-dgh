@@ -1,0 +1,23 @@
+[api shell.run]
+Microsoft Windows [Versione 10.0.26200.8246]
+(c) Microsoft Corporation. Tutti i diritti riservati.
+
+F:\pinokio\api\paperclip>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker run --rm -p 3100:3100 -e SERVE_UI=true -v F:\pinokio\api\paperclip\data:/paperclip paperclip
+[11:41:36] INFO: Using embedded PostgreSQL because no DATABASE_URL set (dataDir=/paperclip/instances/default/db, port=54329)
+[11:41:44] INFO: Created embedded PostgreSQL database: paperclip
+[11:41:44] INFO: Detected first-run embedded PostgreSQL setup; applying pending migrations automatically
+[11:41:44] INFO: Applying 65 pending migrations for Embedded PostgreSQL {"pendingMigrations":["0000_mature_masked_marvel.sql","0001_fast_northstar.sql","0002_big_zaladane.sql","0003_shallow_quentin_quire.sql","0004_issue_identifiers.sql","0005_chief_luke_cage.sql","0006_overjoyed_mister_sinister.sql","0007_new_quentin_quire.sql","0008_amused_zzzax.sql","0009_fast_jackal.sql","0010_stale_justin_hammer.sql","0011_windy_corsair.sql","0012_perpetual_ser_duncan.sql","0013_dashing_wasp.sql","0014_many_mikhail_rasputin.sql","0015_project_color_archived.sql","0016_agent_icon.sql","0017_tiresome_gabe_jones.sql","0018_flat_sleepwalker.sql","0019_public_victor_mancha.sql","0020_white_anita_blake.sql","0021_chief_vindicator.sql","0022_company_brand_color.sql","0023_fair_lethal_legion.sql","0024_far_beast.sql","0025_nasty_salo.sql","0026_lying_pete_wisdom.sql","0027_tranquil_tenebrous.sql","0028_harsh_goliath.sql","0029_plugin_tables.sql","0030_rich_magneto.sql","0031_zippy_magma.sql","0032_pretty_doctor_octopus.sql","0033_shiny_black_tarantula.sql","0034_fat_dormammu.sql","0035_marvelous_satana.sql","0036_cheerful_nitro.sql","0037_friendly_eddie_brock.sql","0038_careless_iron_monger.sql","0039_fat_magneto.sql","0040_eager_shotgun.sql","0041_curly_maria_hill.sql","0042_spotty_the_renegades.sql","0043_reflective_captain_universe.sql","0044_illegal_toad.sql","0045_workable_shockwave.sql","0046_smooth_sentinels.sql","0047_overjoyed_groot.sql","0048_flashy_marrow.sql","0049_flawless_abomination.sql","0050_stiff_luckman.sql","0051_young_korg.sql","0052_mushy_trauma.sql","0053_sharp_wild_child.sql","0054_draft_routines.sql","0055_kind_weapon_omega.sql","0056_spooky_ultragirl.sql","0057_tidy_join_requests.sql","0058_wealthy_starbolt.sql","0059_plugin_database_namespaces.sql","0060_orange_annihilus.sql","0061_lively_thor_girl.sql","0062_routine_run_dispatch_fingerprint.sql","0063_issue_thread_interactions.sql","0064_issue_thread_interaction_idempotency.sql"]}
+[11:41:46] INFO: Embedded PostgreSQL ready
+[11:41:47] INFO: Authenticated mode auth origin configuration {"authBaseUrlMode":"auto","authPublicBaseUrl":null,"trustedOrigins":[],"trustedOriginsSource":{"derived":0,"env":0}}
+[11:41:47] ERROR: Paperclip server failed to start 
+    err: {
+      "type": "Error",
+      "message": "BETTER_AUTH_SECRET (or PAPERCLIP_AGENT_JWT_SECRET) must be set. For local development, set BETTER_AUTH_SECRET=paperclip-dev-secret in your .env file.",
+      "stack":
+          Error: BETTER_AUTH_SECRET (or PAPERCLIP_AGENT_JWT_SECRET) must be set. For local development, set BETTER_AUTH_SECRET=paperclip-dev-secret in your .env file.
+              at createBetterAuthInstance (/app/server/src/auth/better-auth.ts:91:11)
+              at startServer (/app/server/dist/index.js:378:22)
+              at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    }
+
+(base) F:\pinokio\api\paperclip>

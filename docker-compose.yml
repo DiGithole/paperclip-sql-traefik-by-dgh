@@ -1,0 +1,67 @@
+services:
+  traefik:
+    image: traefik:v2.10
+    container_name: traefik
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.endpoint=unix:///var/run/docker.sock"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=${EMAIL}"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "./data/traefik:/letsencrypt"
+    restart: always
+
+  db:
+    image: postgres:15-alpine
+    container_name: paperclip_db
+    restart: always
+    environment:
+      POSTGRES_USER: paperclip
+      POSTGRES_PASSWORD: paperclip_password
+      POSTGRES_DB: paperclip
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U paperclip -d paperclip"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  paperclip:
+    build: 
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: paperclip_app
+    restart: always
+    environment:
+      - DATABASE_URL=postgres://paperclip:paperclip_password@db:5432/paperclip
+      - BETTER_AUTH_SECRET=${SECRET:-paperclip-dev-secret}
+      - PAPERCLIP_AGENT_JWT_SECRET=${SECRET:-paperclip-dev-secret}
+      - SERVE_UI=true
+      - PORT=3100
+    volumes:
+      - ./data/paperclip:/paperclip
+    depends_on:
+      db:
+        condition: service_healthy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.paperclip.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.paperclip.entrypoints=websecure"
+      - "traefik.http.routers.paperclip.tls.certresolver=myresolver"
+      - "traefik.http.services.paperclip.loadbalancer.server.port=3100"
+      # Redirezione HTTP -> HTTPS
+      - "traefik.http.routers.paperclip-http.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.paperclip-http.entrypoints=web"
+      - "traefik.http.routers.paperclip-http.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"

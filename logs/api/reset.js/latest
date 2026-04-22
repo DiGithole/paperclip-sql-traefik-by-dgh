@@ -1,0 +1,8 @@
+[api shell.run]
+Microsoft Windows [Versione 10.0.26200.8246]
+(c) Microsoft Corporation. Tutti i diritti riservati.
+
+F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && rm .env
+rm: cannot remove '.env': No such file or directory
+
+(base) F:\pinokio\api\paperclip-sql-traefik-by-dgh>

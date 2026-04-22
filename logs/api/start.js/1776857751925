@@ -1,0 +1,8 @@
+[api shell.run]
+Microsoft Windows [Versione 10.0.26200.8246]
+(c) Microsoft Corporation. Tutti i diritti riservati.
+
+F:\pinokio\api\paperclip>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker run --rm -p 3100:3100 -e SERVE_UI=true -v F:\pinokio\api\paperclip\data:/paperclip paperclip
+exec /usr/local/bin/docker-entrypoint.sh: no such file or directory
+
+(base) F:\pinokio\api\paperclip>

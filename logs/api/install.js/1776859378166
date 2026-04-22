@@ -1,0 +1,14 @@
+[api shell.run]
+Microsoft Windows [Versione 10.0.26200.8246]
+(c) Microsoft Corporation. Tutti i diritti riservati.
+
+F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && git clone https://github.com/paperclipai/paperclip.git app
+Cloning into 'app'...
+remote: Enumerating objects: 33042, done.
+remote: Counting objects: 100% (743/743), done.
+remote: Compressing objects: 100% (289/289), done.
+remote: Total 33042 (delta 562), reused 454 (delta 454), pack-reused 32299 (from 2)
+Receiving objects: 100% (33042/33042), 20.10 MiB | 10.22 MiB/s, done.
+Resolving deltas: 100% (24568/24568), done.
+
+(base) F:\pinokio\api\paperclip-sql-traefik-by-dgh>

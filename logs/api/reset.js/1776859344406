@@ -1,0 +1,10 @@
+[api shell.run]
+Microsoft Windows [Versione 10.0.26200.8246]
+(c) Microsoft Corporation. Tutti i diritti riservati.
+
+F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker-compose down --rmi all --volumes
+time="2026-04-22T14:02:27+02:00" level=warning msg="The \"EMAIL\" variable is not set. Defaulting to a blank string."
+time="2026-04-22T14:02:27+02:00" level=warning msg="The \"DOMAIN\" variable is not set. Defaulting to a blank string."
+time="2026-04-22T14:02:27+02:00" level=warning msg="The \"DOMAIN\" variable is not set. Defaulting to a blank string."
+
+(base) F:\pinokio\api\paperclip-sql-traefik-by-dgh>

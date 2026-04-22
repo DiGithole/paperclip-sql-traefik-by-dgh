@@ -1,0 +1,138 @@
+[api shell.run]
+Microsoft Windows [Versione 10.0.26200.8246]
+(c) Microsoft Corporation. Tutti i diritti riservati.
+
+F:\pinokio\api\paperclip>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker-compose build
+time="2026-04-22T13:47:04+02:00" level=warning msg="F:\\pinokio\\api\\paperclip\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+#1 [internal] load local bake definitions
+#1 reading from stdin 533B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 3.04kB done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:lts-trixie-slim
+#3 DONE 1.2s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 139B done
+#4 DONE 0.0s
+
+#5 [base 1/3] FROM docker.io/library/node:lts-trixie-slim@sha256:735dd688da64d22ebd9dd374b3e7e5a874635668fd2a6ec20ca1f99264294086
+#5 resolve docker.io/library/node:lts-trixie-slim@sha256:735dd688da64d22ebd9dd374b3e7e5a874635668fd2a6ec20ca1f99264294086 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 28.12MB 2.2s done
+#6 DONE 2.2s
+
+#7 [base 3/3] RUN usermod -u 1000 --non-unique node   && groupmod -g 1000 --non-unique node   && usermod -g 1000 -d /paperclip node
+#7 CACHED
+
+#8 [deps  6/19] COPY packages/shared/package.json packages/shared/
+#8 CACHED
+
+#9 [deps  1/19] WORKDIR /app
+#9 CACHED
+
+#10 [deps 12/19] COPY packages/adapters/cursor-local/package.json packages/adapters/cursor-local/
+#10 CACHED
+
+#11 [build 6/7] RUN pnpm --filter @paperclipai/server build
+#11 CACHED
+
+#12 [deps 14/19] COPY packages/adapters/openclaw-gateway/package.json packages/adapters/openclaw-gateway/
+#12 CACHED
+
+#13 [deps 17/19] COPY packages/plugins/sdk/package.json packages/plugins/sdk/
+#13 CACHED
+
+#14 [deps  2/19] COPY package.json pnpm-workspace.yaml pnpm-lock.yaml .npmrc ./
+#14 CACHED
+
+#15 [deps 13/19] COPY packages/adapters/gemini-local/package.json packages/adapters/gemini-local/
+#15 CACHED
+
+#16 [deps  4/19] COPY server/package.json server/
+#16 CACHED
+
+#17 [deps 15/19] COPY packages/adapters/opencode-local/package.json packages/adapters/opencode-local/
+#17 CACHED
+
+#18 [production 4/5] COPY scripts/docker-entrypoint.sh /usr/local/bin/
+#18 CACHED
+
+#19 [deps  9/19] COPY packages/mcp-server/package.json packages/mcp-server/
+#19 CACHED
+
+#20 [build 5/7] RUN pnpm --filter @paperclipai/plugin-sdk build
+#20 CACHED
+
+#21 [build 7/7] RUN test -f server/dist/index.js || (echo "ERROR: server build output missing" && exit 1)
+#21 CACHED
+
+#22 [deps  3/19] COPY cli/package.json cli/
+#22 CACHED
+
+#23 [build 3/7] COPY . .
+#23 CACHED
+
+#24 [deps  7/19] COPY packages/db/package.json packages/db/
+#24 CACHED
+
+#25 [build 4/7] RUN pnpm --filter @paperclipai/ui build
+#25 CACHED
+
+#26 [base 2/3] RUN apt-get update   && apt-get install -y --no-install-recommends ca-certificates gosu curl gh git wget ripgrep python3   && rm -rf /var/lib/apt/lists/*   && corepack enable
+#26 CACHED
+
+#27 [deps  8/19] COPY packages/adapter-utils/package.json packages/adapter-utils/
+#27 CACHED
+
+#28 [build 2/7] COPY --from=deps /app /app
+#28 CACHED
+
+#29 [production 2/5] COPY --chown=node:node --from=build /app /app
+#29 CACHED
+
+#30 [deps  5/19] COPY ui/package.json ui/
+#30 CACHED
+
+#31 [deps 11/19] COPY packages/adapters/codex-local/package.json packages/adapters/codex-local/
+#31 CACHED
+
+#32 [deps 19/19] RUN pnpm install --frozen-lockfile
+#32 CACHED
+
+#33 [deps 16/19] COPY packages/adapters/pi-local/package.json packages/adapters/pi-local/
+#33 CACHED
+
+#34 [deps 10/19] COPY packages/adapters/claude-local/package.json packages/adapters/claude-local/
+#34 CACHED
+
+#35 [deps 18/19] COPY patches/ patches/
+#35 CACHED
+
+#36 [production 3/5] RUN npm install --global --omit=dev @anthropic-ai/claude-code@latest @openai/codex@latest opencode-ai   && apt-get update   && apt-get install -y --no-install-recommends openssh-client jq   && rm -rf /var/lib/apt/lists/*   && mkdir -p /paperclip   && chown node:node /paperclip
+#36 CACHED
+
+#37 [production 5/5] RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+#37 CACHED
+
+#38 exporting to image
+#38 exporting layers done
+#38 exporting manifest sha256:31dea1346511c675a47fbc7af3210a01ec31d55e8320889f410c61141e1d76e9 0.0s done
+#38 exporting config sha256:995fe26bfbb6021700da695ed6625dddb008ce774eeae4b1e5674879ec8f1792 0.0s done
+#38 exporting attestation manifest sha256:b39e7f224f7e3717cbb34845eb4f1b82219ece6cb207de6e491cdb93220a35e7 0.0s done
+#38 exporting manifest list sha256:0a076971b012e71032ad856883f1ce9df81560e114a8ef3429000e9dc7b53f55 done
+#38 naming to docker.io/library/paperclip-paperclip:latest done
+#38 unpacking to docker.io/library/paperclip-paperclip:latest done
+#38 DONE 0.1s
+
+#39 resolving provenance for metadata file
+#39 DONE 0.0s
+[+] build 1/1
+ ✔ Image paperclip-paperclip Built4.0s
+
+(base) F:\pinokio\api\paperclip>

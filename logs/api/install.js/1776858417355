@@ -1,0 +1,7 @@
+[api shell.run]
+Microsoft Windows [Versione 10.0.26200.8246]
+(c) Microsoft Corporation. Tutti i diritti riservati.
+
+F:\pinokio\api\paperclip\app>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && powershell -Command "(Get-Content scripts/docker-entrypoint.sh -Raw).Replace(\"`r`n\", \"`n\") | Set-Content scripts/docker-entrypoint.sh -NoNewline"
+
+(base) F:\pinokio\api\paperclip\app>
