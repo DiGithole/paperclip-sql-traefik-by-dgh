@@ -33,6 +33,38 @@ module.exports = {
       }
     },
     {
+      method: "shell.run",
+      params: {
+        message: "type .env",
+        on: [{
+          "event": "/EMAIL=(.+)/",
+          "done": true
+        }]
+      }
+    },
+    {
+      method: "local.set",
+      params: {
+        email: "{{input.event[1].trim()}}"
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        message: "type .env",
+        on: [{
+          "event": "/SECRET=(.+)/",
+          "done": true
+        }]
+      }
+    },
+    {
+      method: "local.set",
+      params: {
+        secret: "{{input.event[1].trim()}}"
+      }
+    },
+    {
       method: "fs.write",
       params: {
         path: "dynamic_conf.yml",
@@ -62,11 +94,26 @@ module.exports = {
     {
       method: "shell.run",
       params: {
+        env: {
+          DOMAIN: "{{local.domain}}",
+          EMAIL: "{{local.email}}",
+          SECRET: "{{local.secret}}"
+        },
         message: [
           "docker compose up --force-recreate"
         ],
         on: [{
-          "event": "/Server listening on 0.0.0.0:3100/",
+          "event": "/Server listening on/",
+          "done": true
+        }]
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        message: "echo http://{{local.domain}}",
+        on: [{
+          "event": "/(http:\\/\\/[0-9.:a-z-]+)/",
           "done": true
         }]
       }
@@ -74,13 +121,13 @@ module.exports = {
     {
       method: "local.set",
       params: {
-        url: "http://{{local.domain}}"
+        url: "{{input.event[1]}}"
       }
     },
     {
       method: "log",
       params: {
-        text: "Ready to launch! Open the Web UI from the sidebar."
+        text: "Paperclip Signature Edition is ready!"
       }
     }
   ]

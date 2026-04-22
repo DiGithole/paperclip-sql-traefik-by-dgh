@@ -3,7 +3,7 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        message: "docker compose exec paperclip pnpm paperclipai auth bootstrap-ceo"
+        message: "docker compose exec paperclip npm run paperclipai auth bootstrap-ceo"
       }
     }
   ]
