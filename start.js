@@ -10,7 +10,7 @@ module.exports = {
     {
       method: "local.set",
       params: {
-        url: "https://{{input.domain}}"
+        url: "{{input.domain.indexOf('localhost') !== -1 ? 'http' : 'https'}}://{{input.domain}}"
       }
     },
     {
