@@ -1,2 +1,0 @@
-│
-●  Deployment mode is local_trusted. Bootstrap CEO invite is only required for authenticated mode.
