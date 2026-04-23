@@ -1,5 +1,19 @@
-[api shell.run]
-Microsoft Windows [Versione 10.0.26200.8246]
-(c) Microsoft Corporation. Tutti i diritti riservati.
+[memory]
+{"ts":1776902186820,"step":1,"input":{"id":"d1698d77-60ec-4d8d-a044-4e738f4c7e41"},"args":{},"global":{},"local":{},"port":42003}
 
-F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker compose --env-file .env up -d
+[api local.set]
+
+
+===================================================
+
+[api local.set]
+# local variables
+
+[api local.set]
+{
+  "url": "http://localhost:3100"
+}
+[api local.set]
+
+===================================================
+

@@ -1,5 +1,5 @@
 {
-  "title": "PAPERCLIP SQL TRAEFIK BY DGH",
-  "description": "🚀 Pro Orchestration Stack for AI Agents. Includes Paperclip UI/Server, Dedicated PostgreSQL, and Traefik Reverse Proxy with Auto-SSL. \n\nCredits:\n- Paperclip by paperclipai\n- PostgreSQL by PostgreSQL Group\n- Traefik by Traefik Labs\n\nMaintained by Digithole (DGH).\n🌐 https://digithole.com\n📧 info@digithole.com\n💖 Contributions: SOL: HtuDN3S2hHUv252H4mkt5zTWAihgCicBkv88aTzX9Dt1 | BTC: bc1q85pu0xythn44xkr8h8fwv3rtyqr2cqg6n5f8t7",
+  "title": "Paperclip AI (SQL Edition)",
+  "description": "Paperclip AI with PostgreSQL backend",
   "icon": "icon.png"
 }

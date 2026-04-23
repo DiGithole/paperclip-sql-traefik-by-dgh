@@ -3,26 +3,19 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        path: "app",
-        message: [
-          "git pull"
-        ]
+        message: "git pull"
       }
     },
     {
       method: "shell.run",
       params: {
-        message: [
-          "node fix.js"
-        ]
+        message: "docker compose pull"
       }
     },
     {
-      method: "shell.run",
+      method: "notify",
       params: {
-        message: [
-          "docker-compose build --no-cache"
-        ]
+        html: "Update Complete! Restart the app to apply changes."
       }
     }
   ]

@@ -1,7 +1,2 @@
-[api shell.run]
-Microsoft Windows [Versione 10.0.26200.8246]
-(c) Microsoft Corporation. Tutti i diritti riservati.
-
-F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && powershell -Command "Remove-Item -Recurse -Force data"
-
-(base) F:\pinokio\api\paperclip-sql-traefik-by-dgh>
+[memory]
+{"ts":1776900421657,"step":2,"input":{"id":"32ddafa0-5a8c-48eb-b223-a3b6fa71a341"},"args":{},"global":{},"local":{},"port":42003}

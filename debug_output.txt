@@ -1,0 +1,58 @@
+--- CONTAINER ENV --- 
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HOSTNAME=aab2a3b6c09c
+PAPERCLIP_SERVER_BIND=lan
+BETTER_AUTH_URL=http://paperclip.localhost:8000
+DATABASE_URL=postgres://paperclip:db@paperclip_db:5432/paperclip
+PORT=3100
+BETTER_AUTH_SECRET=paperclip-very-secure-random-secret-32-chars-long
+PAPERCLIP_AUTH_BASE_URL_MODE=explicit
+PAPERCLIP_DATABASE_URL=postgres://paperclip:db@paperclip_db:5432/paperclip
+PAPERCLIP_AUTH_MODE=authenticated
+PAPERCLIP_DEPLOYMENT_MODE=authenticated
+PAPERCLIP_HOME=/paperclip
+PAPERCLIP_SERVER_HOST=0.0.0.0
+PAPERCLIP_SERVER_PORT=3100
+PAPERCLIP_SERVER_EXPOSURE=public
+HOST=0.0.0.0
+PAPERCLIP_AUTH_BASE_URL=http://paperclip.localhost:8000
+PAPERCLIP_AUTH_SECRET=paperclip-very-secure-random-secret-32-chars-long
+PAPERCLIP_DEPLOYMENT_EXPOSURE=public
+NODE_VERSION=24.15.0
+YARN_VERSION=1.22.22
+NODE_ENV=production
+HOME=/paperclip
+SERVE_UI=true
+PAPERCLIP_INSTANCE_ID=default
+USER_UID=1000
+USER_GID=1000
+PAPERCLIP_CONFIG=/paperclip/instances/default/config.json
+OPENCODE_ALLOW_ALL_MODELS=true
+--- CONFIG.JSON --- 
+{
+  "$meta": {
+    "version": 1,
+    "updatedAt": "2026-04-22T22:41:59.637Z",
+    "source": "onboard"
+  },
+  "deploymentMode": "authenticated",
+  "database": {
+    "provider": "postgres",
+    "url": "postgres://paperclip:db@paperclip_db:5432/paperclip"
+  },
+  "logging": {
+    "level": "info",
+    "mode": "file"
+  },
+  "server": {
+    "port": 3100,
+    "bind": "lan",
+    "exposure": "public"
+  },
+  "auth": {
+    "mode": "authenticated",
+    "baseUrlMode": "explicit",
+    "baseUrl": "http://paperclip.localhost:8000",
+    "publicBaseUrl": "http://paperclip.localhost:8000"
+  }
+}

@@ -1,7 +1,8 @@
-app/
+# Ignora la cartella dei dati persistenti (Database, Istante di Paperclip, Log)
 data/
-env/
-.env
-conf.json
-*.log
+
+# Ignora eventuali file temporanei di log o configurazioni
 node_modules/
+.env
+INVITO.txt
+.DS_Store

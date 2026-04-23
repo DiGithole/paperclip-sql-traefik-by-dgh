@@ -1,18 +1,6 @@
 services:
-  traefik:
-    image: traefik:v3.0
-    command:
-      - "--providers.file.filename=/etc/traefik/dynamic_conf.yml"
-      - "--entrypoints.web.address=:80"
-    ports:
-      - "8000:80"
-    volumes:
-      - "./dynamic_conf.yml:/etc/traefik/dynamic_conf.yml"
-    networks:
-      - paperclip-network
-
   paperclip_db:
-    image: postgres:15-alpine
+    image: postgres:16-alpine
     container_name: paperclip_db
     environment:
       POSTGRES_USER: paperclip
@@ -22,37 +10,27 @@ services:
       - ./data/postgres:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U paperclip -d paperclip"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
-    networks:
-      - paperclip-network
+      interval: 3s
+      timeout: 3s
+      retries: 10
 
   paperclip_app:
-    build:
-      context: ./app
-      dockerfile: Dockerfile
+    image: ghcr.io/paperclipai/paperclip:latest
     container_name: paperclip_app
+    ports:
+      - "3100:3100"
     environment:
-      PAPERCLIP_DATABASE_URL: postgres://paperclip:db@paperclip_db:5432/paperclip
-      PAPERCLIP_AUTH_SECRET: ${SECRET}
-      PAPERCLIP_AUTH_BASE_URL: http://${DOMAIN}:8000
-      PAPERCLIP_HOME: /paperclip
-      PAPERCLIP_SERVER_HOST: 0.0.0.0
-      PAPERCLIP_SERVER_PORT: 3100
       DATABASE_URL: postgres://paperclip:db@paperclip_db:5432/paperclip
-      BETTER_AUTH_SECRET: ${SECRET}
-      BETTER_AUTH_URL: http://${DOMAIN}:8000
+      PAPERCLIP_DATABASE_URL: postgres://paperclip:db@paperclip_db:5432/paperclip
+      BETTER_AUTH_SECRET: paperclip-very-secure-random-secret-32-chars-long
+      PAPERCLIP_AGENT_JWT_SECRET: paperclip-very-secure-random-secret-32-chars-long
       PORT: 3100
-      HOST: 0.0.0.0
+      PAPERCLIP_SERVER_PORT: 3100
+      PAPERCLIP_SERVER_HOST: 0.0.0.0
+      BETTER_AUTH_URL: http://localhost:3100
+      PAPERCLIP_HOME: /paperclip
     volumes:
       - ./data/paperclip:/paperclip
     depends_on:
       paperclip_db:
         condition: service_healthy
-    networks:
-      - paperclip-network
-
-networks:
-  paperclip-network:
-    driver: bridge

@@ -2,33 +2,4 @@
 Microsoft Windows [Versione 10.0.26200.8246]
 (c) Microsoft Corporation. Tutti i diritti riservati.
 
-F:\pinokio\api\paperclip-sql-traefik-by-dgh>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && docker-compose build --no-cache
-#1 [internal] load local bake definitions
-#1 reading from stdin 633B 0.0s done
-#1 DONE 0.0s
-
-#2 [internal] load build definition from Dockerfile
-#2 transferring dockerfile: 3.04kB 0.0s done
-#2 DONE 0.0s
-
-#3 [internal] load metadata for docker.io/library/node:lts-trixie-slim
-#3 DONE 1.4s
-
-#4 [internal] load .dockerignore
-#4 transferring context: 139B done
-#4 DONE 0.0s
-
-#5 [base 1/3] FROM docker.io/library/node:lts-trixie-slim@sha256:735dd688da64d22ebd9dd374b3e7e5a874635668fd2a6ec20ca1f99264294086
-#5 resolve docker.io/library/node:lts-trixie-slim@sha256:735dd688da64d22ebd9dd374b3e7e5a874635668fd2a6ec20ca1f99264294086 0.0s done
-#5 CACHED
-
-#6 [internal] load build context
-#6 transferring context: 116.05kB 0.1s done
-#6 DONE 0.2s
-
-#7 [base 2/3] RUN apt-get update   && apt-get install -y --no-install-recommends ca-certificates gosu curl gh git wget ripgrep python3   && rm -rf /var/lib/apt/lists/*   && corepack enable
-#7 0.687 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
-#7 0.898 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
-#7 0.975 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
-#7 1.049 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9671 kB]
-#7 3.390 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+F:\pinokio\api\paperclip-sql-traefik-by-dgh\app>conda_hook & conda deactivate & conda deactivate & conda deactivate & conda activate base && git pull
